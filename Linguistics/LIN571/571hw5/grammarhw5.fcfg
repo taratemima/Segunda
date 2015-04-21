@@ -1,0 +1,62 @@
+S[SEM = <?vp(?subj)>?punc] -> NP[NUM=?n,SEM=?subj] VP[NUM=?n,SEM=?vp] PUNC[sem=?punc]
+PUNC[SEM=''] -> '.'
+
+NP[NUM=?n,SEM=<?det(?np)> ] -> Det[NUM=?n,SEM=?det]  NP[NUM=?n,SEM=?np]
+NP[LOC=?l,NUM=?n,SEM=?np] -> PropN[LOC=?l,NUM=?n,SEM=?np]
+NP[NUM=?n, sem=?np] -> N[NUM=?n, SEM=?np]
+
+VP[NUM=?n,SEM=?v(?subj)] -> NP[NUM=?n,SEM=?subj] IV[NUM=?n,SEM=?v]
+VP[NUM=?n,SEM=<?v(?subj, ?obj)>] -> NP[NUM=?n,SEM=?subj] TV[NUM=?n,SEM=?v] NP[SEM=?obj]
+VP[NUM=?n,SEM=<?v(?subj, ?obj,?pp)>] -> NP[NUM=?n,SEM=?subj] DTV[NUM=?n,SEM=?v] NP[SEM=?obj] PP[+TO,SEM=?pp]
+PP[+IN, SEM=?np] -> P[+IN] NP[SEM=?np]
+
+VP[NUM=?n,sem=<-?aux(?obj) ?v(?obj)>]-> AUX[NUM=?n, sem=?aux] 'not' VP[num=?n, sem=?v]
+
+VP[NUM=?n, SEM=<?v(?obj) | ?v(?obj)>] -> VP[num=?n, sem=?v] 'or' VP[num=?n, sem=?v]
+NP[NUM=?n, SEM=<?n | ?n>] -> NP[num=?n, sem=?n] 'or' NP[num=?n, sem=?n]
+
+# Lexical Rules
+PropN[-LOC,NUM=sg,SEM=<\P.P(john)>] -> 'John'
+PropN[-LOC,NUM=sg,SEM=<\P.P(jack)>] -> 'Jack'
+PropN[-LOC,NUM=sg,SEM=<\P.P(irene)>] -> 'Mary'
+PropN[LOC, NUM=sg, SEM=<\P.P(seattle)>]-> 'Seattle'
+
+Det[NUM=sg,SEM=<\P Q.all x.(P(x) -> Q(x))>] -> 'every' | 'Every'
+Det[NUM=pl,SEM=<\P Q.all x.(P(x) -> Q(x))>] -> 'all' | 'All'
+
+Det[NUM=sg,SEM=<\P Q.exists x.(P(x) & Q(x))>] -> 'a' | 'A'
+Det[NUM=sg,SEM=<\P Q.exists x.(P(x) & Q(x))>] -> 'an' | 'An'
+
+Adv[SEM=<\P Q.x.(-P(x) -> -Q(x))>] -> 'not'
+P[+in] -> 'in'
+
+N[NUM=sg,SEM=<\x.student(x)>] -> 'student'
+N[NUM=sg,SEM=<\x.person(x)>] -> 'person'
+N[NUM=sg, SEM=<\x.(-person(x))>] -> 'Nobody' 
+N[NUM=sg, SEM=<\y.sandwich(y)>] -> 'sandwich'
+N[NUM=sg, SEM=<\y.bagel(y)>] ->'bagel'
+N[NUM=sg, SEM=<\y.soda(y)>] -> 'soda'
+N[NUM=pl, SEM=<\x.students(x)>] -> 'students | 'Students'
+N[Num=pl, SEM=<\y.sandwiches(y)>] -> 'sandwiches'
+N[NUM=sg, SEM=<\y.essay(y)>] -> 'essay'
+
+IV[NUM=sg,SEM=<\x.eat(x)>,TNS=pres] -> 'eats'
+IV[NUM=pl,SEM=<\x.eat(x)>,TNS=pres] -> 'eat'
+IV[NUM=sg,SEM=<\x.drink(x)>,TNS=pres] -> 'drinks'
+IV[NUM=pl,SEM=<\x.drink(x)>,TNS=pres] -> 'drink'
+TV[NUM=sg,SEM=<\X x.X(\y.eat(x,y))>,TNS=pres] -> 'eats' 
+TV[NUM=pl,SEM=<\X x.X(\y.drink(x,y))>,TNS=pres] -> 'drink'
+TV[NUM=sg,SEM=<\X x.X(\y.drink(x,y))>,TNS=pres] -> 'drinks' 
+TV[NUM=pl,SEM=<\X x.X(\y.eat(x,y))>,TNS=pres] -> 'eat'
+
+TV[NUM=sg,SEM=<\X x.X(\y.write(x,y))>,TNS=pres] -> 'writes'
+DTV[num=sg, sem=<\Y X.x.X(\z.Y(\y.eat(x,y,z)))>,TNS=pre] -> 'eats'
+
+AUX[num=sg, sem=<\X x.X(\x.aux(x)>, TNS=pre] -> 'does'
+
+
+
+
+
+
+

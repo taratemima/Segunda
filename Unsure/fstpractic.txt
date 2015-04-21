@@ -1,0 +1,37 @@
+fst1 for {(a2n, bn) | n >=0}
+fst2 for {(an, b2nc) | n >=0}
+fst3 for{(an d*, (bc)n g) | n>=0}
+
+fst1
+
+For each two instances of a, change into one instance of b
+
+3
+(0(1 "a"))
+(0(2 "b" "aa"))
+(1(2 "aa" "b"))
+(2 (1 "aa")(1"b"))
+(2 (3 *e*))
+
+fst2
+for every instance of a, change into two bs and a c
+
+2
+(0(1 "a" "bbc"))
+(1(0 "a"))
+(1 (2 *e*))
+
+fst3 
+
+for every instance of a and maybe d, replace with bc then g. Use g only once
+
+4
+(0(1 "a"))
+(1 (2 "a"))
+(1 (2 "ad"))
+(2 (3 "a" "bcg"))
+(2 (3 "ad" "bcg"))
+(3 (3 "a" "bc"))
+(3 (3 "ad" "bc"))
+(3 (4 *e*))
+

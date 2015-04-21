@@ -1,0 +1,1222 @@
+delivery was found 
+.Its part of speech tag is NN 
+Board was found 
+.Its part of speech tag is NNP 
+many was found 
+.Its part of speech tag is JJ 
+learned was found 
+.Its part of speech tag is VBD 
+issue was found 
+.Its part of speech tag is VB 
+autumn was found 
+.Its part of speech tag is NN 
+million was found 
+.Its part of speech tag is CD 
+thrift was found 
+.Its part of speech tag is NN 
+Where was found 
+.Its part of speech tag is WRB 
+what was found 
+.Its part of speech tag is WP 
+indicates was found 
+.Its part of speech tag is VBZ 
+them was found 
+.Its part of speech tag is PRP 
+marketing was found 
+.Its part of speech tag is NN 
+happen was found 
+.Its part of speech tag is VB 
+In was found 
+.Its part of speech tag is IN 
+figure was found 
+.Its part of speech tag is NN 
+system was found 
+.Its part of speech tag is NN 
+of was found 
+.Its part of speech tag is IN 
+Trust was found 
+.Its part of speech tag is NNP 
+n't was found 
+.Its part of speech tag is RB 
+true was found 
+.Its part of speech tag is JJ 
+long-term was found 
+.Its part of speech tag is JJ 
+still was found 
+.Its part of speech tag is RB 
+Series was found 
+.Its part of speech tag is NNP 
+executive was found 
+.Its part of speech tag is JJ 
+will was found 
+.Its part of speech tag is MD 
+much was found 
+.Its part of speech tag is JJ 
+when was found 
+.Its part of speech tag is WRB 
+going was found 
+.Its part of speech tag is VBG 
+chief was found 
+.Its part of speech tag is NN 
+firm was found 
+.Its part of speech tag is NN 
+can was found 
+.Its part of speech tag is MD 
+where was found 
+.Its part of speech tag is WRB 
+Hartford was found 
+.Its part of speech tag is NNP 
+batting was found 
+.Its part of speech tag is NN 
+land was found 
+.Its part of speech tag is NN 
+average was found 
+.Its part of speech tag is JJ 
+reached was found 
+.Its part of speech tag is VBD 
+wait was found 
+.Its part of speech tag is VB 
+For was found 
+.Its part of speech tag is IN 
+dialogue was found 
+.Its part of speech tag is NN 
+way was found 
+.Its part of speech tag is NN 
+a was found 
+.Its part of speech tag is DT 
+Toronto was found 
+.Its part of speech tag is NNP 
+fact was found 
+.Its part of speech tag is NN 
+opponents was found 
+.Its part of speech tag is NNS 
+Boston was found 
+.Its part of speech tag is NNP 
+seen was found 
+.Its part of speech tag is VBN 
+proposal was found 
+.Its part of speech tag is NN 
+future was found 
+.Its part of speech tag is NN 
+in was found 
+.Its part of speech tag is IN 
+placed was found 
+.Its part of speech tag is VBD 
+quite was found 
+.Its part of speech tag is RB 
+only was found 
+.Its part of speech tag is RB 
+may was found 
+.Its part of speech tag is MD 
+me was found 
+.Its part of speech tag is PRP 
+receives was found 
+.Its part of speech tag is VBZ 
+two-year was found 
+.Its part of speech tag is JJ 
+by was found 
+.Its part of speech tag is RB 
+investor was found 
+.Its part of speech tag is NN 
+quickly was found 
+.Its part of speech tag is RB 
+That was found 
+.Its part of speech tag is WDT 
+House was found 
+.Its part of speech tag is NNP 
+cool was found 
+.Its part of speech tag is JJ 
+problem was found 
+.Its part of speech tag is NN 
+proceedings was found 
+.Its part of speech tag is NNS 
+Now was found 
+.Its part of speech tag is RB 
+moving was found 
+.Its part of speech tag is VBG 
+Business was found 
+.Its part of speech tag is NNP 
+crucial was found 
+.Its part of speech tag is JJ 
+One was found 
+.Its part of speech tag is NN 
+flooded was found 
+.Its part of speech tag is VBN 
+magazine was found 
+.Its part of speech tag is NN 
+investment was found 
+.Its part of speech tag is NN 
+rushed was found 
+.Its part of speech tag is VBD 
+there was found 
+.Its part of speech tag is EX 
+Committee was found 
+.Its part of speech tag is NNP 
+keeping was found 
+.Its part of speech tag is VBG 
+fast was found 
+.Its part of speech tag is RB 
+market was found 
+.Its part of speech tag is NN 
+September was found 
+.Its part of speech tag is NNP 
+fight was found 
+.Its part of speech tag is NN 
+This was found 
+.Its part of speech tag is DT 
+gone was found 
+.Its part of speech tag is VBN 
+on was found 
+.Its part of speech tag is RP 
+holds was found 
+.Its part of speech tag is VBZ 
+American was found 
+.Its part of speech tag is JJ 
+owned was found 
+.Its part of speech tag is JJ 
+further was found 
+.Its part of speech tag is JJ 
+ran was found 
+.Its part of speech tag is VBD 
+Dan was found 
+.Its part of speech tag is NNP 
+commercials was found 
+.Its part of speech tag is NNS 
+Treasury was found 
+.Its part of speech tag is NNP 
+handle was found 
+.Its part of speech tag is VB 
+afternoon was found 
+.Its part of speech tag is NN 
+flexibility was found 
+.Its part of speech tag is NN 
+balanced was found 
+.Its part of speech tag is JJ 
+So was found 
+.Its part of speech tag is RB 
+into was found 
+.Its part of speech tag is IN 
+seven was found 
+.Its part of speech tag is CD 
+case was found 
+.Its part of speech tag is NN 
+advanced was found 
+.Its part of speech tag is JJ 
+series was found 
+.Its part of speech tag is NN 
+good was found 
+.Its part of speech tag is NN 
+Your was found 
+.Its part of speech tag is PRP 
+education was found 
+.Its part of speech tag is NN 
+meeting was found 
+.Its part of speech tag is NN 
+account was found 
+.Its part of speech tag is VBP 
+Lynch was found 
+.Its part of speech tag is NNP 
+running was found 
+.Its part of speech tag is VBG 
+ago was found 
+.Its part of speech tag is RB 
+then was found 
+.Its part of speech tag is RB 
+sold was found 
+.Its part of speech tag is VBD 
+produce was found 
+.Its part of speech tag is VB 
+roll was found 
+.Its part of speech tag is VB 
+faster was found 
+.Its part of speech tag is JJR 
+step was found 
+.Its part of speech tag is NN 
+few was found 
+.Its part of speech tag is JJ 
+down was found 
+.Its part of speech tag is RB 
+about was found 
+.Its part of speech tag is IN 
+government was found 
+.Its part of speech tag is NN 
+disclosed was found 
+.Its part of speech tag is VBD 
+win was found 
+.Its part of speech tag is VB 
+unauthorized was found 
+.Its part of speech tag is JJ 
+how was found 
+.Its part of speech tag is WRB 
+prove was found 
+.Its part of speech tag is VB 
+those was found 
+.Its part of speech tag is DT 
+We was found 
+.Its part of speech tag is PRP 
+their was found 
+.Its part of speech tag is PRP 
+away was found 
+.Its part of speech tag is RB 
+creating was found 
+.Its part of speech tag is VBG 
+price was found 
+.Its part of speech tag is NN 
+Stewart was found 
+.Its part of speech tag is NNP 
+direct was found 
+.Its part of speech tag is VB 
+even was found 
+.Its part of speech tag is JJ 
+uncertainty was found 
+.Its part of speech tag is NN 
+up was found 
+.Its part of speech tag is IN 
+having was found 
+.Its part of speech tag is VBG 
+say was found 
+.Its part of speech tag is VB 
+familiar was found 
+.Its part of speech tag is JJ 
+roughly was found 
+.Its part of speech tag is RB 
+he was found 
+.Its part of speech tag is PRP 
+billion was found 
+.Its part of speech tag is CD 
+attitude was found 
+.Its part of speech tag is NN 
+point was found 
+.Its part of speech tag is NN 
+debt was found 
+.Its part of speech tag is NN 
+normal was found 
+.Its part of speech tag is JJ 
+which was found 
+.Its part of speech tag is WDT 
+Chicago was found 
+.Its part of speech tag is NNP 
+far was found 
+.Its part of speech tag is IN 
+least was found 
+.Its part of speech tag is JJS 
+better was found 
+.Its part of speech tag is RBR 
+keep was found 
+.Its part of speech tag is VB 
+fine was found 
+.Its part of speech tag is RB 
+also was found 
+.Its part of speech tag is RB 
+firms was found 
+.Its part of speech tag is NNS 
+interest was found 
+.Its part of speech tag is NN 
+collected was found 
+.Its part of speech tag is VBN 
+Week was found 
+.Its part of speech tag is NNP 
+decided was found 
+.Its part of speech tag is VBN 
+clubs was found 
+.Its part of speech tag is NNS 
+possible was found 
+.Its part of speech tag is JJ 
+but was found 
+.Its part of speech tag is CC 
+too was found 
+.Its part of speech tag is RB 
+and was found 
+.Its part of speech tag is IN 
+months was found 
+.Its part of speech tag is NNS 
+small was found 
+.Its part of speech tag is JJ 
+games was found 
+.Its part of speech tag is NNS 
+over was found 
+.Its part of speech tag is JJ 
+leaders was found 
+.Its part of speech tag is NNS 
+touted was found 
+.Its part of speech tag is VBN 
+later was found 
+.Its part of speech tag is JJ 
+federal was found 
+.Its part of speech tag is JJ 
+is was found 
+.Its part of speech tag is VBZ 
+seventh was found 
+.Its part of speech tag is JJ 
+brokerage was found 
+.Its part of speech tag is NN 
+drives was found 
+.Its part of speech tag is NNS 
+already was found 
+.Its part of speech tag is RB 
+think was found 
+.Its part of speech tag is VBP 
+agreement was found 
+.Its part of speech tag is NN 
+received was found 
+.Its part of speech tag is VBD 
+visible was found 
+.Its part of speech tag is JJ 
+prevent was found 
+.Its part of speech tag is VB 
+saying was found 
+.Its part of speech tag is VBG 
+last was found 
+.Its part of speech tag is NN 
+members was found 
+.Its part of speech tag is NNS 
+sort was found 
+.Its part of speech tag is NN 
+game was found 
+.Its part of speech tag is NN 
+notes was found 
+.Its part of speech tag is VBZ 
+Giant was found 
+.Its part of speech tag is NNP 
+were was found 
+.Its part of speech tag is VBD 
+law was found 
+.Its part of speech tag is NN 
+next was found 
+.Its part of speech tag is IN 
+pay was found 
+.Its part of speech tag is NN 
+off was found 
+.Its part of speech tag is RP 
+adds was found 
+.Its part of speech tag is VBZ 
+like was found 
+.Its part of speech tag is VB 
+got was found 
+.Its part of speech tag is VBD 
+former was found 
+.Its part of speech tag is JJ 
+past was found 
+.Its part of speech tag is NN 
+portfolios was found 
+.Its part of speech tag is NNS 
+editions was found 
+.Its part of speech tag is NNS 
+includes was found 
+.Its part of speech tag is VBZ 
+vice was found 
+.Its part of speech tag is NN 
+He was found 
+.Its part of speech tag is PRP 
+Another was found 
+.Its part of speech tag is DT 
+Los was found 
+.Its part of speech tag is NNP 
+value was found 
+.Its part of speech tag is NN 
+resolved was found 
+.Its part of speech tag is VBD 
+Lehman was found 
+.Its part of speech tag is NNP 
+evening was found 
+.Its part of speech tag is NN 
+dozen was found 
+.Its part of speech tag is NN 
+introduced was found 
+.Its part of speech tag is VBN 
+hold was found 
+.Its part of speech tag is VB 
+Moore was found 
+.Its part of speech tag is NNP 
+advertisers was found 
+.Its part of speech tag is NNS 
+position was found 
+.Its part of speech tag is NN 
+include was found 
+.Its part of speech tag is VB 
+same was found 
+.Its part of speech tag is JJ 
+hit was found 
+.Its part of speech tag is VBN 
+director was found 
+.Its part of speech tag is NN 
+named was found 
+.Its part of speech tag is VBD 
+run was found 
+.Its part of speech tag is VBP 
+Other was found 
+.Its part of speech tag is JJ 
+free was found 
+.Its part of speech tag is JJ 
+Mary was found 
+.Its part of speech tag is NNP 
+his was found 
+.Its part of speech tag is PRP 
+raising was found 
+.Its part of speech tag is VBG 
+make was found 
+.Its part of speech tag is VB 
+features was found 
+.Its part of speech tag is NNS 
+under was found 
+.Its part of speech tag is IN 
+getting was found 
+.Its part of speech tag is VBG 
+obligations was found 
+.Its part of speech tag is NNS 
+through was found 
+.Its part of speech tag is IN 
+while was found 
+.Its part of speech tag is IN 
+timing was found 
+.Its part of speech tag is NN 
+harder was found 
+.Its part of speech tag is RBR 
+big was found 
+.Its part of speech tag is JJ 
+coming was found 
+.Its part of speech tag is VBG 
+behaving was found 
+.Its part of speech tag is VBG 
+allow was found 
+.Its part of speech tag is VB 
+cash was found 
+.Its part of speech tag is NN 
+funds was found 
+.Its part of speech tag is NNS 
+held was found 
+.Its part of speech tag is VBD 
+move was found 
+.Its part of speech tag is VB 
+financing was found 
+.Its part of speech tag is VBG 
+that was found 
+.Its part of speech tag is WDT 
+take was found 
+.Its part of speech tag is VBP 
+green was found 
+.Its part of speech tag is JJ 
+campaign was found 
+.Its part of speech tag is NN 
+chairman was found 
+.Its part of speech tag is NN 
+president was found 
+.Its part of speech tag is NN 
+its was found 
+.Its part of speech tag is PRP 
+leaving was found 
+.Its part of speech tag is VBG 
+replacing was found 
+.Its part of speech tag is VBG 
+individuals was found 
+.Its part of speech tag is NNS 
+Their was found 
+.Its part of speech tag is PRP 
+some was found 
+.Its part of speech tag is DT 
+with was found 
+.Its part of speech tag is IN 
+arrangement was found 
+.Its part of speech tag is NN 
+tunes was found 
+.Its part of speech tag is NNS 
+here was found 
+.Its part of speech tag is RB 
+goes was found 
+.Its part of speech tag is VBZ 
+Moreover was found 
+.Its part of speech tag is RB 
+delay was found 
+.Its part of speech tag is VBP 
+we was found 
+.Its part of speech tag is PRP 
+Angeles was found 
+.Its part of speech tag is NNP 
+remains was found 
+.Its part of speech tag is VBZ 
+plunge was found 
+.Its part of speech tag is NN 
+to was found 
+.Its part of speech tag is IN 
+home was found 
+.Its part of speech tag is RB 
+raised was found 
+.Its part of speech tag is VBN 
+explains was found 
+.Its part of speech tag is VBZ 
+spot was found 
+.Its part of speech tag is NN 
+stock-market was found 
+.Its part of speech tag is NN 
+plus was found 
+.Its part of speech tag is RB 
+ahead was found 
+.Its part of speech tag is RB 
+try was found 
+.Its part of speech tag is VB 
+relatively was found 
+.Its part of speech tag is RB 
+an was found 
+.Its part of speech tag is DT 
+against was found 
+.Its part of speech tag is IN 
+resigned was found 
+.Its part of speech tag is JJ 
+need was found 
+.Its part of speech tag is VBP 
+debut was found 
+.Its part of speech tag is NN 
+or was found 
+.Its part of speech tag is CC 
+could was found 
+.Its part of speech tag is MD 
+rock was found 
+.Its part of speech tag is NN 
+stake was found 
+.Its part of speech tag is VB 
+does was found 
+.Its part of speech tag is VBZ 
+permit was found 
+.Its part of speech tag is VBP 
+rates was found 
+.Its part of speech tag is VBZ 
+acquire was found 
+.Its part of speech tag is VB 
+everything was found 
+.Its part of speech tag is NN 
+revenues was found 
+.Its part of speech tag is NNS 
+nation was found 
+.Its part of speech tag is NN 
+damage was found 
+.Its part of speech tag is NN 
+opposition was found 
+.Its part of speech tag is NN 
+needs was found 
+.Its part of speech tag is VBZ 
+forced was found 
+.Its part of speech tag is VBN 
+are was found 
+.Its part of speech tag is NN 
+ad was found 
+.Its part of speech tag is NN 
+long was found 
+.Its part of speech tag is JJ 
+Francisco was found 
+.Its part of speech tag is NNP 
+San was found 
+.Its part of speech tag is NNP 
+example was found 
+.Its part of speech tag is NN 
+working was found 
+.Its part of speech tag is NN 
+Hill was found 
+.Its part of speech tag is NNP 
+than was found 
+.Its part of speech tag is IN 
+Saturday was found 
+.Its part of speech tag is NNP 
+John was found 
+.Its part of speech tag is NNP 
+just was found 
+.Its part of speech tag is RB 
+likely was found 
+.Its part of speech tag is JJ 
+clients was found 
+.Its part of speech tag is NNS 
+Ad was found 
+.Its part of speech tag is NNP 
+effective was found 
+.Its part of speech tag is JJ 
+sponsor was found 
+.Its part of speech tag is NN 
+you was found 
+.Its part of speech tag is PRP 
+put was found 
+.Its part of speech tag is VBN 
+October was found 
+.Its part of speech tag is NNP 
+took was found 
+.Its part of speech tag is VBD 
+see was found 
+.Its part of speech tag is VB 
+remarked was found 
+.Its part of speech tag is VBN 
+congressional was found 
+.Its part of speech tag is JJ 
+Such was found 
+.Its part of speech tag is JJ 
+business was found 
+.Its part of speech tag is NN 
+Terms was found 
+.Its part of speech tag is NNS 
+night was found 
+.Its part of speech tag is NN 
+seems was found 
+.Its part of speech tag is VBZ 
+selling was found 
+.Its part of speech tag is VBG 
+prior was found 
+.Its part of speech tag is RB 
+several was found 
+.Its part of speech tag is JJ 
+volatility was found 
+.Its part of speech tag is NN 
+Chairman was found 
+.Its part of speech tag is NNP 
+time was found 
+.Its part of speech tag is NN 
+all was found 
+.Its part of speech tag is PDT 
+settled was found 
+.Its part of speech tag is VBN 
+Instead was found 
+.Its part of speech tag is RB 
+operating was found 
+.Its part of speech tag is VBG 
+debacle was found 
+.Its part of speech tag is NN 
+said was found 
+.Its part of speech tag is VBD 
+ordered was found 
+.Its part of speech tag is VBD 
+manager was found 
+.Its part of speech tag is NN 
+swing was found 
+.Its part of speech tag is NN 
+Merrill was found 
+.Its part of speech tag is NNP 
+teachers was found 
+.Its part of speech tag is NNS 
+throughout was found 
+.Its part of speech tag is IN 
+You was found 
+.Its part of speech tag is PRP 
+At was found 
+.Its part of speech tag is IN 
+ads was found 
+.Its part of speech tag is NNS 
+lead was found 
+.Its part of speech tag is VB 
+would was found 
+.Its part of speech tag is MD 
+no was found 
+.Its part of speech tag is RB 
+might was found 
+.Its part of speech tag is MD 
+corporate was found 
+.Its part of speech tag is JJ 
+order was found 
+.Its part of speech tag is NN 
+investors was found 
+.Its part of speech tag is NNS 
+Mike was found 
+.Its part of speech tag is NNP 
+fans was found 
+.Its part of speech tag is NNS 
+black-and-white was found 
+.Its part of speech tag is JJ 
+total was found 
+.Its part of speech tag is VB 
+feel was found 
+.Its part of speech tag is VBP 
+The was found 
+.Its part of speech tag is DT 
+Shearson was found 
+.Its part of speech tag is NNP 
+whose was found 
+.Its part of speech tag is WP 
+stocks was found 
+.Its part of speech tag is RB 
+after was found 
+.Its part of speech tag is RB 
+get was found 
+.Its part of speech tag is VB 
+public was found 
+.Its part of speech tag is JJ 
+including was found 
+.Its part of speech tag is VBG 
+huge was found 
+.Its part of speech tag is JJ 
+bat was found 
+.Its part of speech tag is NN 
+closed was found 
+.Its part of speech tag is VBN 
+five was found 
+.Its part of speech tag is CD 
+unless was found 
+.Its part of speech tag is IN 
+phone was found 
+.Its part of speech tag is NN 
+TV was found 
+.Its part of speech tag is NNP 
+go was found 
+.Its part of speech tag is VBP 
+created was found 
+.Its part of speech tag is VBN 
+Just was found 
+.Its part of speech tag is RB 
+as was found 
+.Its part of speech tag is IN 
+why was found 
+.Its part of speech tag is WRB 
+largest was found 
+.Its part of speech tag is JJS 
+It was found 
+.Its part of speech tag is PRP 
+know was found 
+.Its part of speech tag is VBP 
+has was found 
+.Its part of speech tag is VBP 
+taking was found 
+.Its part of speech tag is VBG 
+dumped was found 
+.Its part of speech tag is VBD 
+grants was found 
+.Its part of speech tag is NNS 
+prepared was found 
+.Its part of speech tag is VBN 
+out was found 
+.Its part of speech tag is RP 
+deficit was found 
+.Its part of speech tag is NN 
+haul was found 
+.Its part of speech tag is NN 
+wrote was found 
+.Its part of speech tag is VBD 
+lower was found 
+.Its part of speech tag is JJR 
+agree was found 
+.Its part of speech tag is VB 
+pages was found 
+.Its part of speech tag is NNS 
+must was found 
+.Its part of speech tag is MD 
+Park was found 
+.Its part of speech tag is NNP 
+specific was found 
+.Its part of speech tag is JJ 
+protect was found 
+.Its part of speech tag is VB 
+budget was found 
+.Its part of speech tag is NN 
+Every was found 
+.Its part of speech tag is DT 
+bad was found 
+.Its part of speech tag is JJ 
+kind was found 
+.Its part of speech tag is NN 
+But was found 
+.Its part of speech tag is CC 
+fall was found 
+.Its part of speech tag is VB 
+If was found 
+.Its part of speech tag is IN 
+stands was found 
+.Its part of speech tag is NNS 
+agency was found 
+.Its part of speech tag is NN 
+able was found 
+.Its part of speech tag is JJ 
+create was found 
+.Its part of speech tag is VBP 
+Is was found 
+.Its part of speech tag is VBZ 
+during was found 
+.Its part of speech tag is IN 
+David was found 
+.Its part of speech tag is NNP 
+work was found 
+.Its part of speech tag is VB 
+bottom was found 
+.Its part of speech tag is JJ 
+spending was found 
+.Its part of speech tag is VBG 
+days was found 
+.Its part of speech tag is NNS 
+side was found 
+.Its part of speech tag is NN 
+becomes was found 
+.Its part of speech tag is VBZ 
+approach was found 
+.Its part of speech tag is NN 
+Corporate was found 
+.Its part of speech tag is NNP 
+thrifts was found 
+.Its part of speech tag is NNS 
+speak was found 
+.Its part of speech tag is VB 
+since was found 
+.Its part of speech tag is IN 
+sell was found 
+.Its part of speech tag is VBP 
+went was found 
+.Its part of speech tag is VBD 
+new was found 
+.Its part of speech tag is JJ 
+strategies was found 
+.Its part of speech tag is NNS 
+television was found 
+.Its part of speech tag is NN 
+enough was found 
+.Its part of speech tag is RB 
+raise was found 
+.Its part of speech tag is NN 
+rather was found 
+.Its part of speech tag is RB 
+other was found 
+.Its part of speech tag is JJ 
+Today was found 
+.Its part of speech tag is NN 
+I was found 
+.Its part of speech tag is PRP 
+whether was found 
+.Its part of speech tag is IN 
+To was found 
+.Its part of speech tag is TO 
+continue was found 
+.Its part of speech tag is VB 
+Mark was found 
+.Its part of speech tag is NNP 
+Tuesday was found 
+.Its part of speech tag is NNP 
+three was found 
+.Its part of speech tag is CD 
+ever was found 
+.Its part of speech tag is RB 
+sale was found 
+.Its part of speech tag is NN 
+gold was found 
+.Its part of speech tag is NN 
+use was found 
+.Its part of speech tag is VBP 
+boys was found 
+.Its part of speech tag is NNS 
+been was found 
+.Its part of speech tag is VBN 
+requires was found 
+.Its part of speech tag is VBZ 
+Notes was found 
+.Its part of speech tag is NNPS 
+retain was found 
+.Its part of speech tag is VB 
+volume was found 
+.Its part of speech tag is NN 
+week was found 
+.Its part of speech tag is JJ 
+hearing was found 
+.Its part of speech tag is NN 
+despite was found 
+.Its part of speech tag is IN 
+principle was found 
+.Its part of speech tag is NN 
+Monday was found 
+.Its part of speech tag is NNP 
+With was found 
+.Its part of speech tag is IN 
+paid was found 
+.Its part of speech tag is VBD 
+until was found 
+.Its part of speech tag is IN 
+was was found 
+.Its part of speech tag is VBD 
+runs was found 
+.Its part of speech tag is VBZ 
+capital was found 
+.Its part of speech tag is NN 
+want was found 
+.Its part of speech tag is VB 
+another was found 
+.Its part of speech tag is DT 
+clearly was found 
+.Its part of speech tag is RB 
+late was found 
+.Its part of speech tag is RB 
+News was found 
+.Its part of speech tag is NNP 
+expensive was found 
+.Its part of speech tag is JJ 
+scheduled was found 
+.Its part of speech tag is VBN 
+two was found 
+.Its part of speech tag is CD 
+if was found 
+.Its part of speech tag is IN 
+Edward was found 
+.Its part of speech tag is NNP 
+Rick was found 
+.Its part of speech tag is NNP 
+view was found 
+.Its part of speech tag is NN 
+majority was found 
+.Its part of speech tag is NN 
+seats was found 
+.Its part of speech tag is NNS 
+plan was found 
+.Its part of speech tag is VB 
+Stark was found 
+.Its part of speech tag is NNP 
+Roger was found 
+.Its part of speech tag is NNP 
+relative was found 
+.Its part of speech tag is JJ 
+name was found 
+.Its part of speech tag is VB 
+appear was found 
+.Its part of speech tag is VBP 
+your was found 
+.Its part of speech tag is PRP 
+confidence was found 
+.Its part of speech tag is NN 
+usual was found 
+.Its part of speech tag is JJ 
+prices was found 
+.Its part of speech tag is NNS 
+written was found 
+.Its part of speech tag is VBN 
+area was found 
+.Its part of speech tag is NN 
+Congress was found 
+.Its part of speech tag is NNP 
+have was found 
+.Its part of speech tag is VBP 
+offers was found 
+.Its part of speech tag is NNS 
+calls was found 
+.Its part of speech tag is VBZ 
+it was found 
+.Its part of speech tag is PRP 
+Jackson was found 
+.Its part of speech tag is NNP 
+advertising was found 
+.Its part of speech tag is VBG 
+Friday was found 
+.Its part of speech tag is NNP 
+assets was found 
+.Its part of speech tag is NNS 
+crisis was found 
+.Its part of speech tag is NN 
+today was found 
+.Its part of speech tag is NN 
+events was found 
+.Its part of speech tag is NNS 
+appreciation was found 
+.Its part of speech tag is NN 
+bill was found 
+.Its part of speech tag is NN 
+crash was found 
+.Its part of speech tag is NN 
+savings-and-loan was found 
+.Its part of speech tag is JJ 
+points was found 
+.Its part of speech tag is NNS 
+post was found 
+.Its part of speech tag is VB 
+handled was found 
+.Its part of speech tag is VBN 
+special was found 
+.Its part of speech tag is JJ 
+World was found 
+.Its part of speech tag is NNP 
+legislation was found 
+.Its part of speech tag is NN 
+borrowing was found 
+.Its part of speech tag is NN 
+comes was found 
+.Its part of speech tag is VBZ 
+executives was found 
+.Its part of speech tag is NNS 
+ultimately was found 
+.Its part of speech tag is RB 
+commercial was found 
+.Its part of speech tag is NN 
+anything was found 
+.Its part of speech tag is NN 
+full was found 
+.Its part of speech tag is JJ 
+stock was found 
+.Its part of speech tag is JJ 
+changed was found 
+.Its part of speech tag is VBN 
+ready was found 
+.Its part of speech tag is JJ 
+four was found 
+.Its part of speech tag is CD 
+urging was found 
+.Its part of speech tag is VBG 
+half was found 
+.Its part of speech tag is PDT 
+they was found 
+.Its part of speech tag is PRP 
+lot was found 
+.Its part of speech tag is NN 
+works was found 
+.Its part of speech tag is NNS 
+money was found 
+.Its part of speech tag is NN 
+bonds was found 
+.Its part of speech tag is NNS 
+us was found 
+.Its part of speech tag is PRP 
+exceed was found 
+.Its part of speech tag is VBP 
+anyone was found 
+.Its part of speech tag is NN 
+PaineWebber was found 
+.Its part of speech tag is NNP 
+response was found 
+.Its part of speech tag is NN 
+doubt was found 
+.Its part of speech tag is NN 
+mean was found 
+.Its part of speech tag is JJ 
+message was found 
+.Its part of speech tag is NN 
+panic was found 
+.Its part of speech tag is NN 
+well was found 
+.Its part of speech tag is RB 
+swelling was found 
+.Its part of speech tag is VBG 
+began was found 
+.Its part of speech tag is VBD 
+shop was found 
+.Its part of speech tag is NN 
+thing was found 
+.Its part of speech tag is NN 
+news was found 
+.Its part of speech tag is NN 
+spent was found 
+.Its part of speech tag is VBD 
+around was found 
+.Its part of speech tag is RP 
+potential was found 
+.Its part of speech tag is JJ 
+forward was found 
+.Its part of speech tag is RB 
+not was found 
+.Its part of speech tag is RB 
+On was found 
+.Its part of speech tag is IN 
+individual was found 
+.Its part of speech tag is NN 
+mark was found 
+.Its part of speech tag is NN 
+double was found 
+.Its part of speech tag is JJ 
+Sunday was found 
+.Its part of speech tag is NNP 
+years was found 
+.Its part of speech tag is NNS 
+When was found 
+.Its part of speech tag is WRB 
+who was found 
+.Its part of speech tag is WP 
+caught was found 
+.Its part of speech tag is VBN 
+Charles was found 
+.Its part of speech tag is NNP 
+bank was found 
+.Its part of speech tag is NN 
+one was found 
+.Its part of speech tag is NN 
+issued was found 
+.Its part of speech tag is VBD 
+none was found 
+.Its part of speech tag is NN 
+did was found 
+.Its part of speech tag is VBD 
+do was found 
+.Its part of speech tag is VB 
+followed was found 
+.Its part of speech tag is VBN 
+wins was found 
+.Its part of speech tag is VBZ 
+spokesman was found 
+.Its part of speech tag is NN 
+from was found 
+.Its part of speech tag is IN 
+says was found 
+.Its part of speech tag is VBZ 
+estimated was found 
+.Its part of speech tag is VBD 
+feet was found 
+.Its part of speech tag is NNS 
+investing was found 
+.Its part of speech tag is VBG 
+language was found 
+.Its part of speech tag is NN 
+particularly was found 
+.Its part of speech tag is RB 
+decision was found 
+.Its part of speech tag is NN 
+any was found 
+.Its part of speech tag is DT 
+Separately was found 
+.Its part of speech tag is NNP 
+more was found 
+.Its part of speech tag is JJR 
+times was found 
+.Its part of speech tag is NNS 
+year was found 
+.Its part of speech tag is JJ 
+the was found 
+.Its part of speech tag is JJ 
+done was found 
+.Its part of speech tag is VBN 
+newspapers was found 
+.Its part of speech tag is NNS 
+Giants was found 
+.Its part of speech tag is NNP 
+before was found 
+.Its part of speech tag is RB 
+this was found 
+.Its part of speech tag is DT 
+for was found 
+.Its part of speech tag is IN 
+leading was found 
+.Its part of speech tag is VBG 
+considered was found 
+.Its part of speech tag is VBN 
+be was found 
+.Its part of speech tag is VB 
+lesson was found 
+.Its part of speech tag is NN 
+team was found 
+.Its part of speech tag is NN 
+major was found 
+.Its part of speech tag is JJ 
+Hutton was found 
+.Its part of speech tag is NNP 
+yesterday was found 
+.Its part of speech tag is NN 
+most was found 
+.Its part of speech tag is JJS 
+complicated was found 
+.Its part of speech tag is IN 
+place was found 
+.Its part of speech tag is VB 
+sounding was found 
+.Its part of speech tag is VBG 
+worst was found 
+.Its part of speech tag is JJS 
+merge was found 
+.Its part of speech tag is VB 
+early was found 
+.Its part of speech tag is JJ 
+at was found 
+.Its part of speech tag is IN 
+help was found 
+.Its part of speech tag is VB 
+National was found 
+.Its part of speech tag is NNP 
+had was found 
+.Its part of speech tag is VBD 
+A was found 
+.Its part of speech tag is DT 
+first was found 
+.Its part of speech tag is RB 
+newly was found 
+.Its part of speech tag is RB 
+air was found 
+.Its part of speech tag is VBP 

@@ -1,0 +1,16 @@
+#!/bin/usr/perl
+
+use warnings;
+use strict;
+use diagnostics;
+
+
+#OK, what information will we need for medoid calculations?
+#$word1 = 
+#cos(($x/$y));
+#$x = sum of all containers with both x and y in there
+#$y = (sqrt(sum of all containers with x)) *(sqrt(sum of all containers with y)))
+
+#$word1 values are at lines (i - 1) * (number of vectors / number of clusters) 
+#What process changes the clusters?
+}

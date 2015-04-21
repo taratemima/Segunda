@@ -1,0 +1,29 @@
+John eats .
+A student eats .
+John eats a sandwich .
+John drinks a soda or eats a sandwich .
+John or Mary eats .
+All students eat or drink .
+A student writes an essay or eats .
+Every student eats a sandwich or drinks a soda .
+John eats every sandwich .
+John eats every sandwich or bagel .
+Nobody eats a bagel .
+Jack does not eat or drink .
+A person does not eat .
+No student eats a bagel .
+John eats in Seattle .
+
+They capture infected cells and display fragments of the pathogen .
+Systemic infections overstimulate dendritic cells .
+Dr Jose Villadangos is a researcher of the immune system .
+The immune system shuts down .
+
+The dogs bark .
+The dog barks .
+Dogs bark .
+
+*the dog bark .
+*the dogs barks .
+*dog bark .
+*the dogs bark the cats .

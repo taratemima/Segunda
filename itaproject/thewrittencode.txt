@@ -1,0 +1,73 @@
+#!/bin/usr/perl
+
+use warnings;
+use strict;
+use diagnostics;
+
+sub GrabFromFile{
+
+$/ = ""';
+
+open(<TEXT>, $_[0]) || die "Cannot find file";
+my @results;
+
+while(<TEXT>){
+	chomp;
+	@results = grep(/conversation*./, $_);
+	}
+return @results;
+}
+
+sub GrabbingTextFiles{
+my @textFiles = grep(-T, readdir('Conversation'));
+
+if(@textFiles){
+	my @totalResults = &GrabFromFile($textFiles[0]);
+	}
+else{
+	die "Could not find keywords";
+	}
+
+for (my $i = 1; $i < $#textFiles; $i++){
+	my @fileResults = &GrabFromFile($textFiles[$i]);
+
+	if(@fileResults){
+		foreach my $r (@fileResults){
+			push(@totalResults, $r);
+			}
+		}
+	}
+return @textFiles;
+return @totalResults;
+}
+
+
+
+sub CreateResultsHash{
+my @allResults = $_[0];
+my %results;
+
+foreach my $p (@allResults){
+	$results{$p}++;	
+	}
+
+return %results;
+
+}
+
+sub PrintResultsToHash{
+open(CASE, ">conversationResults.txt");
+(my @files, my @all) = &GrabbingTextFiles;
+my %results = &CreateResultsHash(@all);
+my @arranged = sort ({$results{$a} <=> $results{$b}} keys %results);
+
+foreach my $f (@files){
+	print(CASE "$f \n");
+	}
+
+foreach my $r (@arranged){
+	print(CASE "$r \t $results{$r} \n");
+	}
+}
+
+&PrintResultsToHash;

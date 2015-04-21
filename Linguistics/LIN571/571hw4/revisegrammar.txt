@@ -1,0 +1,46 @@
+ADJP -> JJ ADJP | JJ 
+Adv -> RB | RP
+AdvP -> Adv | Adv AdvP
+AT -> 'a' | 'the' | 'A' | 'The'
+AUX -> MD | BE
+BE -> 'is' | 'was'
+CC -> 'and'
+CD -> 'five'
+COM -> ','
+Det -> PDT | DT | PRPS | AT | WDT
+FRAG -> NP PUNC
+IN -> 'in' | 'by' | 'of' | 'with' | 'that' | 'on' | 'for' | 'into'
+JJ -> 'dendritic' | 'immune' | 'infected' | 'new' | 'Systemic' | 'weak' | 'whole' | 'live' | 'interesting'
+MD -> 'will' | 'have' | 'Will'|  'did' | 'does'
+N -> NNS | NN | NNP | PRP | DT
+NN -> 'system' | 'research' | 'response' | 'pathogen' | 'researcher' | 'vaccine' | 'immunity' | 'case' | 'type' | 'body' | 'mouse' | 'Tuesday' | 'summit' | 'cart' | 'shelf' | 'book' | 'sand' | 'farmer' | 'dog' 
+NNP -> 'Dr' | 'Jose' | 'Villadangos' | 'sepsis' | 'malaria' | 'John' | 'Mary'
+NNS -> 'cells' | 'fragments' | 'humans' | 'infections' | 'mice' | 'Scientists'| 'minutes' | 'cats' | 'dogs'
+Nom -> ADJP Nom | Nom PP | Nom Nom | N
+NP -> Det Nom | Nom | PRP Nom | PRP 
+P -> IN | CC
+PDT -> 'whole' | 'mouse'
+PP -> P | PP NP | P PP | PP Sbar
+PPL -> 'herself' | 'himself' 
+PRP -> 'this' | 'them' | 'They' | 'they'
+PRPS -> 'their' | 'Their'
+PUNC -> '?' | '.'
+RB -> 'online' | 'today'| 'Tuesday'
+RP -> 'down'
+S -> NP VP | S PUNC |  X1 S 
+SBAR -> 'that' S 
+SQ -> X2 '?'
+TOP -> S | SQ | FRAG
+V -> VBZ | VBD | VBN | VBP | VB
+VB  -> 'work'
+VBD -> 'alerted' | 'injected' | 'published' | 'rescued'  | 'restored' | 'loaded' | 'walked' | 'thought' | 'did' 
+VBN -> 'alerted' | 'compromised' | 'discovered' | 'made' | 'infected' | 'published' | 'restored' | 'injected' | 'saw' | 'filled' | 'reached'
+VBP -> 'alert' | 'capture' | 'display' | 'have' | 'overstimulate' | 'know' | 'put' | 'bark' | 'think'
+VBZ -> 'does' |  'knows' | 'barks' | 'shuts' | 'invades'
+VP -> V | VP PP | AUX VP | VP AdvP | VBP NP | VBD NP | VP X3 | VBD X4 | VBZ NP | VBP NP | VBZ RP | VBN SBAR
+WDT ? 'that' | 'this'
+WP-> 'what'
+X1 -> PP COM
+X2 -> AUX S
+X3 -> P VP
+X4 -> NP PP

@@ -1,0 +1,27 @@
+Other People's Writings
+
+They have switch! Yay!
+
+   1.  use Switch;
+   2.
+   3. switch ($val) {
+   4. case 1 { print "number 1" }
+   5. case "a" { print "string a" }
+   6. case [1..10,42] { print "number in list" }
+   7. case (\@array) { print "number in list" }
+   8. case /\w+/ { print "pattern" }
+   9. case qr/\w+/ { print "pattern" }
+  10. case (\%hash) { print "entry in hash" }
+  11. case (\&sub) { print "arg to subroutine" }
+  12. else { print "previous case not true" }
+  13. }
+
+Also has break;
+
+Unicode-string and Unicode-normalize are also part of the package.
+
+http://search.cpan.org/~dwheeler/FSA-Rules-0.28/lib/FSA/Rules.pm
+http://search.cpan.org/perldoc?Computer::Theory::FSA
+
+http://perldoc.perl.org/functions/shift.html
+http://search.cpan.org/~swalters/Object-PerlDesignPatterns-0.03/PerlDesignPatterns.pm

@@ -1,0 +1,325 @@
+Other People's Writings
+
+Commands for classes
+
+Dictionary
+
+Dictionary()
+          Sole constructor.
+Dictionary nytD = new Dictionary();
+
+abstract  Enumeration 	elements()
+          Returns an enumeration of the values in this dictionary.
+abstract  Object 	get(Object key)
+          Returns the value to which the key is mapped in this dictionary.
+abstract  boolean 	isEmpty()
+          Tests if this dictionary maps no keys to value.
+abstract  Enumeration 	keys()
+          Returns an enumeration of the keys in this dictionary.
+abstract  Object 	put(Object key, Object value)
+          Maps the specified key to the specified value in this dictionary.
+abstract  Object 	remove(Object key)
+          Removes the key (and its corresponding value) from this dictionary.
+abstract  int 	size()
+          Returns the number of entries (dinstint keys) in this dictionary.
+
+File
+
+File(File parent, String child)
+          Creates a new File instance from a parent abstract pathname and a child pathname string.
+File(String pathname)
+          Creates a new File instance by converting the given pathname string into an abstract pathname.
+
+
+boolean 	canRead()
+          Tests whether the application can read the file denoted by this abstract pathname.
+listFiles()
+          Returns an array of abstract pathnames denoting the files in the directory denoted by this abstract pathname.
+
+
+StreamTokenizer
+
+As of JDK version 1.1, the preferred way to tokenize an input stream is to convert it into a character stream, for example:
+
+       Reader r = new BufferedReader(new InputStreamReader(is));
+       StreamTokenizer st = new StreamTokenizer(r);
+     
+double 	nval
+          If the current token is a number, this field contains the value of that number.
+ String 	sval
+          If the current token is a word token, this field contains a string giving the characters of the word token.
+static int 	TT_EOF
+          A constant indicating that the end of the stream has been read.
+static int 	TT_EOL
+          A constant indicating that the end of the line has been read.
+static int 	TT_NUMBER
+          A constant indicating that a number token has been read.
+static int 	TT_WORD
+          A constant indicating that a word token has been read.
+ int 	ttype
+          After a call to the nextToken method, this field contains the type of the token just read.
+
+
+StringTokenizer
+
+StringTokenizer(String str)
+          Constructs a string tokenizer for the specified string.
+StringTokenizer(String str, String delim)
+          Constructs a string tokenizer for the specified string.
+StringTokenizer(String str, String delim, boolean returnDelims)
+          Constructs a string tokenizer for the specified string.
+
+ int 	countTokens()
+          Calculates the number of times that this tokenizer's nextToken method can be called before it generates an exception.
+ boolean 	hasMoreElements()
+          Returns the same value as the hasMoreTokens method.
+ boolean 	hasMoreTokens()
+          Tests if there are more tokens available from this tokenizer's string.
+ Object 	nextElement()
+          Returns the same value as the nextToken method, except that its declared return value is Object rather than String.
+ String 	nextToken()
+          Returns the next token from this string tokenizer.
+ String 	nextToken(String delim)
+          Returns the next token in this string tokenizer's string.
+
+http://download.oracle.com/javase/1.4.2/docs/api/overview-summary.html
+
+
+Boolean(boolean value)
+          Allocates a Boolean object representing the value argument.
+Boolean(String s)
+          Allocates a Boolean object representing the value true if the string argument is not null and is equal, ignoring case, to the string "true".
+
+ boolean 	booleanValue()
+          Returns the value of this Boolean object as a boolean primitive.
+ boolean 	equals(Object obj)
+          Returns true if and only if the argument is not null and is a Boolean object that represents the same boolean value as this object.
+static boolean 	getBoolean(String name)
+          Returns true if and only if the system property named by the argument exists and is equal to the string "true".
+ int 	hashCode()
+          Returns a hash code for this Boolean object.
+ String 	toString()
+          Returns a String object representing this Boolean's value.
+static String 	toString(boolean b)
+          Returns a String object representing the specified boolean.
+static Boolean 	valueOf(boolean b)
+          Returns a Boolean instance representing the specified boolean value.
+static Boolean 	valueOf(String s)
+          Returns a Boolean with a value represented by the specified String.
+
+
+String()
+          Initializes a newly created String object so that it represents an empty character sequence.
+String(byte[] bytes)
+          Constructs a new String by decoding the specified array of bytes using the platform's default charset.
+String(byte[] ascii, int hibyte)
+          Deprecated. This method does not properly convert bytes into characters. As of JDK 1.1, the preferred way to do this is via the String constructors that take a charset name or that use the platform's default charset.
+String(byte[] bytes, int offset, int length)
+          Constructs a new String by decoding the specified subarray of bytes using the platform's default charset.
+String(byte[] ascii, int hibyte, int offset, int count)
+          Deprecated. This method does not properly convert bytes into characters. As of JDK 1.1, the preferred way to do this is via the String constructors that take a charset name or that use the platform's default charset.
+String(byte[] bytes, int offset, int length, String charsetName)
+          Constructs a new String by decoding the specified subarray of bytes using the specified charset.
+String(byte[] bytes, String charsetName)
+          Constructs a new String by decoding the specified array of bytes using the specified charset.
+String(char[] value)
+          Allocates a new String so that it represents the sequence of characters currently contained in the character array argument.
+String(char[] value, int offset, int count)
+          Allocates a new String that contains characters from a subarray of the character array argument.
+String(String original)
+          Initializes a newly created String object so that it represents the same sequence of characters as the argument; in other words, the newly created string is a copy of the argument string.
+String(StringBuffer buffer)
+          Allocates a new string that contains the sequence of characters currently contained in the string buffer argument.
+ 
+Method Summary
+ char 	charAt(int index)
+          Returns the character at the specified index.
+ int 	compareTo(Object o)
+          Compares this String to another Object.
+ int 	compareTo(String anotherString)
+          Compares two strings lexicographically.
+ int 	compareToIgnoreCase(String str)
+          Compares two strings lexicographically, ignoring case differences.
+ String 	concat(String str)
+          Concatenates the specified string to the end of this string.
+ boolean 	contentEquals(StringBuffer sb)
+          Returns true if and only if this String represents the same sequence of characters as the specified StringBuffer.
+static String 	copyValueOf(char[] data)
+          Returns a String that represents the character sequence in the array specified.
+static String 	copyValueOf(char[] data, int offset, int count)
+          Returns a String that represents the character sequence in the array specified.
+ boolean 	endsWith(String suffix)
+          Tests if this string ends with the specified suffix.
+ boolean 	equals(Object anObject)
+          Compares this string to the specified object.
+ boolean 	equalsIgnoreCase(String anotherString)
+          Compares this String to another String, ignoring case considerations.
+ byte[] 	getBytes()
+          Encodes this String into a sequence of bytes using the platform's default charset, storing the result into a new byte array.
+ void 	getBytes(int srcBegin, int srcEnd, byte[] dst, int dstBegin)
+          Deprecated. This method does not properly convert characters into bytes. As of JDK 1.1, the preferred way to do this is via the the getBytes() method, which uses the platform's default charset.
+ byte[] 	getBytes(String charsetName)
+          Encodes this String into a sequence of bytes using the named charset, storing the result into a new byte array.
+ void 	getChars(int srcBegin, int srcEnd, char[] dst, int dstBegin)
+          Copies characters from this string into the destination character array.
+ int 	hashCode()
+          Returns a hash code for this string.
+ int 	indexOf(int ch)
+          Returns the index within this string of the first occurrence of the specified character.
+ int 	indexOf(int ch, int fromIndex)
+          Returns the index within this string of the first occurrence of the specified character, starting the search at the specified index.
+ int 	indexOf(String str)
+          Returns the index within this string of the first occurrence of the specified substring.
+ int 	indexOf(String str, int fromIndex)
+          Returns the index within this string of the first occurrence of the specified substring, starting at the specified index.
+ String 	intern()
+          Returns a canonical representation for the string object.
+ int 	lastIndexOf(int ch)
+          Returns the index within this string of the last occurrence of the specified character.
+ int 	lastIndexOf(int ch, int fromIndex)
+          Returns the index within this string of the last occurrence of the specified character, searching backward starting at the specified index.
+ int 	lastIndexOf(String str)
+          Returns the index within this string of the rightmost occurrence of the specified substring.
+ int 	lastIndexOf(String str, int fromIndex)
+          Returns the index within this string of the last occurrence of the specified substring, searching backward starting at the specified index.
+ int 	length()
+          Returns the length of this string.
+ boolean 	matches(String regex)
+          Tells whether or not this string matches the given regular expression.
+ boolean 	regionMatches(boolean ignoreCase, int toffset, String other, int ooffset, int len)
+          Tests if two string regions are equal.
+ boolean 	regionMatches(int toffset, String other, int ooffset, int len)
+          Tests if two string regions are equal.
+ String 	replace(char oldChar, char newChar)
+          Returns a new string resulting from replacing all occurrences of oldChar in this string with newChar.
+ String 	replaceAll(String regex, String replacement)
+          Replaces each substring of this string that matches the given regular expression with the given replacement.
+ String 	replaceFirst(String regex, String replacement)
+          Replaces the first substring of this string that matches the given regular expression with the given replacement.
+ String[] 	split(String regex)
+          Splits this string around matches of the given regular expression.
+ String[] 	split(String regex, int limit)
+          Splits this string around matches of the given regular expression.
+ boolean 	startsWith(String prefix)
+          Tests if this string starts with the specified prefix.
+ boolean 	startsWith(String prefix, int toffset)
+          Tests if this string starts with the specified prefix beginning a specified index.
+ CharSequence 	subSequence(int beginIndex, int endIndex)
+          Returns a new character sequence that is a subsequence of this sequence.
+ String 	substring(int beginIndex)
+          Returns a new string that is a substring of this string.
+ String 	substring(int beginIndex, int endIndex)
+          Returns a new string that is a substring of this string.
+ char[] 	toCharArray()
+          Converts this string to a new character array.
+ String 	toLowerCase()
+          Converts all of the characters in this String to lower case using the rules of the default locale.
+ String 	toLowerCase(Locale locale)
+          Converts all of the characters in this String to lower case using the rules of the given Locale.
+ String 	toString()
+          This object (which is already a string!) is itself returned.
+ String 	toUpperCase()
+          Converts all of the characters in this String to upper case using the rules of the default locale.
+ String 	toUpperCase(Locale locale)
+          Converts all of the characters in this String to upper case using the rules of the given Locale.
+ String 	trim()
+          Returns a copy of the string, with leading and trailing whitespace omitted.
+static String 	valueOf(boolean b)
+          Returns the string representation of the boolean argument.
+static String 	valueOf(char c)
+          Returns the string representation of the char argument.
+static String 	valueOf(char[] data)
+          Returns the string representation of the char array argument.
+static String 	valueOf(char[] data, int offset, int count)
+          Returns the string representation of a specific subarray of the char array argument.
+static String 	valueOf(double d)
+          Returns the string representation of the double argument.
+static String 	valueOf(float f)
+          Returns the string representation of the float argument.
+static String 	valueOf(int i)
+          Returns the string representation of the int argument.
+static String 	valueOf(long l)
+          Returns the string representation of the long argument.
+static String 	valueOf(Object obj)
+          Returns the string representation of the Object argument.
+
+Should I have something for buffers? 
+
+char 	charValue()
+          Returns the value of this Character object.
+ int 	compareTo(Character anotherCharacter)
+          Compares two Character objects numerically.
+ int 	compareTo(Object o)
+          Compares this Character object to another object.
+static int 	digit(char ch, int radix)
+          Returns the numeric value of the character ch in the specified radix.
+ boolean 	equals(Object obj)
+          Compares this object against the specified object.
+static char 	forDigit(int digit, int radix)
+          Determines the character representation for a specific digit in the specified radix.
+static byte 	getDirectionality(char ch)
+          Returns the Unicode directionality property for the given character.
+static int 	getNumericValue(char ch)
+          Returns the int value that the specified Unicode character represents.
+static int 	getType(char ch)
+          Returns a value indicating a character's general category.
+ int 	hashCode()
+          Returns a hash code for this Character.
+static boolean 	isDefined(char ch)
+          Determines if a character is defined in Unicode.
+static boolean 	isDigit(char ch)
+          Determines if the specified character is a digit.
+static boolean 	isIdentifierIgnorable(char ch)
+          Determines if the specified character should be regarded as an ignorable character in a Java identifier or a Unicode identifier.
+static boolean 	isISOControl(char ch)
+          Determines if the specified character is an ISO control character.
+static boolean 	isJavaIdentifierPart(char ch)
+          Determines if the specified character may be part of a Java identifier as other than the first character.
+static boolean 	isJavaIdentifierStart(char ch)
+          Determines if the specified character is permissible as the first character in a Java identifier.
+static boolean 	isJavaLetter(char ch)
+          Deprecated. Replaced by isJavaIdentifierStart(char).
+static boolean 	isJavaLetterOrDigit(char ch)
+          Deprecated. Replaced by isJavaIdentifierPart(char).
+static boolean 	isLetter(char ch)
+          Determines if the specified character is a letter.
+static boolean 	isLetterOrDigit(char ch)
+          Determines if the specified character is a letter or digit.
+static boolean 	isLowerCase(char ch)
+          Determines if the specified character is a lowercase character.
+static boolean 	isMirrored(char ch)
+          Determines whether the character is mirrored according to the Unicode specification.
+static boolean 	isSpace(char ch)
+          Deprecated. Replaced by isWhitespace(char).
+static boolean 	isSpaceChar(char ch)
+          Determines if the specified character is a Unicode space character.
+static boolean 	isTitleCase(char ch)
+          Determines if the specified character is a titlecase character.
+static boolean 	isUnicodeIdentifierPart(char ch)
+          Determines if the specified character may be part of a Unicode identifier as other than the first character.
+static boolean 	isUnicodeIdentifierStart(char ch)
+          Determines if the specified character is permissible as the first character in a Unicode identifier.
+static boolean 	isUpperCase(char ch)
+          Determines if the specified character is an uppercase character.
+static boolean 	isWhitespace(char ch)
+          Determines if the specified character is white space according to Java.
+static char 	toLowerCase(char ch)
+          Converts the character argument to lowercase using case mapping information from the UnicodeData file.
+ String 	toString()
+          Returns a String object representing this Character's value.
+static String 	toString(char c)
+          Returns a String object representing the specified char.
+static char 	toTitleCase(char ch)
+          Converts the character argument to titlecase using case mapping information from the UnicodeData file.
+static char 	toUpperCase(char ch)
+          Converts the character argument to uppercase using case mapping information from the UnicodeData file.
+
+' 0027
+( 0028
+) 0029
+< 003C
+> 003E
+
+
+To look up as needed
+http://download.oracle.com/javase/1.4.2/docs/api/java/io/package-summary.html

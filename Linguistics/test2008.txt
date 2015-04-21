@@ -1,0 +1,123 @@
+# A version of the Stroll Through Perl exercise, using different words 
+# May be the foundation of the Nicky project
+
+#!/usr/bin/perl
+
+#All words are from the writings of one Nickolaus Pacione, or 'sweetcheeks' as his
+#lovers call him
+
+&init_test;
+
+#%test = ("coffee", "noun", "make", "verb", "and", "preposition", "sleep", "noun", "sleep", "verb", #"elude", "verb", "this", "determiner", "from", "preposition", "the", "determiner", "is", "auxillary", #"apart", "adjective", "slowly", "adverb"); #as an associative array
+
+#This will be saved in a seperate list
+
+print "Hello, all!\n";
+
+print "What is your name? ";
+
+$name = <STDIN>;
+
+chop($name);
+$original_name = $name;
+$name =~ s/\W.//;
+$name =~ tr/A-Z/a-z/;
+
+if ($name eq "tara") {
+	print "Hi, Tara! How good of you to visit!\n";
+}
+
+#Special surprise for Nicky
+
+elsif ($name eq ("nickolaus" II "nick")){
+	print "Save your angry emails. The use of your prose is covered under fair use. It's properly attributed and used for teaching purposes. \n";
+}
+
+	else{
+		print "Hello, $original_name!\n";
+
+#rest of commands will go here
+#this goes through each value of the associative array
+			while (($word, $pos) = each(%test)){
+				print "Here is a guessing game.\n";
+				print "Is $word a noun, a verb, or neither? ";
+				$guess = <STDIN>;
+				chop($guess);
+					
+					if $pos ne ("noun" || "verb"){
+						$rightguess = "neither";
+					} 
+						else{
+						$rightguess=$pos;
+						}
+#rest of commands go here
+			while (! &good_word($word, $pos))){
+				print "Sorry, try again.\n"
+				print "Is $word a noun, a verb, or neither? ";
+				$guess = <STDIN>;
+				chop($guess);
+				}
+			}
+
+#make necessary subroutines here
+
+#make that more intregrated with wordlist
+
+sub good_word{
+	local($someword, $someguess) = @_;
+	$someword =~ s/\W.*//;
+	$someword =~ tr/A-Z/a-z/;
+
+		if(($test{$someword} || "neither") eq $someguess{
+			1; #return true
+				} else {
+					0; #return false
+				}
+
+			}
+
+sub init_test{ 
+
+	open(WORDLIST, $filename);
+	while ($word = <WORDLIST>){
+		chop($word);
+		$pos = <WORDLIST>;
+		chop($pos);
+		$test{$word} = $pos;
+				}
+
+	close(WORDLIST);
+			}
+		}
+
+
+#To use for specifying order for the Nicky project
+
+#From this that eludes me which I pen this – as what I say what eludes me is sleep, and from the sleep becomes the etchings where the dreams begin.
+#Such thoughts should be erased as the Y2K virus, in the eyes of the rural Christians - in the hall of mirrors. 
+#Only as one thinks this, I am alone - I am no one, one that is hunted as a witch by the rural individuals whom look at the Bible as the only book one should be reading. 
+#Lurking as an apparition in the cavern -- the cavern which is concieved of cold concrete and rusted pipes; the shapeless shadow which is seen in the eyes of a writer whom had visited the place called Lower Wacker Drive in the dead of a Chicago winter.
+#It was him that said I should not dress the way I was because I would be hunted down as a witch, or one whom had a morbid intrest in the fear of the unknown (within one's darkest fears -- the thoughts that should not be are as a sin, are a way of demonic openings.)
+#The first story was titled Anchorwoman -- A Journal with the help of my former landlord who also owned a pet shop. 
+#My imagination is troubled as a person with a drug addiction, an addiction that is similar to one who'd been taking Crank. 
+#Beneath them which brings into the darkness – it would become from a foreboding and ominous sound from the sky;  that sound – the hissing of small insect wings flying in swarms.  Swarms as they would become in the color of the fog,   darkness as they fly with the echo of nightfall.
+#It would be covered in hornets and locusts in the way it was described – from patterns that dwell in the pages as they were written from the perspective of the writer who writes them. 
+#But then again, I was no stranger to the practices of Satanism and the occult which I will describe later on where a person had done a tarot reading on me.
+#That as one would be reading this that I wrote would say that I have gone evil, but what I write has some truth to it. 
+#I had been one of a dark historian since Glen Ellyn in strongly influenced by Wheaton College. 
+#Thoughts that are concieved in the eyes of philosophy are what I would often ponder on such #as what does make the center hold.
+
+# When one would visit Naperville and Joliet, The thoughts that would be inside of their mind as #they are mesmorized by the old Gregorian structures and Victorian Gothic designs. One can #only see inside of the thoughts that would remain -- knowing that a mother murdered her own #children in one of the houses in Naperville, and in Joliet, a woman -- who was a nurse had been #strangled and the house burned to hide the remains of the bizarre homicide. 
+
+#According to the patrons, one had said that the paintings would look at them with evil eyes.
+
+
+#http://www.cs.lth.se/home/Pierre_Nugues/ilppp/toc.shtml (see if I can borrow it at NU library)
+#http://search.cpan.org/~jrennie/WordNet-QueryData-1.47/QueryData.pm (need a WordNet link)
+#http://www.perlmonks.org/?node_id=7980 (Someone solicits suggestions on making good text
+#mining scripts with Perl--worth looking at)
+#http://www.llc.manchester.ac.uk/intranet/ug/useful-links/perl/Perllesson8/
+#http://umiacs.umd.edu/~resnik/ling647_sp2006/assignments/hmm.html
+#http://www.cs.nyu.edu/~melamed/genproc.html
+
+#http://textmine.sourceforge.net/index.html

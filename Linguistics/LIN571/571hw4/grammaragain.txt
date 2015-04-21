@@ -1,0 +1,71 @@
+TOP -> S | SQ | FRAG
+S -> NP VP | S PUNC |  X1 S 
+SQ -> X2 '?'
+FRAG -> NP PUNC
+X1 -> PP COM
+X2 -> MD S
+
+VP -> VP ADVP | VBP NP | VB PP | VBD NP | VP X3 | VBD X4 | VBZ NP | AUX VP | VBN PP | VBP NP | VBZ RP | VBN SBAR
+X3 -> Conj VP
+X4 -> NP PP
+SBAR -> 'that' S 
+
+ADVP -> Adv | Adv ADVP
+NP -> Det Nom | Nom | PossPro Nom | PRP
+Nom -> ADJP Nom | Nom PP | Nom Nom | NN | NNS | NNP 
+ADJP -> Adj ADJP | Adj 
+PP -> Prep NP
+AUX -> Aux | AuxZ
+Det -> 'a' | 'A' | 'the' | 'The' 
+PRP -> 'this' | 'them' | 'They' | 
+Prep -> 'In' | 'with' |  'in' | 'of' | 'by' 
+PossPro -> 'their' | 'Their'
+Adv -> 'today' | 'online'
+Adj -> 'dendritic' | 'immune' | 'infected' | 'new' | 'Systemic' | 'weak' 
+Conj -> 'and'
+NNS -> 'cells' | 'fragments' | 'humans' | 'infections' | 'mice' | 'Scientists'
+NN -> 'body' | 'case' | 'immunity' | 'malaria' | 'mouse' | 'pathogen' | 'research' | 'researcher' | 'response' | 'sepsis' | 'system' | 'type' | 'vaccine' 
+NNP -> 'Dr' | 'Jose' | 'Villadangos'
+RP -> 'down'
+IN -> 'that'
+Aux -> 'have'
+AuxZ -> 'is' | 'was'
+MD -> 'Will'
+VB  -> 'work'
+VBP -> 'alert' | 'capture' | 'display' | 'have' | 'overstimulate' 
+VBD -> 'alerted' | 'injected' | 'published' | 'rescued'  | 'restored' | 'was' 
+VBN -> 'alerted' | 'compromised' | 'discovered' | 'made' 
+VBZ -> 'invades' | 'is' | 'shuts'
+Adj -> 'whole' | 'live'
+COM -> ','
+PUNC -> '?' | '.'
+
+NP -> N | JJ NP | Det NP | NP PP 
+N -> NNS | NN | NNP | PRP | DT
+Det -> PDT | DT | PRPS | AT
+PP -> P | PP NP | P PP | PP Sbar
+P -> IN | CC
+VP -> V | VP NP | VP PP | Aux VP | VP AdvP
+V -> VBZ | VBD | VBN
+Adv -> RB | RP
+AdvP -> Adv | Adv AdvP
+Aux -> MD | BE
+NNS -> 'scientists' | 'humans' | 'cells' | 'fragments' | 'mice' | 'infections'
+VBD -> 'rescued' | 'published' | 'alerted' | 'restored' | 'compromised' | 'injected' | 'discovered' | 'made'
+AT -> 'a' | 'the' 
+DT -> 'this'
+NN -> 'system' | 'research' | 'response' | 'pathogen' | 'researcher' | 'vaccine' | 'immunity' | 'case' | 'type' | 'body'
+MD -> 'will' | 'have' 
+BE -> 'was' | 'is'
+JJ -> 'immune' | 'dendritic' | 'systemic' | 'new' | 'live' | 'weak' | 'infected'
+VBP -> 'work' | 'capture' | 'display' | 'overstimulate' | 'alert'
+IN -> 'in' | 'by' | 'of' | 'with' | 'that'
+PRP -> 'they' | 'them' 
+PRPS -> 'their'
+VBZ -> 'shuts' | 'invades'
+VBN -> 'infected'
+NNP -> 'Dr' | 'Jose' | 'Villadangos' | 'sepsis' | 'malaria'
+RP -> 'down'
+PDT -> 'whole' | 'mouse'
+CC -> 'and'
+RB -> 'online' | 'today'

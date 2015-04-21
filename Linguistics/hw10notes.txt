@@ -1,0 +1,1 @@
+The hard part was figuring out how to represent the word, features and direction, and keep them all together and printed out. I do not think I suceeded. I tried to write functions for mediods, but haven't test them out. I included print out of the test material so that you can see that parts of it worked. 

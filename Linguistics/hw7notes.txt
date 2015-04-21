@@ -1,0 +1,184 @@
+http://www.stellman-greene.com/aspm/content/blogcategory/15/38/
+http://www.cc.gatech.edu/classes/AY2001/cs3300_fall/Slides/ch5col/index.htm
+
+#
+
+Define the problem you want your program to solve. 
+
+Use Viterbi equation to tag new text. Compare results to gold standard.
+
+#
+Step 2
+
+Break the problem down into steps. Plan what each piece of the program should do, such as "Program needs a sign-in page, an input page, and needs to be able to calculate total number of elephants after additions and subtractions to collection."
+
+Use Viterbi equation
+
+Print out a Hidden Markov Model containing information to be used in Viterbi equation
+Build an alpha array to store tag combinations (state sequence) and their probability
+Build a beta array to store word/tag combinations and their probability
+Tag testing text with words with only one tag
+For words with multiple tags, get tags combinations with the probability of that word and the surrounding words from the alpha array
+Calculate (word3/total words * chosen-tag3/all tags) * (tag3 & tag 1, tag2 probability)  * (word1& tag1 * word2 & tag2)
+Compare disputed probability results
+Tag disputed words with tag with the highest probability
+Print results in this format “observ => state_seq lgprob” (Is the entire sentence the observation or is the trigram?)
+
+Compare results to gold standard
+
+Convert "observ => state seq logprob" printout into "w1/t1 w2/t2 . . .wn/tn" 
+Run gold standard script on it
+Save results
+
+
+#
+Step 3
+
+Break each step into smaller pieces, such as "Count elephants from storage 1 and 2, calculate total, subtract elephants sold and calculate final number."
+
+#Print out a Hidden Markov Model containing information to be used in Viterbi equation
+Format of HMM is  
+
+state_num=
+sym_num=
+init_line_num=
+trans_line_num=
+emiss_line_num=
+
+\init
+BOS     1.0 
+
+\trans
+tag3 tag1 tag2 total-probability log-prob
+so on until end of sentence
+
+\emis
+tag3 word3 total-probability log-prob
+
+
+To print for the program to use
+state_num=alpha axis=
+sym_num=beta axis=
+trans_line_num=alpha loop=
+emiss_line_num=beta loop=
+
+\trans
+(tag3: | tag1:  tag2: ) total-probability 
+so on until end of sentence/text
+
+\emis
+(tag3: |  word3: ) total-probability 
+
+##Figure how to calcuate missing bits
+Get and print number of unique tags--done
+Get and print number of unique words--done
+Get and print number of <s>--done
+Print arc probability result--done
+
+Make training data into trigrams
+Split training data from spaces--done
+For each combo, join combo, combo + 1, and combo + 2 with |--done 
+Split combo into word1 and tag1--done
+Split combo + 1 into word2 and tag2--done
+Split combo + 2 into word3 and tag3-done
+Print tag3, then tag1 then tag2--done
+Print tag3 and word3--done
+
+Calculate probability for trigram
+Get total tag1 count--done
+Get total number of specific tag1--done
+Divide tag1 by total tag1s--done 
+Repeat for each tag--done
+Multiple total quotients--done
+Return and print final probability--done
+Calculate and return log probability--done
+Integrate with earlier print out of words and tags--done
+
+Calculate probability for word/tag--done
+Get total word1/tag1 count--done
+Get total words in document--done
+Get total number of specific tag1--done
+Divide word1 by total words--done
+Divide tag1 by total tag1s--done
+Multiple the quotients--done
+Integrate with earlier print out of words and tags--done
+
+Also had the return values default to 1.0 to account for punctuation
+Test transmission subfunctions individually.--done
+Print out emissions--done
+Test emission subfunctions--currently doing
+
+I keep getting stuck on PRP$, I tried to make some type of function to help out with that , but I keep on messing up. 
+
+Count transition lines
+Print number as trans_line_num
+Count emission lines
+Print number as emis_line_num
+
+##Figure out how to format information for easier retrieval
+I can make two array of hashes to store information from the hmm_input, beta_pool and alpha_pool
+I will use state total and alpha_pool total for the array
+I will use state total and beta_pool total for beta array
+
+#Build an alpha array to store tag combinations (state sequence) and their probability--not really able to do
+I forget which I chose for the first array bracket and which one I chose for the second array bracket. I hope that made sense
+
+Initialize an array called alpha with number of states available down and number of bigrams across
+Initialize an array called alpha-axis equal to total number of unique tags
+With for loop build an array within alpha-axis with alpha-loop as the index
+tag1 and tag2 will be the column, tag3 will be the row. Put the probability in the correct place. 
+Return alpha array
+
+#Build a beta array to store word/tag combinations and their probability
+Initialize an array called beta with number of states available down and number of unique words across
+Initialize an array called beta-axis equal to total number of unique tags
+With for loop build an array within beta-axis with beta-loop as the index
+tag will be the row, and word will be the column. Put the probability in the correct place
+Return beta array
+
+#Format testing text into trigram forms
+Split the paragraphs by spaces
+Join sentence as (word3: (word + 2), word1: word, word2: (word + 1)) with commas and colons
+If there is no word3, join as (word + 1, word) with a comma
+
+Build Viterbi array
+T = will be alpha_pool total
+N + 2 = N will be beta_pool total
+Fill down with word trigrams from training text
+Fill across with tag trigrams from columns and rows of alpha_array joined together
+Find word1 on beta_array
+If word1 is found, make location of found tags and their count in a hash
+If it has one key-value pair, have location with that word in front of word trigram and that tag in front of that tag trigram equal that probability
+If it is not found, count how many incidences of that word is in the testing text.
+Push word into beta-array, and have its column filled with 1/$word_count * different tags in unknown file
+If multiple key-value pairs, pass it on with the word
+for word2 and word3, except for multiplying the location with the word trigram and tag trigram with the probability, the steps are still the same.
+
+For words with multiple tags
+Looping through an array storing keys, look for the row that matches that symbol
+for each one, multiple the probability by each probability found in the alpha-array
+Join symbol and bigram
+Look for columns that match the joined trigram
+Look for trigrams with word in front
+If that cell is defined, multiply its value by the trigram probability
+If that cell is not defined, the cell value equals trigram probability
+
+Do the same for word2 and possible tag2, only have look for the word in the middle of the word trigram, and for word3 and possible tag3
+
+When all rows have at least one value and it is the end of the testing text, stop
+
+Look at column at observation (word trigram).
+Look at the first value at [observation][tag trigram].
+Look at next defined value at tag trigram
+If first is greater than next, probability equals first.
+If next is greater than first, probability equals next.
+Repeat for other defined values
+Return that tag trigram as state sequence and the probability
+
+Print results in this format “observ => state_seq lgprob” 
+Print word trigram as observation
+Print tag trigram as state sequence
+Calculate log probability for final trigram probability
+
+
+

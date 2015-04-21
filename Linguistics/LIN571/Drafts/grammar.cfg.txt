@@ -1,0 +1,42 @@
+Quest -> Q Sbar ? 
+Q -> MD | WP | WP$ | BE
+Sbar -> NP VP
+S -> Sbar . | S Sbar .
+Frag -> NP | VP
+PartS -> PP , Sbar
+NP -> N | JJ NP | Det NP | NP PP 
+N -> NNS | NN | NNP | PRP | DT
+Det -> PDT | DT | PRP$ | AT
+PP -> P | PP NP | P PP | PP Sbar
+P -> IN | CC
+VP -> V | VP NP | VP PP | Aux VP | VP AdvP
+V -> VBZ | VBD | VBN
+Adv -> RB | RP
+AdvP -> Adv | Adv AdvP
+Aux -> MD | BE
+
+
+NNS -> 'scientists' | 'humans' | 'cells' | 'fragments' | 'mice' | 'infections'
+VBD -> 'rescued' | 'published' | 'alerted' | 'restored' | 'compromised' | 'injected' | 'discovered' | 'made'
+AT -> 'a' | 'the' 
+DT -> 'this'
+NN -> 'system' | 'research' | 'response' | 'pathogen' | 'researcher' | 'vaccine' | 'immunity' | 'case' | 'type' | 'body'
+MD -> 'will' | 'have' 
+BE -> 'was' | 'is'
+JJ -> 'immune' | 'dendritic' | 'systemic' | 'new' | 'live' | 'weak' | 'infected'
+VBP -> 'work' | 'capture' | 'display' | 'overstimulate' | 'alert'
+IN -> 'in' | 'by' | 'of' | 'with' | 'that'
+PRP -> 'they' | 'them' 
+PRP$ -> 'their'
+VBZ -> 'shuts' | 'invades'
+VBN -> 'infected'
+NNP -> 'Dr. Jose Villadangos' | 'sepsis' | 'malaria'
+RP -> 'down'
+PDT -> 'whole' | 'mouse'
+CC -> 'and'
+RB -> 'online' | 'today'
+
+
+
+
+

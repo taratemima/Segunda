@@ -1,0 +1,10 @@
+l1=0.2, l2=0.3, l3=0.5
+read 26 entries from /home2/fxia/dropbox/09-10/570/hw6/examples/unk_prob_sec22
+renorm_flag=1
+Finish reading
+ sent_num=1921, word_num=46451
+tag_num=47
+unigram_N=50293 bigram_N=50293 trigram_N=50293
+BOS_bigram_num=30
+dumping emiss prob: renorm_flag=1
+All done. Output is under 3g_hmm_0.2_0.3_0.5

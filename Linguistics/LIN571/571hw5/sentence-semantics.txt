@@ -1,0 +1,16 @@
+John.Eats(John)
+exists student.Eats(exists student)
+x.x.John.exists sandwich.Eats(John, food(exists sandwich))
+x.X.x.X.John.exists sandwich.exists soda.Eats(John, food(exists sandwich)) | Drinks(John, exists soda)
+x.x.X.John.Mary.Eats(John) | Eats(Mary)
+x.X.X.all students.Eat(all students) | Drink(all students)
+x.X.X.x.exists student.Writes(exists student, writing(essay)) | Eats(exists student)
+x.x.John. all sandwich.Eats(John, food(all sandwich))
+x.x.x.X.John.all sandwich.all bagel.Eats(John, food(all sandwich)) | Eats(John, food(all bagel))
+x.x.exists bagel.person.-Eats(person, food(bagel))
+x.X.X -(Eat(Jack) | Drink(Jack))
+x.exists person.-Eat(exists person)
+student.exists bagel.x.x.-Eats(student, food(exists bagel))
+x.x.Eats(John,(loc(Seattle))
+
+ 

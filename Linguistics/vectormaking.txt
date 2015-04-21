@@ -1,0 +1,14 @@
+
+sub CreatingContainer{
+$vector = { word => , direction1 =>, featureName1 =>, featureValue1 =>,};
+
+}
+
+#http://www.lwebzem.com/cgi-bin/courses/learning_center.cgi
+
+#sub FindingValues{
+#my @draft = $_[0];
+#$vector = &CreatingContainer;
+
+#}
+

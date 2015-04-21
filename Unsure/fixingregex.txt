@@ -1,0 +1,94 @@
+use warnings;
+use strict;
+use diagnostics;
+
+my $text_sample = "short.txt";
+
+
+while ( $line =~ m/(\b[^\W_][\w'\/-]+\b)/gm ) {
+		$pairs{$1}++;
+			}
+
+
+if(/^\s*$/){
+	next;
+}
+
+s/^\s+//;
+s/\s+$//;
+
+if(scalar @parts != 2){
+	    print STDERR "wrong (word, tag) pair: +$key+\n";
+	    next;
+	}
+
+
+foreach my $part (@parts){
+	if($part =~ /^(.+)\/(.+)$/){
+	    my $w = $1;
+	    my $t = $2;
+	    push(@$word_ptr, $w);
+	    push(@$tag_ptr, $t);
+	}
+
+
+### collect the counts
+	for(my $i=0; $i<$sent_leng; $i++){
+	    my $w = $words[$i];
+	    my $t = $tags[$i];
+	    
+	    ### unigram
+	    if(defined($unigram_hash{$t})){
+		$unigram_hash{$t} ++;
+	    }else{
+		$unigram_hash{$t} = 1;
+	    }
+
+	    $unigram_N ++;
+
+	    ## (word, tag) pair
+	    my $key = "$w $t";
+	    if(defined($wt_hash{$key})){
+		$wt_hash{$key} ++;
+	    }else{
+		$wt_hash{$key} = 1;
+	    }
+
+	    ## word
+	    if(defined($voc{$w})){
+		$voc{$w} ++;
+	    }else{
+		$voc{$w} = 1;
+	    }
+
+
+#she used pointers for the tags-related parts of the assignment. I am not comfortable around pointers yet
+
+while (1){
+	eval "&subroutine";
+	warn $@;
+
+
+sub subroutine{
+
+return 1, @array;
+return 0;
+}
+
+{
+local(@return) = &subroutine(parameter);
+if (shift @return){
+
+success
+	}
+	else{
+fail
+}
+}
+
+Were my friends trying to kill me?
+I lied to her. "I am allergic to buttercream."
+"Oh. You never told me that. I would have gotten a different frosting."
+"No, no, not fatal." I tried to soften my lie, make it plausible. 
+
+She was crying, trying to revive me, but I was going anyway. It is nice to see loyalty. I am sorry I did not see it until now.

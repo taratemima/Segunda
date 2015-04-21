@@ -1,0 +1,8 @@
+Executable = #!/opt/perl/bin/perl
+Universe = vanilla
+input = ./571hw2/hw3.pl
+output = hw
+.out
+getenv = true
+error = hw3.err
+Queue

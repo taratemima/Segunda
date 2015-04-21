@@ -1,0 +1,145 @@
+#sub Test1{
+#	my $file = 'wsj_sec0.txt';
+#	&CreateTrainingStructure($file);
+#}
+
+#&Test1;
+#Result: it did print, but it did not have unique keys for the document, just for the individual lines. Realized that I may have #forgotten $/ = "". Will try a new variation with $/ equalling new line after testing with warnings and strict on. 
+#Putting it on strict made difference to output. 
+#Result: Putting in the paragraph mark worked. 
+
+#sub Test2{
+#	my $file = 'wsj_sec0.txt';
+#	my @samples = &CreateTrainingStructure($file);
+
+#for (my $s = 0; $s < 10; $s++){
+#	print "$samples[$s]{Word} \n";
+#	print "$samples[$s]{POS} \n";
+#	print "$samples[$s]{Number} \n";
+
+	
+#	}
+
+
+
+#}
+
+#&Test2;
+
+#Result: Adding a default POS if there is nothing after the / helped get rid of the warnings. Apparently, calling individual elements #of the anonymous hash worked. So, why did the counting the elements not work?
+
+#sub Test3{
+#	my $file = 'wsj_sec0.txt';
+#	my @samples = &CreateTrainingStructure($file);
+
+#	my $counter = 0;
+#for (my $s = 0; $s < 29; $s++){
+#	my $testTag = "NNP";
+#	if ($samples[$s]{POS} eq $testTag){
+#		$counter++;
+
+#		}
+#	}
+
+#	print "The number of NNPs are ";
+#	print "$counter \n";
+	
+
+#}
+
+#&Test3;
+
+#Results: after declaring the counter variable before the for loop, I got the answer I wanted. 
+#I changed it from $counter++ to $counter += 1 thinking that was the issue. I will try it with ++
+#Ok, ++ worked
+
+
+#sub Test4{
+#	my $file = 'wsj_sec0.txt';
+#	my @samples = &CreateTrainingStructure($file);
+
+#	my @listOfPOS;
+#for (my $s = 0; $s < $#samples; $s++){
+#	push (@listOfPOS, $samples[$s]{POS});
+#			}
+
+#my @unique = ();
+#my %seen = ();
+   
+#foreach my $elem ( @listOfPOS )
+#{
+#	next if $seen{ $elem }++;
+#	push @unique, $elem;
+#		}
+
+#print "Here is the list: \n";
+#for (my $p = 0; $p < $#unique; $p++){
+#	print "$unique[$p] \n";
+#	}
+
+#}
+
+#&Test4;
+
+#Result: got a whole bunch of hash codes. I think I forgot to specify key. When I did that, it worked. Before I add uniq, would #specifying paragraph get the same or different results? It got the same result. 
+#Hey, I can use hash for this, neat.
+
+Reminder: if I want to do for whole dictionary, do a foreach loop for the unique list of tags and words. Store results in a two dimensional array
+
+
+#foreach my $u (@unique){
+#	my $select_total = 0;
+#	print "The tag is $u ";
+#	for (my $t = 0; $t < $#samples; $t++){
+#		if (($samples[$t]{$selection}) eq $u){
+#			$select_total += $samples[$t]{Number};
+#			}
+#		}
+#	print "The total is $select_total. \n";
+
+
+Somehow, when adding things to catch 0 division, I broke stuff. I am going to figure out what. I think making the default condition more than zero rather than equal to zero helped. 
+
+#&CalculatePossiblePaths('wsj_sec0.txt');
+
+#I may need the arrays rather than the count
+#If I do that, what changes should I make to CalculatePossiblePaths? 
+#I made the changes and it still works
+
+#sub Test1
+#test 1 commands transferred to WordTotal and TagTotal
+#There seemed to be more printing than I thought, it is a matter of knowing where and which for loops to 
+#place commands.
+#Once I put the select_total assignment within the foreach loop, I got the answer that I wanted.
+
+#&Test1('wsj_sec0.txt', "POS");
+
+#Test 2 will look for both tag and word and find the number for it.
+
+#&Test2('wsj_sec0.txt', "the", "DT");
+#It worked and transferred to SpecificTagTotal
+
+Question 1 is asking me what is the best choice for tags given a sentence and possible multiple tags for the same word
+
+#&GetProbability('wsj_sec0.txt', "fish", "VBP");
+#Got the possible unknown word error. Hah, know it.
+#Got an illegal division error. So I guess I should put in something to catch that.
+#I put in that unknown words file and the rest of the function cannot continue unless certain numbers are more than zero
+
+#Cannot use string "members" as a hash reference? WHY?
+#Ah, I should have kept dictionary for look up. Ah.
+
+
+
+#'test-plainwords.txt'
+#'wsj_sec0.txt'
+#It was working this, why is not work now. Was it change in the text string?
+
+#&LookForWords('test-plainwords.txt', 'wsj_sec0.txt');
+
+#I got a list printed, but it looks too neat. I think that if there was more than one same key, they used the last value. 
+#I got the number counted, and my intuition was right, some of them had more than one entry. I got a way to make it look much 
+#nicer
+
+
+

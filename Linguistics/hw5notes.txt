@@ -1,0 +1,43 @@
+I did not use the example training data because there would be these bizarre blank square characters when I read it in WordPad. I look at that document in Word, and did not find those characters. So, I saved the document as a text document. So, it should be good to go.
+
+I had a problem with arrays from sentences being passed into the Ngram subfunctions. After trial and error, and moving the functions to places they can get the data better, I managed to solve it. I noticed that if I use the text with newlines, the function counted ngrams within the sentence, but not within the document. To get a more accurate count, I used the document without newlines. 
+
+
+After that, I have to format the calculating and printing of the language model. This is my version of the class lecture slides.
+
+Modified ARPA format
+\data\
+Unigrams: type: token:
+Bigrams: type: token:
+Trigrams: type: token:
+
+Types: the number of distinct words in a corpus
+Tokens: the total number of words in a corpus
+
+\1-grams:
+count:  probability:  logprob:  word: 
+...
+\2-grams:
+count:  probability:  logprob:  word1: word2: 
+\3-grams:
+count:  probability:  logprob:  word1: word2:  word3: 
+...
+\end\
+# cnt is Cnt(w1,w2), prob is P(w2| w1)
+# prob is P(w3| w1, w2)
+
+PPL
+With current sentences
+Find type(s) in the sentence
+Calculate total probability of sentence from beginning to end
+
+With new sentences
+Find type(s) in the sentence
+If word is not in dictionaries, use $type/$token probability
+Calculate total probability of sentence from beginning to end
+
+
+
+
+
+ 

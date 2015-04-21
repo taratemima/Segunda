@@ -1,0 +1,332 @@
+
+
+while (($dictcategory, $dictarray) = each(%alphabet)){
+	foreach $dictarray(values %alphabet){
+		if($newstring =~ m /$dictarray/){		
+
+#It did not change the output
+# I am wondering what I can do about that. 
+#switch for initial states
+switch($dictcategory){
+	case "v1"{
+		$state = 1;}
+	case "c1"{
+		$state = 2;}
+	case "c2"{
+		$state = 3;}
+	case "v2"{
+		$state = 4;}
+	case "t"{
+		$state = 5;}
+	case "v3"{
+		$state = 6;}
+	case "c3"{
+		$state = 9;}
+	}
+
+
+#switch for transitions
+switch($state){
+	case 2{
+		if($dictcategory eq "v1"){
+
+#all other category transitions are covered
+#we'll do the rest here
+
+			$state = 7;
+		}
+				elsif($dictcategory eq "c1"){
+				 	$state = 8;}
+						
+
+}
+
+	case 4{
+		if($dictcategory eq "v1"){
+			$state = 7;}
+				elsif($dictcategory eq "c1"){
+					$state = 8;
+					}
+						
+		}
+	
+	case 5{
+		if($dictcategory eq "v1"){
+				$state = 7;
+					}
+					elsif($dictcategory eq "c1"){
+						$state = 8;
+						}
+			
+								
+	}
+	case 6{
+		if($dictcategory eq "v1"){
+			$state = 7;
+		}
+				elsif($dictcategory eq "c1"){
+					$state = 8;
+			}
+					
+}
+	case 7{
+		if($dictcategory eq "v1"){
+			$newstring =~ s/$dictarray/"\<br\>" $dictarray/;
+#replace whatever letter set this off by the same letter with <br> tag before it
+			$state = 1;
+		}
+			
+	}
+
+	case 8{
+		if($dictcategory eq "c1"){
+		$newstring =~ s/$dictarray/"\<br\>" $dictarray/;
+#replace whatever letter set this off by the same letter with <br> tag before it
+		$state = 2;
+		}
+}
+
+	case 9{
+		$newstring =~ s/./."\<br\>"/
+#Substitute all but newline with <br> HTML tag
+				}
+			}
+		}
+	}
+}
+
+#I'll have to keep the switches in the while statement, which is not so terrible. 
+
+sub print_thai{
+	open(REVISE,">fsm-output.html");
+	open(SAMPLE, ">thai.html");
+
+print SAMPLE "\<HTML\>\<META HTTP-EQUIV=\' content-type \'content=\'text \/ html;charset=utf8' /\>\<body\>$thaistring\<br/\>\</body\> \</HTML\>";
+
+print REVISE "\<HTML\>\<META HTTP-EQUIV=\' content-type \'content=\'text \/ html;charset=utf8' /\>\<body\>$newstring\<br/\>\</body\> \</HTML\>";
+	}
+
+&print_thai;
+	
+#Hashes, arrays, switches, and I did not use the modules after all
+#I guess I get confused when I have lots of features available
+#and not many features I understand or even recognize
+
+http://tlt.its.psu.edu/suggestions/international/bylanguage/thaichart.html#about
+
+case 2{
+		if($label eq "c2"){
+			$state = 3;
+			}
+				elsif($label eq "v2"){
+					$state = 4;
+			}
+					elsif($label eq "t"){
+						$state = 5;
+			}
+						elsif($label eq "v3"){
+						$state = 6;
+			}
+							elsif($label eq "c3"){
+							$state = 9;
+			}
+								elsif($label eq "v1"){
+								$state = 7;
+			}
+									elsif($label eq "c1"){
+										$state = 8;
+			}
+										else{
+											last;
+				}
+		}
+	case 3{
+		if($label eq "v2"){
+				$state = 4;
+			{
+				elsif($label eq "t"){
+					$state = 5;
+			}
+					elsif($label eq "v3"){
+						$state = 6;
+			}		
+						elsif($label eq "c3"){
+							$state = 9;
+			}
+				else{
+					last;
+			}
+		}
+	case 4{
+		if($label eq "t"){
+			$state = 5;
+			}
+				elsif($label eq "v3"){
+					$state = 6;
+			}
+					elsif($label eq "c3"){
+						$state = 9;
+			}
+							elsif($label eq "v1"){
+								$state = 7;
+			}
+								elsif($label eq "c1"){
+									$state = 8;
+			}
+				else{
+					last;
+			}
+		}
+
+#Maybe I should refer to some subroutine to handle cases 4-6
+#I know I make more work for myself, not to mention increasing typos,
+#but it seems better than doing nothing
+
+	case 5{
+		if($label eq "v3"){
+			$state = 6;
+			}
+				elsif($label eq "c3"){
+					$state = 9;
+			}
+					elsif($label eq "v1"){
+						$state = 7;
+			}
+						elsif($label eq "c1"){
+							$state = 8;
+			}
+				else{
+					last;
+			}
+		}
+	case 6{
+		if($label eq "c3"){
+			$state = 9;
+			}
+				elsif($label eq "v1"){
+					$state = 7;
+			}
+					elsif($label eq "c1"){
+						$state = 8;
+			}
+				else{
+					last;
+			}
+	}
+
+	
+
+Will need to try this
+
+my @color = qw(green blue yellow cyan violet puce taupe lilac);
+for my $item @color (
+if ($item eq 'red') {
+  print "Found red.\n";
+  exit;
+}
+}
+print "Found no red.\n";
+
+# retaining @color from above
+my %color;
+for my $item (@color) {
+$color{$item} = 1;  # 1 or any "true" value
+}
+if ($color{'red'}) {
+print "Red found!\n";
+}
+
+sub verify{
+	
+	if($v1[$letter]{
+		case = 1;
+	elsif($c1){
+		$state = 3;
+		}
+			elsif(@v2[$letter]){
+				$state = 4;
+			}
+				elsif($label eq "t"){
+					$state = 5;
+				}
+					elsif($label eq "v3"){
+						$state = 6;
+						}
+							elsif($label eq "c3"){
+								$state = 9;
+							}
+								elsif($label eq "v1"){
+									$state = 7;
+								}
+									elsif($label eq "c1"){
+										$state = 9;
+											}
+	$state
+
+	}
+switch($state){
+	case 0{
+
+#This is for any other letters that are 'caught', since I assume that the controls
+#will work at it all at once at the text
+		if (@fancy){
+			&verify;
+			}
+						else{
+							last;
+		}
+	}
+	case 1{
+		if($label eq "c1"){
+			$state = 2;
+				}
+					else{
+						last;
+			}
+		}
+
+	case 2{ if ($label){
+			&verify;
+			}else{
+				last;
+		}
+}
+	case 3{if ($label){
+			&verify;
+			}else{
+				last;
+	}	
+}
+	case 4{if ($label){
+			&verify;
+			}else{
+				last;
+	}	}
+	case 5{if ($label){
+			&verify;
+			}else{
+				last;
+	}	}
+	case 6{if ($label){
+			&verify;
+			}else{
+				last;
+	}	}
+
+	case 7{print TEST "/<br/> $letter";
+		$state = 1;
+			}
+	
+	case 8{print TEST "/<br/> $letter";
+		$state = 2;
+		}
+	case 9{
+		print TEST "$letter /<br/>";
+		$state = 0;
+		}
+	
+	
+
+				}
+		}
+	}

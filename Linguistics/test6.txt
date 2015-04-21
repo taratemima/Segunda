@@ -1,0 +1,2 @@
+Total number of unique words are 7349 
+The estimated total paths available are 249866 . 

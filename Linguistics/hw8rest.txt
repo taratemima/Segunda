@@ -1,0 +1,55 @@
+Q2: Creating attribute-value table (60 points)
+(a) 20 points: Write a script, proc file.sh, that processes a document and prints out the feature
+vectors.
+• The command line is: proc file.sh input file targetLabel output file
+• The input file is a text file (e.g., input ex).
+• The output file has only one line with the format (e.g., output ex):
+instanceName targetLabel f1 v1 f2 v2 ....
+– The instanceName is the filename of the input file.
+– The targetLabel is the second argument of the command line.
+• To generate the feature vector, the code should do the following (see Slide #33-35 in
+11 18 Mallet.pdf) :
+– First, skip the header; that is, the text before the first blank line should be ignored.
+– Next, replace all the chars that are not [a-zA-Z] with whitespace, and lowercase all the
+remaining chars.
+– Finally, break the text into token by whitespace, and each token will become a feature.
+– The feature values will be the frequency of the sequences.
+– The (featname, value) pairs are ordered by the spelling of the featname.
+• For instance, running “proc file.sh $exDir/input ex c1 output ex” will produce output ex
+as the one under the $exDir.
+(b) 20 points: Write a script, create vectors.sh, that creates training and test vectors from several
+directories of documents. This script has the same function as text2vectors, except that the
+vectors produced by this script are in the text format and the training/test split is not random.
+• The command line is: create vectors.sh train vector file test vector file ratio dir1 dir2 ...
+That is, the command line should include one or more directories.
+• ratio is the portion of the training data. For instance, if the ratio is 0.9, then the FIRST
+90% of the FILES in EACH directory should be treated as the training data, and the
+remaining 10% should be treated as the test data.
+• train vector file and test vector file are the output files and they are the training and test
+vectors in the text format (the same format as the output file in Q2(a)).
+• The class label is the basename of an input directory. For instance, if a directory is
+hw8/20 newsgroups/talk.politics.misc, the class label for every file under that directory
+should be talk.politics.misc.
+(c) 10 points: Classify the documents in the talk.politics.* groups under $dataDir.
+2
+Table 2: Classification results for Q2(c)-(e)
+Training accuracy Test accuracy
+(3) three talk.politics.* groups
+(4) four sci.* groups
+(5) four rec.* groups
+• Run create vectors.sh from Q2(b) with the ratio being 0.9, and the directories being
+talk.politics.guns, talk.politics.mideast, and talk.politics.misc.
+• Run info2vectors to convert the vectors to the binary format, vectors2train for training
+(with MaxEnt trainer) and classify for testing.
+• Suppose you run info2vector on train vector file and create train.vectors. When you run
+info2vectors for the test vector file, remember to use the option “--use-pipe-from train.vectors”.
+That way, the two vector files will use the same mapping to map feature names to feature
+indexes.
+• Save all the files (the vectors in text format and binary format, the MaxEnt model, the
+classification output) under a directory called q2c.
+• What are the training and test accuracy?
+(d) 5 points: The same as Q2(c), except that you will use the four sci.* groups under $dataDir.
+Save the files under a directory called q2d.
+(e) 5 points: The same as Q2(c), except that you will use the four rec.* groups under $dataDir.
+Save the files under a directory called q2e.
+Fill out Table 2 with the results from (a)-(e).

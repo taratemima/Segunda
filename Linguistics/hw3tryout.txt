@@ -1,0 +1,116 @@
+
+#print all words => print none or the output, probability
+
+my @input = split;
+
+#four fsts
+#10 examples
+#two ties
+
+my $ties = {
+word =>,
+output1 =>,
+output2 =>,
+probability1 =>,
+probability2 =>,
+
+};
+
+my $match= {
+word =>,
+output =>,
+probability => 1,
+error => "\t = > *none* \t 0 \n"
+
+};
+
+“tar –cvf hw1.tar hw1_dir"
+
+
+sub LetterFST{
+#output will be stdout
+
+#no a in $_
+#odd a
+#even a
+
+#Use states
+
+}
+
+sub FSTOne{
+#stdout
+#Use states
+
+}
+
+sub FSTTwo{
+#stdout
+#Use states
+}
+
+sub FSTThree{
+#installed array
+#Use states
+}
+
+
+sub CalculateProbability{
+my $total = 1;
+my @words = $_[0];
+
+my $fish = $ties;
+my $can = $ties;
+
+$fish->word = "fish";
+$fish->output1 = "NOUN";
+$fish->output2 = "VERB";
+$fish->probability1 = 0.7;
+$fish->probability2 = 0.3;
+
+$can->word = "can";
+$can->output1 = "VERB";
+$can->output2 = "NOUN";
+$can->probability1 = 0.9;
+$can->probability2 = 0.1;
+
+my $they = $match;
+$they->word = "they";
+$they->output = "PRO";
+
+for (my $i = 0; $i =< 4; $i++){
+if ($words[$i] =~ m/$they->word/){
+print $they->output;
+$total =* $they->probability;
+}
+elsif ($words[$i] =~ m/$fish->word/){
+	if ($words[$i-1] =~ m/$they->word/){
+		print $fish->output2;
+		$total =* $fish->probability2;
+			}
+			else{
+		print $fish->output1;
+		$total =* $fish->probability1;
+			}
+		}
+
+elsif ($words[$i] =~ m/$can->word/){
+	if (($total * $can->probability1) < ($total * $can->probability2)){
+		print $can->probability2;
+		$total =* $can->probability2;
+			} 
+			else{
+			print $can->probability1;
+			$total =* $can->probability1;
+				}
+
+			}
+
+		}
+
+
+	}
+
+print $total;
+
+}

@@ -1,0 +1,33 @@
+Question 2
+
+I started out just splitting at certain bits of puncutation and trying to transliterate any strings into any spaces. However, while the words are split at the right parts, and values are incremented, much needs to be done before it is a decent program. For one, large spaces are counted as words, even though I put a split command for one or more spaces. I think special characters got into my copy of the ex1 file. I have done substitutions for the percent sign, the ampersand (&), and the abbreviation of Mister. However, for acronyms, I have not really developed a strategy. I think what I will do is link to Acronym finder. No word lists were used in this program.
+
+Question 5
+
+In pseudocode
+#sub Question5{
+#my $chance = (1/38) = 0.026315789473684210526315789473684;
+#my $turns = 500;
+#my $wins = 13;
+
+500 C 13 * (0.026315789473684210526315789473684 to the power of 13) * ((1 - 0.026315789473684210526315789473684) to the power of 487)
+
+(500!/13! 487!) * (0.026315789473684210526315789473684 to the power of 13) * ((1 - 0.026315789473684210526315789473684) to the power of 487)
+
+(500!/13! 487!) * (0.026315789473684210526315789473684 to the power of 13) *(0.97368421052631578947368421052632 to the power of 487)
+
+According to http://stattrek.com/Tables/Binomial.aspx, the answer is approximately 0.1112883
+
+#my $mu = ($wins/$turns) * $chance;
+
+Or does the $mu equal $wins/$turns? I am not really sure. 
+
+This is the value of the assumed mu 
+
+0.026 *  0.026315789473684210526315789473684 = 0.000684210526315789473684210526298
+
+I am not sure what this is asking. It is more what would I use as the mean number of successes.
+
+e to the power of -0.000684210526315789473684210526298 * (0.000684210526315789473684210526298 to the power of 13) / 13!
+
+The answer was something like 4e, but there were lots of other numbers involved. I think it was too long for my calculator. 

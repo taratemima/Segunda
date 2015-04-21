@@ -1,0 +1,5 @@
+http://mjtokelly.blogspot.com/2006/04/ita-software-puzzle-word-rectangle.html
+http://notes.autologictech.com/2010/01/improvements-to-solution-to-word.html
+http://codegolf.stackexchange.com/questions/2554/find-possible-word-rectangles
+http://maxnoy.com/interviews.html
+

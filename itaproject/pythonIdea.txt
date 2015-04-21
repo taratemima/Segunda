@@ -1,0 +1,10 @@
+>>> puzzle_letters = nltk.FreqDist('egivrvonl')
+>>> obligatory = 'r'
+>>> wordlist = nltk.corpus.words.words()
+>>> [w for w in wordlist if len(w) >= 6 [1]
+...                      and obligatory in w [2]
+...                      and nltk.FreqDist(w) <= puzzle_letters] [3]
+['glover', 'gorlin', 'govern', 'grovel', 'ignore', 'involver', 'lienor',
+'linger', 'longer', 'lovering', 'noiler', 'overling', 'region', 'renvoi',
+'revolving', 'ringle', 'roving', 'violer', 'virole']
+

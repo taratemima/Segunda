@@ -1,0 +1,100 @@
+This module implements a trie data structure. The term "trie" comes from the word retrieval, but is generally pronounced like "try". A trie is a tree structure (or directed acyclic graph), the nodes of which represent letters in a word. For example, the final lookup for the word 'bob' would look something like $ref->{'b'}{'o'}{'b'}{'00'} (the 00 being an end marker). Only nodes which would represent words in the trie exist, making the structure slightly smaller than a hash of the same data set.
+
+The advantages of the trie over other data storage methods is that lookup times are O(1) WRT the size of the index. For sparse data sets, it is probably not as efficient as performing a binary search on a sorted list, and for small files, it has a lot of overhead. The main advantage (at least from my perspective) is that it provides a relatively cheap method for finding a list of words in a large, dense data set which begin with a certain string.
+
+The term "word" in this documentation can refer to one of two things: either a reference to an array of strings, or a scalar which is not a reference. In the case of the former, each element of the array is treated as a "letter" of the "word". In the case of the latter, the scalar is evaluated in string context and it is split into its component letters. Return values of methods match the values of what is passed in -- that is, if you call lookup() with an array reference, the return value will be an array reference (if appropriate).
+
+NOTE: The return semantics of the lookup_data method have CHANGED from version 1.0 to version 1.1. If you use this method, be sure to see the perldoc on that method for details.
+
+METHODS 
+new() 
+new({option0 => value0, option1 => value1, ...}) 
+This is the constructor method for the class. You may optionally pass it a hash reference with a set of option => value pairs. The options which can be set at object creation-time are "deepsearch", "end_marker" and "freeze_end_marker". See the documentation on the methods which set and report those values for more information.
+
+$trie->add(word, word1, ...) 
+This method attempts to add the words to the trie. Returns, in list context, the words successfully added to the trie. In scalar context, returns the number of words successfully added. As of this release, the only reason a word would fail to be added is if it is already in the trie.
+
+$trie->add_data(word => data0, word1 => data1, ...) 
+This method works in basically the same way as add(), except in addition to adding words to the trie, it also adds data associated with those words. Data values may be overwritten by adding data for words already in the trie. Its return value is the same and applies only to new words added to the trie, not data modified in existing words.
+
+$trie->remove(word, word1, ...) 
+This method attempts to remove the words from the trie. Returns, in list context, the words successfully removed from the trie. In scalar context, returns the number of words successfully removed. As of this release, the only reason a word would fail to be removed is if it is not already in the trie.
+
+$trie->delete_data(word, word1, ...) 
+This method simply deletes data associated with words in the trie. It is the equivalent to perl's delete builtin operating on a hash. It returns the number of data items deleted in scalar context, or a list of words for which data has been removed, in list context.
+
+$trie->lookup(word) 
+$trie->lookup(word, suffix_length) 
+This method performs lookups on the trie. In list context, it returns a complete list of words in the trie which begin with word. In scalar context, the value returned depends on the setting of the 'deepsearch' option. You can set this option while creating your Trie object, or by using the deepsearch method. Valid deepsearch values are:
+
+boolean: Will return a true value if any word in the trie begins with word. This setting is the fastest.
+
+choose: Will return one word in the trie that begins with word, or undef if nothing is found. If word exists in the trie exactly, it will be returned.
+
+count: Will return a count of the words in the trie that begin with word. This operation may require walking the entire tree, so it can possibly be significantly slower than other options.
+
+prefix: Will return the longest entry in the trie that is a prefix of word. For example, if you had a list of file system mount points in your trie, you could use this option, pass in the full path of a file, and would be returned the name of the mount point on which the file could be found.
+
+exact: If the exact word searched for exists in the trie, will return that word (or the data associated therewith), undef otherwise. This is essentially equivalent to a hash lookup, but it does have utility in some cases.
+
+For reasons of backwards compatibility, 'choose' is the default value of this option.
+
+To get a list of all words in the trie, use lookup("") in list context.
+
+If the suffix_length option is provided, the behavior is a little bit different: Instead of returning words from the trie, it will instead return suffixes that follow word, and those suffixes will be no longer than the numerical value of the option. If the option's value is negative, suffixes of all lengths will be returned. This option only has effect if the call to lookup() is in list context, or if the 'deepsearch' parameter is set to either 'count' or 'choose'. It has no meaning for the other scalar deepsearch settings, and will be ignored in those cases.
+
+For example, assume your trie contains 'foo', 'food' and 'fish'. lookup('f', 1) would return 'o' and 'i'. lookup('f', 3) would return 'oo', 'ood' and 'ish'. lookup('fo', -1) would return 'o' and 'od'. In scalar context, these calls would return what you'd expect, based on the value of deepsearch, with the 'count' and 'choose' options operating only over the set of suffixes. That is, The first call would return 2 with 'count', and either 'o' or 'i' with 'choose'.
+
+Note that lookup("", -1) is the same as lookup("").
+
+$trie->lookup_data(word) 
+This method operates in essentially the same way as lookup(), with the exception that in list context it returns a list of word => data value pairs and in scalar context, where lookup() would return a word, lookup_data() returns the data value associated with that word. In cases where the deepsearch setting is such that lookup() would return a number, lookup_data() will return the same number.
+
+Please note that the return value in list context is NOT a hash. It can be coerced into a hash, and if you are not using any multi-character letters in your trie, this will work fine. However otherwise, if it is coerced into a hash, all the of the array references (remember, words are array refs when using multi-character letters) will be stringified, which renders them (for the most part) useless.
+
+$trie->deepsearch() 
+$trie->deepsearch(new_setting) 
+If option is specified, sets the deepsearch parameter. Option may be one of: 'boolean', 'choose', 'count', 'prefix'. Please see the documentation for the lookup method for the details of what these options mean. Returns the current (new) value of the deepsearch parameter.
+
+$trie->end_marker() 
+$trie->end_marker(new_marker) 
+If the marker is provided, sets the string used internally to indicate the end of a word in the trie to that marker. Doing this causes a complete traversal of the trie, where all old end markers are replaced with the new one. This can get very slow, so try to call this method when the trie is still small. Returns the current (new) end marker value.
+
+$trie->freeze_end_marker() 
+$trie->freeze_end_marker(new_flag) 
+If flag is provided and a true value, turns off checking and automatic updating of the end marker. If flag is provided and false, turns this checking on. Returns the current (new) truth value of this setting.
+
+End Markers 
+Overview
+The following discussion is only important for those people using multi-character letters, or words as array references. If you are just using this module with words as simple strings, you may disregard this section.
+
+First, it's important to understand how data is stored in the trie. As described above, the trie structure is basically just a complicated hash of hashes, with each key of each has being a letter. There needs to be a distinct way of determining when we're at the end of a word; we can't just use the end of the hash structure as a guide, because we need to distinguish between the word "barn" being in the trie and the words "bar" and "barn" being there.
+
+The answer is an end marker -- a distinct token that signifies that we're at the end of the word. Using the above example, if "bar" and "barn" are in the trie, then the keys of the hash at "r" would be "n" and this end marker. Choosing this end marker is easy when all letters are just one character -- we just choose any two-character string and we know that it will never match a letter. However, once we allow arbitrary multi-character letters, then things get much more difficult: there is no possible end marker which can be guaranteed to always work. Here is where we enter some dark water.
+
+Dark Water
+In order to make sure that the end marker is always safe, we must check incoming letters on every word submission. If the word is an array ref, then each letter in it is compared to the current end marker. This does add overhead, but it's necessary. If it is found that a letter does conflict with the end marker, then we choose a new end marker.
+
+In order to find a new end marker, we obviously need to find a string that isn't already being used in the trie. This requires a complete traversal of the trie to collect a complete set of the letters in use. Once we have this it is a simple exercise to generate a new marker which is not in use.
+
+Then we must replace the marker. This of course requires a complete traversal once again. As you can see, this adds a bit of overhead to working with multi-character letters, but it's neccessary to make sure things keep working correctly. This should be fine for people with small data sets, or who just do a bunch of additions ahead of time and then only do lookups. However, if computation time is important to you, there are ways to avoid this mess.
+
+Speeding Things Up
+One way to speed things up is to avoid the need to replace the end marker. You can set the trie's end marker using the end_marker() method, or at creation time, by passing the end_marker option to the trie in its constructor's option hashref. Note that setting the end marker causes a trie traversal, as it must update existing data. As such, you want to set the end marker as soon as possible.
+
+Note that end marker MUST be at least 2 characters long.
+
+Just setting the end marker though, won't stop the trie from checking each letter as you add arrayref words. If you are 100% sure that the end marker you set won't ever show up in an added word, you can either use the freeze_end_marker() method or the freeze_end_marker construction option to tell the trie not to check any more. However, be careful -- once this option is enabled, the data structure is no longer self-policing, so if a letter that matches your end marker does end up slipping in, strange things will begin to happen.
+
+Examples
+Here are some situations in which you might want to use the methods described in the previous section.
+
+Let's say your application takes user input data describing travel across the united states, and each node in the trie is a two-letter state abbreviation. In this case, it would probably be fairly safe to set your end marker to something like '00'. However, since this is user-supplied data, you don't want to let some user break your whole system by entering '00', so you should probably not freeze the end marker in this case.
+
+Let's say you're using the trie for a networking application -- your words will be IP addresses, and your letters will be the four "quads" of an IP address. In this case you can safely set your end marker to 'xx' or anything with letters in it, and know that there will never be a collision. It is entirely reasonable to set the freeze tag in this case.
+
+Future Work 
+There are a few methods of compression that allow you same some amount of space in the trie. I have to figure out which ones are worth implementing. I may end up making the different compression methods configurable. 
+I have now made one of them the default. It's the least effective one, of course.
+
+The ability to have Tree::Trie be backed by a "live" file instead of keeping data in memory. This is, unfortunately, more complicated than simply using TIE, so this will take some amount of work. 

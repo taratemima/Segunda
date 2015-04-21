@@ -1,0 +1,559 @@
+#!/usr/bin/perl
+
+Use strict;
+Use warnings;
+Use diagnostics;
+
+Sub CreateWordList{
+       $/ = "";
+Open(LIST, "wordlist.txt") || die "Cannot find file for word list . \n";
+       My @words;
+       My $words = '';
+While(<LIST>){
+               Chomp;
+               $words = $_;
+               @words = split(/\s+/, $words);
+               }
+
+Return @words;
+}
+
+Sub CreateWordLengthHash{
+       My @words = $_[0];
+       My %wordlist;
+
+       Foreach my $w (@words){
+               If(defined($w)){
+                       $wordlist{$w} = length($w);
+               }
+
+}
+       Return %wordlist;
+}
+
+#Start testing here
+#related to path matrix only
+
+Sub CreatePathProb{
+       (my $observation, my $state, my @state_list, my @ob_list) = @_;
+       My @path;
+       While(<>){
+               Push(@path, [ @ob_list ]);
+                       }
+       For my $i (1 .. ($state + 1)){
+               $path[$i][0] = $state_list[$i -1];
+               }
+       For my $j (2 .. ($observation + 2)){
+               $path[0][$j] = $ob_list[$j -1];
+       }
+
+       $path [0][1] = "Totals";
+
+       Return @path;
+}
+
+Sub InitializeProbabilityTable{
+       My @entries = $_[0];
+       My @states = (0 .. 28);
+My @letters = ('a' .. 'z');
+My $state_total = 29;
+       My $alphabetNumber = 28;
+       My @pathMatrix = &CreatePathProb($state_total, $alphabetNumber, @states, @letters);
+       My $pathTotal = 0;
+
+
+       Foreach my $e (@entries){
+For my $i(1 .. $state_total){
+                       My $offsetEx = $pathMatrix[$i][0];
+                       My $totalForOffset = &CountOffsets($e, $offsetEx);
+                       If(defined($totalForOffset)){
+                               $pathMatrix[$i][1] = $totalForOffset;
+                               $pathtotal += $totalForOffset;
+                               }
+                       Else{
+                               $pathMatrix[$i][1] = 0;
+                       }
+}
+}
+
+       Return(@pathMatrix, $pathTotal);
+}
+
+Sub CalculatePathProb{
+       (my @path, my $total) = @_;
+       My $baseline = &InitializeLetterBaseline;
+       While($total > 0){
+For (my $state = 1; $state < $#path; $state++){
+My $specTotal = $path[$state][1];
+For(my $time = 2; $time < $#{$path [$state]}; $time++){
+               My $value = $path[$i][$j];
+               If($value > 0){
+                       My $answer = &CalculateProb($specTotal, $value);
+                       If($answer >= $baseline){
+                               $path[$i][$j] = $answer;
+                               }
+                       Elsif($answer < $baseline){
+                               $path[$i][$j] = $answer/$baseline;
+                       }
+                       $total -= $specTotal;
+               }
+
+}
+}
+}
+Return @path;
+}
+
+#related to counting specific offset state and letter observations only
+Sub TheOffsets{
+       (my $word, my $offset) = @_;
+       My $count = 0;
+       My $testLetter = &WordToLetter($word, $offset);
+Return($count, $testLetter);
+}
+Sub CountLetterOffset{
+       (my $word, my $letter, my $offset) = @_;
+       (my $count, my $testLetter) = &TheOffsets($word, $offset);
+If($testLetter eq $letter){
+$count++;
+}
+}
+Return $count;
+}
+Sub CountOffsets{
+       (my $word, my $offset) = @_;
+       (my $count, my $testLetter) = &TheOffsets($word, $offset);
+
+       If(defined($testLetter)){
+               $count++;
+       }
+       Return $count;
+
+
+}
+
+#Bridging @pathMatrix and keys to length hash
+Sub FillMatrixWithWord{
+       #make it into accepting a string as input
+My $string = ' ';
+My $length = 0;
+($string, $length, my @pathMatrix, my $total) = @_;
+For (my $state = 1; $state < $#pathMatrix; $state++){
+My $totalFor = $pathMatrix[$state][1];
+My $chosen_offset = $pathMatrix[$state][0];
+While($totalFor > 0){
+For(my $time = 2; $time < $#{$pathMatrix[$state]}; $time++){
+My $chosen_letter = $pathMatrix[0][$time];
+                       If($length >= $chosen_offset){
+My $amount = &CountLetterOffset($string, $chosen_letter, $chosen_offset);
+                       If($amount > 0){
+                               $pathMatrix[$i][$j] += $amount;
+                               $totalFor -= $amount;
+}
+}
+}
+}
+}
+       Return (@pathMatrix, $total);
+
+}
+
+Sub FillMatrixWithSortedArray{
+
+(my %wordlen, my @words) = @_;
+       (my @pathMatrix, my $total) = &InitializeProbabilityTable(@words);
+       My @sorted_words = & ReverseHashSort(%wordlen, @words);
+Foreach my $ex (@sorted_words){
+       My $len = $wordlen{$ex};
+       (@pathMatrix, $total) = &FillMatrixWithWord($ex, $len, @pathMatrix, $total);
+}
+       Return(@path, $total);
+
+}
+
+Sub TestPathMatrix{
+       #Open(PASS, ">milestonePath.txt");
+       (my %wordlist, my @words) = &EndOfPartOne;
+       (my @path, my $total) = & FillMatrixWithSortedArray(%wordlist, @words);
+       &MatrixPrint(@path, 0);
+}
+
+Sub MatrixPrint{
+(my @path, my $baseline) = @_;
+For (my $across = 0; $across < $#path; $across++){
+For(my $down = 0; $down < $#{$path [$across]}; $down++){
+                       My $value = $path[$across][$down];
+                       If($value > $baseline){
+                               My $row = $path[0][$down];
+                               My $col = $path[$across][0];
+                               Print "$row at $col . . . passed \n";
+                       }
+               }
+       }
+}
+
+#For making word rectangle only
+Sub CreateWordRect{
+       (my $across, my $down) = @_;
+       My @rectangle;
+       $rectangle[$across];
+       @rectangle = ([$down]);
+       Return @rectangle;
+}
+#Defining length and width (across and down) based on path probability matrix
+Sub MakeLengthWidth{
+       My @path = @_;
+       My $across = 3;
+       My $down = 2;
+
+       My $length = $across;
+       My $width = $down;
+
+For (my $i = 1; $i < $#path; $i++){
+       If(($path[$i][1]) >= 2) {
+$length = ($length <=> $i);
+                                       }
+               Else(
+                       Last;
+}
+My $letter_count = &CountDefined(@path, $offset);
+$width = ($letter_count <=> $width);
+($width, $length) = &LengthRegulation($width, $length);
+}
+
+}
+
+Sub LengthRegulation{
+       (my $width, my $length) = @_;
+       While(($width >=2)&&($length >= 3)){
+               If($width >= $length){
+                       $width = $length - 1;
+                       }
+               Else{
+                       Return($length, $width);
+               }
+}
+}
+
+#dependant on down and across being defined
+Sub RectangleBasis{
+       My @pathMatrix = @_;
+       (my $across, my $down) = MakeLengthWidth(@pathMatrix);
+       My @rectangle = &CreateWordRect($across, $down);
+
+Return(@rectangle, $across, $down);
+}
+
+Sub CountDefined{
+       (my @path, my $row) = @_;
+       My $col_count = 0;
+       #After specific total, what are the defined cells in a certain row by column?
+For(my $col = 2; $col < $#{$path [$row]}; $col++){
+       If(($path[$row][$col]) > 0){
+               $col_count++;
+       }
+}
+Return $col_count;
+}
+Sub InitializeSentenceBaseline{
+       My $length = $_[0];
+       My $letter = &InitializeLetterBaseline;
+       Return my $sentence_answer = $letter ** $length;
+}
+#Deciding on letters for word rectangle
+Sub CreateBacktrace{
+       My @table = $_[0];
+       #what do I use for across and down?
+       My $totalBackProb = 1;
+       My @backtrace;
+       For (my $t = 2; $t < ($down + 1); $t++){
+               For(my $s = 1; $s < ($down + 1); $s++){
+                       My $prob1 = $table[$s][$t];
+                       My $prob2 = $table[$s][$t - 1]
+                       My $letter1 = $table[0][$t];
+                       My $letter2 = $table[0][$t - 1];
+(my $prob_answer, my $letter_answer) = &TestLetters($letter1, $letter2, $s, @table);
+My $hook = $table[0][$s];
+$backtrace[$hook] = $letter_answer;
+$totalBackProb = &MultiplyProb($prob_answer, $totalBackProb);
+               }
+       }
+       Return ($totalBackProb, @backtrace);
+}
+Sub TestLettersWithProb{
+       (my $letter1, my $letter2, my $position, my @table) = @_;
+       My $prob1 = &LetterToProb(@table, $letter1, $position);
+       My $prob2 = &LetterToProb(@table, $letter2, $position);
+       My $prob_answer = &CompareProb($prob1, $prob2);
+       My $letter_answer = &DecideInitialLetter($letter1, $letter2, @table, $position);
+       Return($prob_answer, $letter_answer);
+}
+Sub LetterToProb{
+       (my @path_table, my $letter, my $offset) = @_;
+       My $probability;
+For (my $across = 0; $across < $#path_table; $across++){
+For(my $down = 0; $down < $#{$path_table [$across]}; $down++){
+                       If(($path_table[$across][0] == $offset)&&($path_table[0][$down] eq $letter)){
+                       $probability = $path[$i][$j];
+                       }
+               }
+}
+       Return $probability;
+}
+Sub DecideInitialLetter{
+       (my $letter1, my $letter2, my @path, my $position) = @_;
+       My $prob1 = &LetterToProb(@path, $letter1, $position);
+       My $prob2 = &LetterToProb(@path, $letter2, $position);
+Return my $decided_letter = &DecideLetter($prob1, $letter1, $prob2, $letter2);
+}
+Sub CalculatingRectangleSpace{
+(my @rectangle, my @path, my $i, my $j) = @_;
+       My $k = 0;
+       My $m = 0;
+       If($i == $j){
+My ($total, @entries) = &CreateBacktrace(@path);
+If(!(defined($rectangle[$i][$j]))){
+       $rectangle[$i][$j] = $entries[$i];
+Else{
+       My $old = $rectangle[$i][$j];
+       My $new = $entries[$i];
+       $rectangle[$i][$j] = &DecideInitialLetter($old, $new, @path, $i);
+                                       }
+                               }
+                                       }
+       Elsif($i != $j){
+               $k = $j;
+               $m = $i;
+               My $space1 = $rectangle[$i][$j];
+               My $space2 = $rectangle[$k][$m];
+               My $decide;
+               If(defined($space1)){
+$decide = &CompareToCommonLetters($i, $j, @path, $space1);
+                               }
+               Elsif(defined($space2)){
+$decide = &CompareToCommonLetters($k, $m, @path, $space2);
+               }
+Elsif((!(defined($space1))) && (!(defined($space2)))){
+$decide = &CompareCommonLetters($i, $j, @path);
+                       $rectangle[$i][$j] = $decide;
+       }
+       Return @rectangle;
+}
+Sub SameLetterDifferentOffsets{
+       (my $letter, my $offset1, my $offset2, my @path) = @_;
+My $proboffset1 = &LetterToProb(@path, $letter, $offset1);
+My $proboffset2 = &LetterToProb(@path, $letter, $offset2);
+       My $combo_offset = &MultiplyProb($proboffset1 , $proboffset2);
+       Return($letter, $combo_offset);
+}
+Sub CommonLetters{
+       (my $offset1, my $offset2, my @path) = @_;
+       My @lettersFromOffset1 = &CreateLetterSelection(@path, $offset1);
+       My @lettersFromOffset2 = &CreateLetterSelection(@path, $offset2);
+       My %total;
+       Grep($total{$_}++, @lettersFromOffset1);
+       Return my @totalResults = grep($total{$_}++, @lettersFromOffset2);
+}
+Sub CreateLetterSelection{
+       (my @path, my $offset) = @_;
+       My @definedLetters;
+For (my $across = 0; $across < $#path_table; $across++){
+       If($path[$across][0] == $offset){
+               My $pivot = $across;
+               For(my $down = 2; $down < $#{$path_table [$pivot]}; $down++){
+                       If($path[$pivot][$down]){
+                               My $letter = $path[0][$down];
+                               Push(@definedLetters, $letter);
+               }
+       }
+       }
+}
+       Return @definedLetters;
+}
+Sub CompareToCommonLetters{
+       (my $i, my $j, my @path, my $entryLetter) = @_;
+My @core = &CommonLetters($i, $j, @path);
+       My $decideLetter = $entryLetter;
+Foreach my $c (@core){
+       $decideLetter = &DecideLetterCombo($decideLetter, $i, $j, $c, @path);
+                       }
+       Return $decideLetter;
+}
+Sub CompareCommonLetters{
+       (my $i, my $j, my @path) = @_;
+My @core = &CommonLetters($i, $j, @path);
+My $chosenLetter;
+       While(@core){
+               My $entry = pop(@core);
+               $chosenLetter = &CompareToCommonLetters($i, $j, @path, $entry);
+       }
+       Return $chosenLetter;
+
+}
+Sub DecideLetterCombo{
+       (my $letter1, my $offset1, my $offset2, my $letter2, my @path) = @_;
+       (my $prob1, my $prob2, my $letter1, my $letter2);
+($letter1, my $prob1) = &SameLetterDifferentOffsets($letter1, $offset1, $offset2, @path);
+($letter2, my $prob2) = &SameLetterDifferentOffsets($letter2, $offset2, $offset1, @path);
+Return $decided_letter = &DecideLetter($prob1, $letter1, $prob2, $letter2);
+}
+Sub FillingTheRectangle{
+       My @path = @_;
+       (my @rectangle, my $across, my $down) = &RectangleBasis(@path);
+       For(my $a = 0; $a < $across; $a++){
+               For(my $d = 0; $d < $across; $d++){
+                       @rectangle = &CalculatingRectangleSpace(@rectangle, @path, $a, $d);
+               }
+}
+
+
+#creating a word probability hash
+Sub ReduceWordlist{
+       (my @list, my %wordlen, my $across) = @_;
+       My @newWords;
+Foreach my $w (@list){
+               My $measure = $wordlen{$w};
+               @newWords = &LengthDecide($w, $measure, $across, @newWords);
+       }
+       Return @newWords;
+}
+Sub LengthDecide{
+       My $word = '';
+       My $measure = 0;
+       ($word, $measure, my $len, my @entries) = @_;
+       My @newWords;
+       If($measure >= $len){
+Push(@newWords, $w);
+       }
+       Return @newWords;
+}
+Sub CalculateProbabilityForOneWord{
+       My $word = '';
+       ($word, my @table) = @_;
+       My $word_prob = 1;
+       My $offset_total = length($word);
+       For my $t (0 .. $offset_total){
+               My $word_letter = &WordToLetter($word, $t);
+               My $letter_prob = &LetterToProb(@table, $word_letter, $t)
+               $word_prob = &MultiplyProb($word_prob, $letter_prob);
+       }
+       Return $word_prob;
+}
+Sub CompareWordToMatrix{
+(my @path, my $word) = @_;
+My %wordProbIndex;
+My $result = &CalculateProbabilityForOneWord($word, @pathTable);
+$wordProbIndex{$word} = $result;
+
+       Return %wordProbIndex;
+}
+
+Sub MakeWordProb{
+(my @path, my @wordlist) = @;
+My %wordProb;
+Foreach my $w (@wordlist){
+       %wordprob = &CompareWordToMatrix(@path, $w);
+}
+       Return %wordProb;
+}
+Sub DoesProbabilityWork{
+       (my %wordProb, my $baseline) = @_;
+       My @finds = keys %wordProb;
+       My $count = 0;
+       Foreach my $f(@finds){
+               If($wordProb{$f} >= $baseline){
+                       $count++;
+                                       }
+                               }
+       If($count > 2){
+               Print "Yes, there are enough words that match or exceed the baseline \n";
+                       }
+       Else{
+               Print "No, try again";
+               }
+
+}
+Sub EndOfPart1{
+My @words = &CreateWordList;
+My %wordlen = &CreateWordLengthHash(@words);
+Return(%wordlen, @words);
+
+}
+
+Sub EndOfPart2{
+       (my %wordlen, my @words) = &EndOfPart1;
+       (My @path, my $total) = &InitializeProbabilityTable(@words);
+&TestPathMatrix;
+       (@path, $total) = & FillMatrixWithSortedArray(my %wordlen, my @words);
+@path = &CalculatePathProb(@path, $total);
+Return(%wordlen, @words, @path);
+
+}
+
+Sub EndOfPart3{
+       (my %wordlen, my @words, my @path) = &EndOfPart2;
+(my @wordRectangle, my $len, my $wid) = &RectangleBasis(@path);
+@wordRectangle = &FillingTheRectangle(@path);
+My $theory_across = &InitializeSentenceBaseline($len);
+My $theory_down = &InitializeSentenceBaseline($wid);
+       (my @backtrace, my $rectangleBaseline) = &CreateBacktrace(@path);
+
+       My $newBaseline = &CompareProb($theory_across, $theory_down);
+       $newBaseline = &CompareProb($newBaseline, $rectangleBaseline);
+       My @newWords = &ReduceWordlist(%wordlen, @words, $len);
+       My %wordProb = &MakeWordProb(@newWords, @path);
+       &DoesProbabilityWork(%wordProb, $newBaseline);
+
+#Return($newBaseline, %wordlen, @words, @path);
+
+}
+
+#for my reference
+# $i = $offset = $across =$row = $state
+#$j = $letter = $down = $column = $observation
+
+#Keepers
+
+Sub ReverseHashSort{
+       (my %list, my @keys) = @_;
+       #to allow for different arrays against a hash
+       My @order = sort{
+       $list{$a} <=> $list{$b}
+       Or
+       $a cmp $b
+       }@keys;
+       Return my @rorder = reverse(@order);
+}
+
+Sub WordToLetter{
+       (my $word, my $offset) = @_;
+       Return my $letter = substr($word, $offset, 1);
+}
+
+#For calculating values in path probability matrix
+Sub MultiplyProb{
+(my $prob1, my $prob2) = @_;
+       Return my $answer = $prob1 * $prob2;
+}
+sub CalculateProb{
+       (my $total, my $value) = @_;
+       return my $answer = ($value/$total);
+}
+Sub InitializeLetterBaseline{
+       My $state = 28;
+       My $alphabet = 26;
+       My $letter_prob = &CalculateProb($alphabet, 1);
+       My $offset_prob = &CalculateProb($state, 1);
+       Return my $initial_prob = &MultiplyProb($letter_prob, $offset_prob);
+}
+Sub CompareProb{
+       (my $prob1, my $prob2) = @_;
+       Return my $highest = $prob1 <=> $prob2;
+}
+
+Tara Edwards
+NHIC, Corp.
+HP Enterprise Services
+Telephone +1 781.741.3939
+Email  tara.edwards@hp.com
+75 William Terry Dr., Hingham, MA 02043

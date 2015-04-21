@@ -1,0 +1,19 @@
+Despite tests on a smaller document, I cannot seem to get beyond printing the initial state. I also tried calculating but that does not seem to work. The functions are not added to take input and output from the command line. I also got confused on the details of computing probability. It is one thing to say P(tag | word), but another to figure what the probability for the input and output would be. 
+
+I had solved the problem of storing the data in the array of hashes. Now I cannot seem to get the information out. Somehow, even printing it by array and specifying a key did not work. I have no idea why it worked earlier and it is not working now. 
+
+These were the functions I could not write without diagnosing the &CountLines problem. 
+
+#sub CalculateTrigramStates{
+#Use &StateNumber three times, and multiply it by 
+#&WordToPOSNumber used for the three words
+#}
+
+#sub CountActualSymbols{}
+#sub CountActualStates{}
+
+#sub DoesArcSumEqualOne{}
+#sub DoesSymbolSumEqualOne{}
+#sub DoesStateSumEqualOne{}
+
+I hope these notes show that I can do some of the work. 

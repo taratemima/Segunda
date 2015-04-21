@@ -1,0 +1,30 @@
+#!/usr/bin/perl
+
+#sub NLPSwissArmyKnife{
+#&MakeContainers
+#&Tokenization
+#&MakeWordList
+#&OpenManyDocs
+#&ReviseWordLists
+#&MakeTermsList
+#&MakeTermNGrams
+#&UniqueWordsList
+#&WordRatio
+#}
+
+#sub MakeContainers{
+#my @word_count = 
+
+#(
+#{
+#Word => ,
+#Count =>,
+#},
+#);
+
+#my @termList;
+#my @documentList;
+#my @wordVector = [ ]; 
+
+#}
+

@@ -1,0 +1,129 @@
+
+sub NLPSwissArmyKnife{
+#(my $train, my @directory) = @ARGV;
+#(my @wc, my @terms, my @docs, my @wordVec) = &MakeContainers($train);
+#&OpenManyDocs
+#&ReviseWordLists
+#&MakeTermsList
+#&MakeTermNGrams
+#&UniqueWordsList
+#&WordRatio
+#&GetTotalWordListCount;
+#&CreateAlphabeticalWordLists;
+#&PourContainerIntoBigger($train, $directory);
+}
+
+sub MakeContainers{
+my @word_count =
+({Word => "Tara" , Count => "0", classLabel => "c1",},);
+
+#my @termList;
+#my @documentList;
+#my @wordVector = &CreateFeatureVectors(@termList, $_); 
+}
+
+
+sub CreateFeatureVectors{
+my @vector = $_[0];
+my $file = $_[1];
+open (INFO, $file);
+
+while (<INFO>){
+	push @vector, [ split ];
+	}
+return @vector;
+}
+
+
+#This is for proc.sh
+#Make subroutine that opens directories, designates some of the files as training, then returns the list of files
+
+
+#open list of files, make hashes from them, then put them in the larger hash
+
+#proc file.sh input file targetLabel output_file
+#create_vectors.sh train_vector_file test_vector_file ratio dir1 dir2 ...
+
+
+#sub Scoreboard{
+#my @scoreboard;
+#my @dir_list = $_[0];
+#my @wordList;
+#my @container = $_[1];
+
+#use @dir_list, @wordList, and @container
+
+#	for (my $j = 0; $j < $#dir_list; $j++){
+#	$scoreboard[$j] = [ &ExtractWordsFromContainer(@container) ];
+#	}
+
+#foreach my $d (@dir_list){
+#	for (my $n = 1; $n < $#dir_list; $n++){
+#	$scoreboard[$n][0] = $d;
+
+#}
+
+#foreach my $w (@wordList){
+#	for (my $p = 1; $p < $#wordList; $p++){
+#	$scoreboard[0][$p] = $w;
+
+#		}
+
+#}
+
+
+#for (my $w = 0; $w < $#wordList; $w++){
+#	for (my $f = 0; $f < $#dir_list; $f++){
+#		for (my $v = 0; $v < $#container; $v++){
+#	if ((($scoreboard[$f][0]) eq ($container[$v]{classLabel}))&&(($scoreboard[0][$w]) eq ($container[$v]{Word}))){
+#		$scoreboard[$f][$w] = ($container[$v]{Count});
+#		}
+#	}	
+
+#}
+#}
+
+
+#my $d = @ARGV;
+#my $ratio = 0;
+
+
+
+#sub PourContainerIntoBigger{
+#my $file = $_[1];
+#my $directory_name = $_[0];
+#(my @bigContainer, my @scoreBoard) = &MakeContainers;
+#my %small_container = MakeWordList($file);
+#my @words = (keys %small_container);
+
+#foreach my $w (@words){
+#for (my $i = 0; $i < $#words; $i++){
+#push @bigContainer, {Word $w Count $small_container{$w} classLabel scalar($directory_name)};
+#}
+#}
+
+#return @bigContainer;
+#}
+
+"The class label is the basename of an input directory. For instance, if a directory is hw8/20 newsgroups/talk.politics.misc, the class label for every file under that directory  should be talk.politics.misc."
+
+The instanceName can just be the file name. Whether the full path name should be included in the instanceName is up to you, as the exact spelling of instanceName does not really matter to Mallet.
+
+"ls dir | wc"
+
+#sub OpenMultipleDocs{
+#my $file = $_[1];
+#my $directory_name = $_[0];
+#opendir (DIR, $directory_name) or die "$!";
+#	while(my $file = readdir(DIR)) {
+#	next if ($file eq '.' || $file eq '..');
+#	open (my $FH, $file) or print "$!\n";
+#		  while (my $line = <$FH>) {
+#			my @words = &CreateAlphabeticalWordLists($file);
+#			&PourContainerIntoBigger($directory_name, $file);
+#		     }
+#	  close $FH;
+#	}
+#
+#	closedir DIR;
+#}

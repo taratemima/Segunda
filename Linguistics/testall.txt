@@ -1,0 +1,7 @@
+The word is 'the'. The tag is 'DT'. 
+Number with both 'the' and 'DT' is 1938. 
+Total entries with 'the' are 1945. 
+Total entries with 'DT' are 3990. 
+The ratio of specific word to word entries is 0.996401028277635. 
+The ratio of specific tag to tag entries is 0.485714285714286. 
+The total probability of 'the' and 'DT' is 0.483966213734851. 

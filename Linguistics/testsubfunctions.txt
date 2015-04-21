@@ -1,0 +1,171 @@
+
+sub TestArrayValue{
+#my %lexicon = &CreateMorphemeList("lexicon_ex");
+#my @wordsFromList = &CreateWordList("wordlist_ex");
+
+#foreach my $w (@wordsFromList){
+#print $w;
+#print " \n";
+#	}
+
+#Nothing printed out for wordlist_ex 
+#What is up with that?
+
+#my @lexiconKeys = keys %lexicon;
+
+#foreach my $k (@lexiconKeys){
+#print $k;
+#print " \n";
+#	}
+
+#Nothing also printed out for lexicon_ex
+#So is it not understanding the file name or am I not writing it right?
+
+#OK, so file name does not seem to be OK as an argument, but I cannot use barewords
+#Did it return an error message? Let's check that
+
+
+
+#The die message is not printed, so it must be finding it
+
+#Why is it not putting in values?
+
+}
+
+sub Example{
+
+if (&CreateLexicon("lexicon_ex")){
+my %example_lexicon = &CreateLexicon("lexicon_ex");
+}
+else{
+warn "Something went wrong with reading the lexicon_ex file \n";
+	}
+
+#if (%example_lexicon){
+#print "Has entries from lexicon_ex \n";
+#	}
+
+if (&CreateWordList("wordlist_ex")){
+my @example_wordlist = &CreateWordList("wordlist_ex");
+}
+else{
+warn "Something went wrong with reading the wordlist_ex file \n";
+}
+
+#if (@example_wordlist){
+#print "Has entries from wordlist_ex \n";
+#	}
+}
+
+&Example;
+
+#OK, I got the error message "lexicon not found" when I ran the subroutine
+
+#Syntax is OK when I ran perl -c
+
+
+
+#sub FindMatches{
+#my %lexicon = &CreateMorphemeList($_[0]);
+#my @wordsFromList = &CreateWordList($_[1]);
+#my @wordsFromLexicon = keys %lexicon;
+
+#my %matches;
+#grep($matches{$_}++, @wordsFromList);
+
+#Code is from my old Programming Perl
+#My gut says that it would miss the words with ing, ed, and s. However, it may get those too 
+#I will use this, and if it does miss them, I will alter it.
+
+#return my @examine = grep($matches{$_}, @wordsFromLexicon);
+#}
+
+#sub GrepTest{
+#my @test = &FindMatches("lexicon_ex", "wordlist_ex");
+
+#foreach my $m (@test){
+#	print $m;
+#	print " \n";
+#	}
+
+#what the printout should look like
+
+#cut 
+#cuts 
+#cuting 
+#speaks 
+#speaking 
+#spoke 
+#speak 
+}
+
+#sub CreateFSA{
+#open (EXAMPLE, $_[0]) || die "Word list not found";
+#while (<EXAMPLE>){
+#	my $list = $_;
+#	chomp;
+#$list =~ &Prepare($list);
+#my @start, my @next, my @morpheme = split (/\s+/, $list, 3);
+
+#my %direction = {
+#startState => @start,
+#morpheme => @morpheme,
+#nextState => @next,
+#};
+
+#complex record: initial state, next state, then morphotactical term, with space for words to fulfill requirements
+
+#Do I have the fields as arrays or as scalars?
+
+#return %direction;
+#	}
+
+#}
+
+#  1. %HoH = (
+# 2. flintstones => {
+#   3. lead => "fred",
+#  4. pal => "barney",
+#   5. },
+#  6. jetsons => {
+#   7. lead => "george",
+#  8. wife => "jane",
+#   9. "his boy" => "elroy",
+#  10. },
+#  11. simpsons => {
+#  12. lead => "homer",
+#  13. wife => "marge",
+# 14. kid => "bart",
+#  15. },
+#16. );
+
+# $HoH{flintstones}{wife} = "wilma";
+
+#$possible{wordFromWordList}{matchFromLexicon} = $morpheme;
+
+
+
+#print results
+#if I have time, I may add a feature to correct errors automatically (add cutting, a new morphotactical tag, and save the example #under a different name
+
+#$wordList[$i] vs. keys %lexicon
+
+
+
+
+#we have words that would fit in the morphotactical category in @startWords and @nextWords
+
+#expand_fsm1.sh lexicon_ex morph_rules_ex hw4_dir/q4/q4_expand_fsm
+#morph_acceptor1.sh hw4_dir/q4/q4_expand_fsm wordlist_ex hw4_dir/q4/q4_result
+
+
+#expand_fsm2.sh lexicon_ex morph_rules_ex hw4_dir/q5/q5_expand_fsm
+#morph_acceptor2.sh hw4_dir/q5/q5_expand_fsm wordlist_ex hw4_dir/q5/q5_result
+
+
+
+
+
+
+#have something that accepts input from a shell script
+

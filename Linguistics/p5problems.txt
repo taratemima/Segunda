@@ -1,0 +1,181 @@
+﻿My Writings
+
+sub PrepareBeforeSearch{
+	my $sentence = $_[0];
+	chop $sentence;
+	Encode::encode_utf8($sentence);
+	$sentence =~ s/[?;:!,"]//g; 
+	$sentence =~ s/\d//g;
+	
+#Thank you, http://www.webmasterworld.com/forum13/2553.htm, for reminding me that =~ works too
+#Keeping it on separate statements seem to make it work
+#Along with the punctuation, I also told it to remove digits
+#Let's keep the period to see if that may help with splitting, and apostrophes to help distinguish words
+
+$sentence;
+}
+
+
+
+sub PrepareAfterSearch{
+	my $alang = $_[0];
+	my $asent = $_[1];
+	my $right = &FindSentence($alang, $asent);
+	$right =~ s/$alang//;
+	$right =~ s/\t//;
+	
+#How to remove spaces after the last word in the sentence?
+#more than one space (2 or more)
+
+$right;
+}
+
+sub GetLength{
+#will need to use encode and all that for this
+#counting this, the actual count of words not including the language identifier and the period is 20
+#Length counts characters, but wait, I got the same result from the for loop
+#What in hell is going on?
+my $langlength = length(&PrepareAfterSearch($_[0], $_[1]));
+	
+print $langlength;
+
+}
+
+
+
+#DirectHit
+#Create a dictionary for one language
+#Make an array for the keys of that dictionary
+#If element in @words matches key array
+#increment $hit
+
+#sub ExamineHits{
+#my $totalhits = $_[0];
+#my $langlength = $_[1];
+#		if ($totalhits/$langlength == 1){
+#			print "Accurate \n";
+#				}else{
+#					print "Not so accurate \n";
+
+#		}
+
+#	}
+
+#ExamineHits
+#Divide hit by length
+#If the answer is not one, warn "The classifier may need work"
+
+
+#my $test = &PrepareAfterSearch("dan", $_);
+print &GetLength("dan", $_);
+
+#foreach my $w (@langCode){
+#	my$psent = &FindSentence($w, $_);
+#	my $phit = &DirectHit($w,$psent);
+#	my $plength = &GetLength($psent);
+#	&ExamineHits($phit, $plength);
+#	}
+
+
+if ($_ =~ m/\./g){
+
+	my $light = split (/\./, $_, 15);
+	push (my @soul, $light);
+		#print $soul[0];
+
+#push (my @buttons, $codes);
+#push (my @limits, $sentences);
+#push (my @soul, (split (/\r/, $b)));
+
+#I will summarize my starting tactic by two questions
+#Is the text Polish or not?
+#Is the classifier accurate or not?
+#I chose Polish because not knowing any Polish, I cannot cheat by searching out lexemes, prefixes, or suffixes
+#Prior probability of a sentence being Polish: 1/15
+#Whatever the accuracy of the Polish classifier (hit/length)
+#Probability of a sentence being Polish and classified as Polish: 1/15 times accuracy of Polish classifier
+#Probability of a sentence not being Polish and classified as Polish: 14/15 times accuracy of Polish classifier
+#Overall probability that the sentence is Polish: adding the probability that a sentence is and is not Polish
+#1/15 times accuracy of classifier divided by overall probability a sentence is Polish
+
+#told you I was keeping it simple, at least until I find I need more tuning
+#This may be done on any classifier that turned out to be less than 1
+
+#Then with test sentences, after cleaning them up, find direct hits
+#Find length and divide them
+#Use prior probability to see if we missed any elements
+#Then factor in invisible data ((1/1500) * (1/15)), then compare to each language
+
+#Direct hits count as 1 in test sentences
+#Of course, that will be altered by how accurate the classifier was with training sentences
+
+#Since this is naive, after the first test run, if any of the scores are equal to each other, what would be appriopriate tests?
+#Perhaps word counts could increase the likelihood that the sentence is what the classifier thinks it is?
+
+#put here some something to make this output
+
+sub PrepareBeforeSearch{
+	my $sentence = $_[0];
+	chop $sentence;
+	Encode::encode_utf8($sentence);
+	$sentence =~ s/\d//g;
+	$sentence =~ s/\t/\n/g;
+	$sentence;
+#encoded the data, removed digits, tabs
+}
+
+sub PrepareList{
+	my $text = $_[0];
+	$text =~ tr/a-zA-Z'()\-,.?!;:/\n/cs;
+	$text =~ s/([,.?!:;()\-])/\n$1\n/g;
+	$text =~ s/\n+/\n/g;
+	
+	# set everything on lines
+	#change punctuation to newline to the end of the line
+	#change more than one spaces to one newline
+
+	return split (/\n/, $text);
+
+#code reuse from bigram thing
+
+}#put here some something to make this output
+
+sub PrepareBeforeSearch{
+	my $sentence = $_[0];
+	chop $sentence;
+	Encode::encode_utf8($sentence);
+	$sentence =~ s/\d//g;
+	$sentence =~ s/\t/\n/g;
+	$sentence;
+#encoded the data, removed digits, tabs
+}
+
+sub PrepareList{
+	my $text = $_[0];
+	$text =~ tr/a-zA-Z'()\-,.?!;:/\n/cs;
+	$text =~ s/([,.?!:;()\-])/\n$1\n/g;
+	$text =~ s/\n+/\n/g;
+	
+	# set everything on lines
+	#change punctuation to newline to the end of the line
+	#change more than one spaces to one newline
+
+	return split (/\n/, $text);
+
+#code reuse from bigram thing
+
+}
+
+#So the regular expression would have been /\r $lang \t/ or /\.{1} $lang \t/	
+#Neither of them seem to be separating one of the sentences from the rest
+#I could just say fuck it and focus on mowing off punctuation
+#compare result of PrepareList to each dictionary
+#maybe I won't try to connect the sentences to the language identifiers
+#or would after all the tests have been run		
+
+#That will do for training, but what about the test text?			
+}
+#http://cpansearch.perl.org/src/EMORGAN/Lingua-EN-Bigram-0.03/lib/Lingua/EN/Bigram.pm
+#I can pass values by reference 
+
+if (/langCode[0]/ .. /langCode[1]/)

@@ -1,0 +1,36 @@
+﻿For Board
+
+['the', 'dogs', 'bark', '.']
+
+Traceback (most recent call last):
+  File "C:\Documents and Settings\Steve\My Documents\Tara\Ongoing\LIN571\571hw4\hw4.py", line 19, in <module>
+    print fs1.unify(g)
+  File "C:\Python26\lib\site-packages\nltk\featstruct.py", line 517, in unify
+    return unify(self, other, bindings, trace, fail, rename_vars)
+  File "C:\Python26\lib\site-packages\nltk\featstruct.py", line 1308, in unify
+    if _default_fs_class(fstruct2) != fs_class:
+  File "C:\Python26\lib\site-packages\nltk\featstruct.py", line 1679, in _default_fs_class
+    'fs_class explicitly.' % obj.__class__.__name__)
+ValueError: To unify objects of type FeatureGrammar, you must specify fs_class explicitly.
+
+I think I am using unify incorrectly, but am not sure how to do it.
+
+Here is the code
+
+import nltk
+from nltk import Nonterminal, nonterminals, Production, parse_cfg, ContextFreeGrammar, FeatStruct
+from nltk.parse import FeatureEarleyChartParser
+
+g = nltk.data.load("file:./grammar.fcfg", format='fcfg')    
+f = nltk.data.load("file:./feature_sentences.txt", format='raw')
+
+eparser = nltk.parse.FeatureEarleyChartParser(g)
+lines = nltk.sent_tokenize(f)
+for line in lines:
+	p = nltk.word_tokenize(line)
+	print p
+	fs1 = nltk.FeatStruct(p)
+	print fs1.unify(g) 
+	trees = eparser.nbest_parse(p)
+	for tree in trees:
+		print tree

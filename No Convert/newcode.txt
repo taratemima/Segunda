@@ -1,0 +1,62 @@
+#!/usr/bin/perl
+
+use warnings;
+use diagnostics;
+use strict;
+
+#open directory
+#look for text files
+#print text files found
+#open a file
+#look for strings with more than 256 characters in the file
+#if yes, print "Paragraph input mode needed" and go to the next state
+#if no, print "Paragraph vs. lines OK" go to the next state
+
+#if there is more than one space between two words, print "Trimming tabs or extra space between words needed" and go to the next state
+#else, print "Trimming extra spaces OK" go to the next state
+
+#Punctuation
+#Make document into a string
+#!
+#@
+#$
+#Hash sign
+#%
+#&
+#(
+#)
+#_
+#-
+#\
+#/
+#:
+#;
+#"
+#'
+#?
+#<
+#>
+#,
+#.
+#}
+#{
+#[
+#]
+#?
+#Mixed caps
+#All caps
+
+#It will be looking for 
+#URLs
+#Email addresses
+#Possible named entities
+#Possible abbreviations and acronyms
+
+#Examine string until all conditions are checked
+#Examine document until all conditions are checked
+#Examine other documents after end of the document
+
+#What do I want the output to look like?
+
+
+

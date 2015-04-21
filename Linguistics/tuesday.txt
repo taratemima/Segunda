@@ -1,0 +1,1 @@
+0 is { Number=1 Word=Tara POS=NNP }

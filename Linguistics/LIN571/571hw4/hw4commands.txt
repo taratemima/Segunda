@@ -1,0 +1,119 @@
+﻿ Includes readers for feature grammars
+ .fcfg files
+ Includes parsers
+ Nltk.parse.FeatureEarleyChartParse
+
+ Create with FeatStruct
+ >>> fs1 = nltk.FeatStruct(NUMBER=‘pl’,PERSON=3)
+ >>>print fs1
+ [ NUMBER = ‘pl’]
+ [ PERSON = 3 ]
+ >>> print fs1[‘NUMBER’]
+ pl
+ >> fs1[‘NUMBER’] = ‘sg’
+
+ >>>fs2 = nltk.FeatStruct(POS=‘N’,AGR=fs1)
+ >>>print fs2
+ [ POS = ‘N’ ]
+ [ [ NUMBER = ‘sg’ ] ]
+ [ AGR = [ PERSON = 3 ] ]
+ Alternatively,
+ >>> fs3 = nltk.FeatStruct(“[POS=‘N’,
+ AGR=[NUM=‘pl’,PER=3]]”)
+
+ N[AGR=[NUM='pl']] -> 'students’
+ N[AGR=[NUM=’sg']] -> 'student’
+
+ >>> fs3 = nltk.FeatStruct(NUM=‘pl’,PER=3)
+ >>> fs4 = nltk.FeatStruct(NUM=‘pl’)
+ >>> print fs4.unify(fs3)
+ [NUM = ‘pl’]
+ [PER = 3 ]
+
+English:
+ Number:
+ Dog, dogs
+ Person:
+ Am; are; is
+ Case:
+ I – me; he – him; etc
+ Countability:
+
+>>> kim = {'CAT': 'NP', 'ORTH': 'Kim', 'REF': 'k'}
+>>> chase = {'CAT': 'V', 'ORTH': 'chased', 'REL': 'chase'}
+
+>>> sent = "Kim chased Lee"
+>>> tokens = sent.split()
+>>> lee = {'CAT': 'NP', 'ORTH': 'Lee', 'REF': 'l'}
+>>> def lex2fs(word):
+...     for fs in [kim, lee, chase]:
+...         if fs['ORTH'] == word:
+...             return fs
+>>> subj, verb, obj = lex2fs(tokens[0]), lex2fs(tokens[1]), lex2fs(tokens[2])
+>>> verb['AGT'] = subj['REF']
+>>> verb['PAT'] = obj['REF']
+>>> for k in ['ORTH', 'REL', 'AGT', 'PAT']:
+...     print "%-5s => %s" % (k, verb[k])
+ORTH  => chased
+REL   => chase
+AGT   => k
+PAT   => l
+
+>>> surprise = {'CAT': 'V', 'ORTH': 'surprised', 'REL': 'surprise',
+...             'SRC': 'sbj', 'EXP': 'obj'}
+
+(8)		
+
+S -> NP_SG VP_SG
+S -> NP_PL VP_PL
+NP_SG -> Det_SG N_SG
+NP_PL -> Det_PL N_PL
+VP_SG -> V_SG
+VP_PL -> V_PL
+
+Det_SG -> 'this'
+Det_PL -> 'these'
+N_SG -> 'dog'
+N_PL -> 'dogs'
+V_SG -> 'runs'
+V_PL -> 'run'
+
+>>> nltk.data.show_cfg('grammars/book_grammars/feat0.fcfg')
+% start S
+# ###################
+# Grammar Productions
+# ###################
+# S expansion productions
+S -> NP[NUM=?n] VP[NUM=?n]
+# NP expansion productions
+NP[NUM=?n] -> PropN[NUM=?n]
+NP[NUM=?n] -> Det[NUM=?n] N[NUM=?n]
+NP[NUM=pl] -> N[NUM=pl]
+# VP expansion productions
+VP[TENSE=?t, NUM=?n] -> IV[TENSE=?t, NUM=?n]
+VP[TENSE=?t, NUM=?n] -> TV[TENSE=?t, NUM=?n] NP
+# ###################
+# Lexical Productions
+# ###################
+Det[NUM=sg] -> 'this' | 'every'
+Det[NUM=pl] -> 'these' | 'all'
+Det -> 'the' | 'some' | 'several'
+PropN[NUM=sg]-> 'Kim' | 'Jody'
+N[NUM=sg] -> 'dog' | 'girl' | 'car' | 'child'
+N[NUM=pl] -> 'dogs' | 'girls' | 'cars' | 'children'
+IV[TENSE=pres,  NUM=sg] -> 'disappears' | 'walks'
+TV[TENSE=pres, NUM=sg] -> 'sees' | 'likes'
+IV[TENSE=pres,  NUM=pl] -> 'disappear' | 'walk'
+TV[TENSE=pres, NUM=pl] -> 'see' | 'like'
+IV[TENSE=past] -> 'disappeared' | 'walked'
+TV[TENSE=past] -> 'saw' | 'liked'
+
+>>> fs1 = nltk.FeatStruct(NUMBER=74, STREET='rue Pascal')
+>>> fs2 = nltk.FeatStruct(CITY='Paris')
+>>> print fs1.unify(fs2)
+[ CITY   = 'Paris'      ]
+[ NUMBER = 74           ]
+[ STREET = 'rue Pascal' ]
+
+#Look at old code for hw1 for the rest
+

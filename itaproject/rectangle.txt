@@ -1,0 +1,166 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use diagnostics;
+
+#Prepare word list
+#Make hash with lengths as values
+#Hash the values, and take the first key
+
+#Find words in word hash with values that equal the first key
+#Store them in another array
+#Make a scalar of the matches array
+#Put words equal to that number in another array
+
+#Split all the longest words into letters
+#Test each word in the 'length equal to number of longest words' array 
+#If no letters match, splice the word out of the 'length equal to number of longest words' array 
+#If there are words left, pop the first longest word
+#Get words that start with the first letter of the first longest word 
+
+#Now, how to do this without losing track or making spaghetti code?
+
+sub CreateWordList{
+        open(STOP, "wordList.txt") || die "Word list file not in folder \n";
+        my @words;
+
+        while(<STOP>){
+                chomp;
+                @words = split;
+        }
+
+return @words;
+}
+
+sub WordLengthHash{
+my %length;
+
+my @words=&CreateWordList;
+
+foreach my $w (@words){
+	$length{$w} = length($w);
+	}
+
+return %length;
+}
+
+sub GettingLongestLength{
+	my %length = &WordLengthHash;
+	my @picks = sort(values %length);
+	return my $top = $picks[0];
+
+}
+
+sub AcrossAndDownWords{
+my %length = &WordLengthHash;
+my $top = &GettingLongestLength;
+
+my @acrossWords;
+my @downWords
+
+foreach my $k (keys %length){
+	if($length{$k} == $top){
+		push(@acrossWords, $k);
+		}
+	elsif($length{$k} < $top){
+		push(@downWords, $k);
+		}
+	}
+
+return @acrossWords;
+return @downWords;
+}
+
+sub UpdateHash{
+	my %list = $_[0];
+	my $key = $_[1];
+	my $value = $_[2];
+
+	if(defined($list{$key}){
+		my $old = $list{$key};
+		my $new = join(';', $old, $value);
+		$list{$key} = $new;
+	}
+	elsif(!(defined($list{$key}){
+		$list{$key} = $value;
+	}
+
+return %list;
+}
+
+
+
+sub FindPositions{
+(my @across, my @down) = &AcrossAndDownWords;
+my $limit = &GettingLongestLength;
+my %scores;
+my $downLength = scalar(@across);
+
+foreach my $target (@across){
+	for (my $x = 0; $x < (length($target)); $x++){
+		foreach my $choice (@down){
+			for (my $y = $downLength; $y > 0; $y--){
+				if((substr($choice, $y, 1)) eq (substr($target, $x, 1))){
+					&UpdateHash(%scores, $target, $x);
+					&UpdateHash(%scores, $choice, $y);
+					}
+				} 
+
+			}
+		}
+
+	}
+
+return %scores;
+}
+
+sub BuildSquare{
+	my $seed = $_[0];
+	my $squareLength = &GettingLongestLength;
+	my @square;
+	my @seed = split(//,$seed);
+
+	for my $i (1..($squareLength + 1)){
+		$square[$i] = [$seed[$i -1]];
+		$square[0][$i] = $seed[$i -1];
+	}
+
+return @square;
+
+
+}
+
+sub PrintAnswers{
+	my %scores = &FindPositions;
+
+	while (($words, $places) = each %scores){
+	print "$word : $places \n";
+	
+		}
+
+	}
+
+}
+
+#Do I drop a letter at a time, do substring searches, or find unique intersecting letters?
+#Do I make English-allowed combos and build with that?
+
+
+(My algorithm places letters in the matrix one at a time, checking to make sure each new letter forms part of a legitimate word in both the horizontal and vertical directions. That check would take ridiculously long if I had to search through the whole wordlist each time, so I do some preprocessing. The wordlist gets parsed into a tree, with the nth level branching on the nth letter of the word. The top level divides the tree by letter counts, since we know from the beginning how many letters our word should have. It takes a while to create the word tree, but once I have it, answering the question "What are the possible 4th letters of a 6-letter word that starts with 'tur'?" is very fast:
+
+    >>> dictionary[6]['t']['u']['r'].keys()
+    ['a', 'b', 'e', 'g', 'f', 'k', 'n', 'r', 't', 'v']
+
+Now if we have a partial 7x7 solution like
+
+    acacias
+    coconut
+    acqui?
+
+we just find all the letters that can legally follow both 'au' and 'acqui':
+
+    >>> dictionary[7]['a']['u'].keys()
+    ['c', 'b', 'd', 'g', 'k', 'l', 'n', 's', 'r', 't', 'x']
+    >>> dictionary[7]['a']['c']['q']['u']['i'].keys()
+    ['r', 't'])

@@ -1,0 +1,1530 @@
+
+
+Sent #1: <s> Influential members of the House Ways and Means Committee introduced legislation that would restrict how the new savings-and-loan bailout agency can raise capital , creating another potential obstacle to the government 's sale of sick thrifts . </s>
+1: log P(Influential | <s>) = -inf (unknown word)
+2: log P(members | <s> Influential) = -4.26127986628694 (unseen ngrams)
+3: log P(of | Influential members) = -0.659218767066308 (unseen ngrams)
+4: log P(the | members of) = -0.673243382588536
+5: log P(House | of the) = -3.26628342277906 (unseen ngrams)
+6: log P(Ways | the House) = -inf (unknown word)
+7: log P(and | House Ways) = -2.5153132992747 (unseen ngrams)
+8: log P(Means | Ways and) = -inf (unknown word)
+9: log P(Committee | and Means) = -4.80534791063722 (unseen ngrams)
+10: log P(introduced | Means Committee) = -4.62925665158154 (unseen ngrams)
+11: log P(legislation | Committee introduced) = -4.40740790196518 (unseen ngrams)
+12: log P(that | introduced legislation) = -0.993387706311519 (unseen ngrams)
+13: log P(would | legislation that) = -0.956662489350199
+14: log P(restrict | that would) = -inf (unknown word)
+15: log P(how | would restrict) = -4.40740790196518 (unseen ngrams)
+16: log P(the | restrict how) = -2.09480746270392 (unseen ngrams)
+17: log P(new | how the) = -2.24354336679086 (unseen ngrams)
+18: log P(savings-and-loan | the new) = -inf (unknown word)
+19: log P(bailout | new savings-and-loan) = -inf (unknown word)
+20: log P(agency | savings-and-loan bailout) = -4.62925665158154 (unseen ngrams)
+21: log P(can | bailout agency) = -3.82762430534837 (unseen ngrams)
+22: log P(raise | agency can) = -4.50431791497324 (unseen ngrams)
+23: log P(capital | can raise) = -4.32822665591756 (unseen ngrams)
+24: log P(, | raise capital) = -2.04191991707428 (unseen ngrams)
+25: log P(creating | capital ,) = -5.1063779063012 (unseen ngrams)
+26: log P(another | , creating) = -3.87592898492293 (unseen ngrams)
+27: log P(potential | creating another) = -4.50431791497324 (unseen ngrams)
+28: log P(obstacle | another potential) = -inf (unknown word)
+29: log P(to | potential obstacle) = -2.39541478730592 (unseen ngrams)
+30: log P(the | obstacle to) = -1.31073683354123 (unseen ngrams)
+31: log P(government | to the) = -2.18899646880379
+32: log P('s | the government) = -1.02473045926145
+33: log P(sale | government 's) = -4.40740790196518 (unseen ngrams)
+34: log P(of | 's sale) = -0.392669010824543 (unseen ngrams)
+35: log P(sick | sale of) = -inf (unknown word)
+36: log P(thrifts | of sick) = -inf (unknown word)
+37: log P(. | sick thrifts) = -2.11250099135999 (unseen ngrams)
+38: log P(</s> | thrifts .) = -0.322502345739275 (unseen ngrams)
+1 sentence, 37 words, 9 OOVs
+logprob=-82.8860891791949 ppl=721.341645452964
+
+
+
+Sent #2: <s> The bill , whose backers include Chairman Dan Rostenkowski -LRB- D. , Ill. -RRB- , would prevent the Resolution Trust Corp. from raising temporary working capital by having an RTC-owned bank or thrift issue debt that would n't be counted on the federal budget . </s>
+1: log P(The | <s>) = -1.048238975517
+2: log P(bill | <s> The) = -4.50431791497324 (unseen ngrams)
+3: log P(, | The bill) = -2.04191991707428 (unseen ngrams)
+4: log P(whose | bill ,) = -3.04896431158314 (unseen ngrams)
+5: log P(backers | , whose) = -inf (unknown word)
+6: log P(include | whose backers) = -4.32822665591756 (unseen ngrams)
+7: log P(Chairman | backers include) = -5.1063779063012 (unseen ngrams)
+8: log P(Dan | include Chairman) = -5.1063779063012 (unseen ngrams)
+9: log P(Rostenkowski | Chairman Dan) = -inf (unknown word)
+10: log P(-LRB- | Dan Rostenkowski) = -4.02719666025358 (unseen ngrams)
+11: log P(D. | Rostenkowski -LRB-) = -4.80534791063722 (unseen ngrams)
+12: log P(, | -LRB- D.) = -2.04191991707428 (unseen ngrams)
+13: log P(Ill. | D. ,) = -3.35767205662403 (unseen ngrams)
+14: log P(-RRB- | , Ill.) = -4.02719666025358 (unseen ngrams)
+15: log P(, | Ill. -RRB-) = -0.755113201239978 (unseen ngrams)
+16: log P(would | -RRB- ,) = -2.9386659840044 (unseen ngrams)
+17: log P(prevent | , would) = -4.80534791063722 (unseen ngrams)
+18: log P(the | would prevent) = -0.294103097676213 (unseen ngrams)
+19: log P(Resolution | prevent the) = -inf (unknown word)
+20: log P(Trust | the Resolution) = -5.1063779063012 (unseen ngrams)
+21: log P(Corp. | Resolution Trust) = -3.87592898492293 (unseen ngrams)
+22: log P(from | Trust Corp.) = -3.25511955758213 (unseen ngrams)
+23: log P(raising | Corp. from) = -4.50431791497324 (unseen ngrams)
+24: log P(temporary | from raising) = -inf (unknown word)
+25: log P(working | raising temporary) = -4.62925665158154 (unseen ngrams)
+26: log P(capital | temporary working) = -4.32822665591756 (unseen ngrams)
+27: log P(by | working capital) = -3.02359253598475 (unseen ngrams)
+28: log P(having | capital by) = -4.80534791063722 (unseen ngrams)
+29: log P(an | by having) = -3.11515183060871 (unseen ngrams)
+30: log P(RTC-owned | having an) = -inf (unknown word)
+31: log P(bank | an RTC-owned) = -4.02719666025358 (unseen ngrams)
+32: log P(or | RTC-owned bank) = -3.39880773020326 (unseen ngrams)
+33: log P(thrift | bank or) = -4.62925665158154 (unseen ngrams)
+34: log P(issue | or thrift) = -0.777825027429386 (unseen ngrams)
+35: log P(debt | thrift issue) = -4.02719666025358 (unseen ngrams)
+36: log P(that | issue debt) = -2.81412183494472 (unseen ngrams)
+37: log P(would | debt that) = -1.97907141883835 (unseen ngrams)
+38: log P(n't | that would) = -0.920161816920853
+39: log P(be | would n't) = -1.31668641885703
+40: log P(counted | n't be) = -inf (unknown word)
+41: log P(on | be counted) = -3.00257418534524 (unseen ngrams)
+42: log P(the | counted on) = -0.760968051008378 (unseen ngrams)
+43: log P(federal | on the) = -3.20766286960211 (unseen ngrams)
+44: log P(budget | the federal) = -4.80534791063722 (unseen ngrams)
+45: log P(. | federal budget) = -2.11250099135999 (unseen ngrams)
+46: log P(</s> | budget .) = -0.322502345739275 (unseen ngrams)
+1 sentence, 45 words, 6 OOVs
+logprob=-126.982187507552 ppl=1494.70224799286
+
+
+
+Sent #3: <s> The bill intends to restrict the RTC to Treasury borrowings only , unless the agency receives specific congressional authorization . </s>
+1: log P(The | <s>) = -1.048238975517
+2: log P(bill | <s> The) = -4.50431791497324 (unseen ngrams)
+3: log P(intends | The bill) = -inf (unknown word)
+4: log P(to | bill intends) = -2.39541478730592 (unseen ngrams)
+5: log P(restrict | intends to) = -inf (unknown word)
+6: log P(the | to restrict) = -2.09480746270392 (unseen ngrams)
+7: log P(RTC | restrict the) = -inf (unknown word)
+8: log P(to | the RTC) = -2.39541478730592 (unseen ngrams)
+9: log P(Treasury | RTC to) = -4.40740790196518 (unseen ngrams)
+10: log P(borrowings | to Treasury) = -inf (unknown word)
+11: log P(only | Treasury borrowings) = -3.87592898492293 (unseen ngrams)
+12: log P(, | borrowings only) = -2.04191991707428 (unseen ngrams)
+13: log P(unless | only ,) = -3.34999430724713 (unseen ngrams)
+14: log P(the | , unless) = -2.09480746270392 (unseen ngrams)
+15: log P(agency | unless the) = -4.62925665158154 (unseen ngrams)
+16: log P(receives | the agency) = -5.1063779063012 (unseen ngrams)
+17: log P(specific | agency receives) = -5.1063779063012 (unseen ngrams)
+18: log P(congressional | receives specific) = -inf (unknown word)
+19: log P(authorization | specific congressional) = -inf (unknown word)
+20: log P(. | congressional authorization) = -2.11250099135999 (unseen ngrams)
+21: log P(</s> | authorization .) = -0.322502345739275 (unseen ngrams)
+1 sentence, 20 words, 6 OOVs
+logprob=-45.4852683030026 ppl=1077.33611865552
+
+
+
+Sent #4: <s> `` Such agency ` self-help ' borrowing is unauthorized and expensive , far more expensive than direct Treasury borrowing , '' said Rep. Fortney Stark -LRB- D. , Calif. -RRB- , the bill 's chief sponsor . </s>
+1: log P(`` | <s>) = -1.35651893145566
+2: log P(Such | <s> ``) = -2.420640365153
+3: log P(agency | `` Such) = -4.62925665158154 (unseen ngrams)
+4: log P(` | Such agency) = -4.80534791063722 (unseen ngrams)
+5: log P(self-help | agency `) = -inf (unknown word)
+6: log P(' | ` self-help) = -3.74465007028361 (unseen ngrams)
+7: log P(borrowing | self-help ') = -5.1063779063012 (unseen ngrams)
+8: log P(is | ' borrowing) = -2.92740095900803 (unseen ngrams)
+9: log P(unauthorized | borrowing is) = -5.1063779063012 (unseen ngrams)
+10: log P(and | is unauthorized) = -2.5153132992747 (unseen ngrams)
+11: log P(expensive | unauthorized and) = -5.1063779063012 (unseen ngrams)
+12: log P(, | and expensive) = -2.04191991707428 (unseen ngrams)
+13: log P(far | expensive ,) = -3.99243455399436 (unseen ngrams)
+14: log P(more | , far) = -1.11200321706277 (unseen ngrams)
+15: log P(expensive | far more) = -5.1063779063012 (unseen ngrams)
+16: log P(than | more expensive) = -3.44362007461963 (unseen ngrams)
+17: log P(direct | expensive than) = -4.62925665158154 (unseen ngrams)
+18: log P(Treasury | than direct) = -4.40740790196518 (unseen ngrams)
+19: log P(borrowing | direct Treasury) = -5.1063779063012 (unseen ngrams)
+20: log P(, | Treasury borrowing) = -2.04191991707428 (unseen ngrams)
+21: log P('' | borrowing ,) = -1.49960147810997 (unseen ngrams)
+22: log P(said | , '') = -1.42096313092403
+23: log P(Rep. | '' said) = -4.80534791063722 (unseen ngrams)
+24: log P(Fortney | said Rep.) = -inf (unknown word)
+25: log P(Stark | Rep. Fortney) = -inf (unknown word)
+26: log P(-LRB- | Fortney Stark) = -4.02719666025358 (unseen ngrams)
+27: log P(D. | Stark -LRB-) = -4.80534791063722 (unseen ngrams)
+28: log P(, | -LRB- D.) = -2.04191991707428 (unseen ngrams)
+29: log P(Calif. | D. ,) = -inf (unknown word)
+30: log P(-RRB- | , Calif.) = -4.02719666025358 (unseen ngrams)
+31: log P(, | Calif. -RRB-) = -0.755113201239978 (unseen ngrams)
+32: log P(the | -RRB- ,) = -1.10625240958596
+33: log P(bill | , the) = -4.50431791497324 (unseen ngrams)
+34: log P('s | the bill) = -2.70670418482016 (unseen ngrams)
+35: log P(chief | bill 's) = -2.38788945095792 (unseen ngrams)
+36: log P(sponsor | 's chief) = -5.1063779063012 (unseen ngrams)
+37: log P(. | chief sponsor) = -2.11250099135999 (unseen ngrams)
+38: log P(</s> | sponsor .) = -0.322502345739275 (unseen ngrams)
+1 sentence, 37 words, 4 OOVs
+logprob=-111.228812025139 ppl=1868.25282572858
+
+
+
+Sent #5: <s> The complex financing plan in the S&L bailout law includes raising $ 30 billion from debt issued by the newly created RTC . </s>
+1: log P(The | <s>) = -1.048238975517
+2: log P(complex | <s> The) = -inf (unknown word)
+3: log P(financing | The complex) = -4.50431791497324 (unseen ngrams)
+4: log P(plan | complex financing) = -4.02719666025358 (unseen ngrams)
+5: log P(in | financing plan) = -1.34722963743089 (unseen ngrams)
+6: log P(the | plan in) = -0.981019231651497 (unseen ngrams)
+7: log P(S&L | in the) = -5.1063779063012 (unseen ngrams)
+8: log P(bailout | the S&L) = -inf (unknown word)
+9: log P(law | S&L bailout) = -3.87592898492293 (unseen ngrams)
+10: log P(includes | bailout law) = -4.40740790196518 (unseen ngrams)
+11: log P(raising | law includes) = -4.50431791497324 (unseen ngrams)
+12: log P($ | includes raising) = -3.02719666025358 (unseen ngrams)
+13: log P(30 | raising $) = -2.37373289134718 (unseen ngrams)
+14: log P(billion | $ 30) = -3.53817618223421 (unseen ngrams)
+15: log P(from | 30 billion) = -1.85172859771099 (unseen ngrams)
+16: log P(debt | billion from) = -4.02719666025358 (unseen ngrams)
+17: log P(issued | from debt) = -4.40740790196518 (unseen ngrams)
+18: log P(by | debt issued) = -3.02359253598475 (unseen ngrams)
+19: log P(the | issued by) = -0.953330803765224 (unseen ngrams)
+20: log P(newly | by the) = -5.1063779063012 (unseen ngrams)
+21: log P(created | the newly) = -5.1063779063012 (unseen ngrams)
+22: log P(RTC | newly created) = -inf (unknown word)
+23: log P(. | created RTC) = -2.11250099135999 (unseen ngrams)
+24: log P(</s> | RTC .) = -0.322502345739275 (unseen ngrams)
+1 sentence, 23 words, 3 OOVs
+logprob=-65.6521565112051 ppl=1337.4980798252
+
+
+
+Sent #6: <s> This financing system was created in the new law in order to keep the bailout spending from swelling the budget deficit . </s>
+1: log P(This | <s>) = -2.51169260973445
+2: log P(financing | <s> This) = -4.50431791497324 (unseen ngrams)
+3: log P(system | This financing) = -4.50431791497324 (unseen ngrams)
+4: log P(was | financing system) = -3.00257418534524 (unseen ngrams)
+5: log P(created | system was) = -5.1063779063012 (unseen ngrams)
+6: log P(in | was created) = -2.4831286159033 (unseen ngrams)
+7: log P(the | created in) = -0.981019231651497 (unseen ngrams)
+8: log P(new | in the) = -2.24354336679086 (unseen ngrams)
+9: log P(law | the new) = -1.94907227597323 (unseen ngrams)
+10: log P(in | new law) = -2.4831286159033 (unseen ngrams)
+11: log P(order | law in) = -4.32822665591756 (unseen ngrams)
+12: log P(to | in order) = -2.39541478730592 (unseen ngrams)
+13: log P(keep | order to) = -2.53139122847685 (unseen ngrams)
+14: log P(the | to keep) = -0.681855609214568
+15: log P(bailout | keep the) = -inf (unknown word)
+16: log P(spending | the bailout) = -3.93028664724552 (unseen ngrams)
+17: log P(from | bailout spending) = -3.25511955758213 (unseen ngrams)
+18: log P(swelling | spending from) = -5.1063779063012 (unseen ngrams)
+19: log P(the | from swelling) = -2.09480746270392 (unseen ngrams)
+20: log P(budget | swelling the) = -4.80534791063722 (unseen ngrams)
+21: log P(deficit | the budget) = -4.80534791063722 (unseen ngrams)
+22: log P(. | budget deficit) = -2.11250099135999 (unseen ngrams)
+23: log P(</s> | deficit .) = -0.322502345739275 (unseen ngrams)
+1 sentence, 22 words, 1 OOVs
+logprob=-66.1383516506709 ppl=1014.58564042705
+
+
+
+Sent #7: <s> Another $ 20 billion would be raised through Treasury bonds , which pay lower interest rates . </s>
+1: log P(Another | <s>) = -2.81716254522929
+2: log P($ | <s> Another) = -3.02719666025358 (unseen ngrams)
+3: log P(20 | Another $) = -4.50431791497324 (unseen ngrams)
+4: log P(billion | $ 20) = -3.53817618223421 (unseen ngrams)
+5: log P(would | 20 billion) = -3.53817618223421 (unseen ngrams)
+6: log P(be | billion would) = -0.963695942140739 (unseen ngrams)
+7: log P(raised | would be) = -2.19153657091466 (unseen ngrams)
+8: log P(through | be raised) = -4.26127986628694 (unseen ngrams)
+9: log P(Treasury | raised through) = -4.40740790196518 (unseen ngrams)
+10: log P(bonds | through Treasury) = -4.62925665158154 (unseen ngrams)
+11: log P(, | Treasury bonds) = -2.04191991707428 (unseen ngrams)
+12: log P(which | bonds ,) = -1.89208058025835 (unseen ngrams)
+13: log P(pay | , which) = -4.06498522114298 (unseen ngrams)
+14: log P(lower | which pay) = -4.50431791497324 (unseen ngrams)
+15: log P(interest | pay lower) = -3.93028664724552 (unseen ngrams)
+16: log P(rates | lower interest) = -0.631688257005163 (unseen ngrams)
+17: log P(. | interest rates) = -0.778001595575068
+18: log P(</s> | rates .) = -0.239667837636183
+1 sentence, 17 words, 0 OOVs
+logprob=-51.9611543887244 ppl=770.425766952307
+
+
+
+Sent #8: <s> But the RTC also requires `` working '' capital to maintain the bad assets of thrifts that are sold , until the assets can be sold separately . </s>
+1: log P(But | <s>) = -1.69205648912366
+2: log P(the | <s> But) = -1.01678178949633
+3: log P(RTC | But the) = -inf (unknown word)
+4: log P(also | the RTC) = -3.49359404958147 (unseen ngrams)
+5: log P(requires | RTC also) = -4.62925665158154 (unseen ngrams)
+6: log P(`` | also requires) = -2.82307667759765 (unseen ngrams)
+7: log P(working | requires ``) = -4.62925665158154 (unseen ngrams)
+8: log P('' | `` working) = -2.82991610212796 (unseen ngrams)
+9: log P(capital | working '') = -4.32822665591756 (unseen ngrams)
+10: log P(to | '' capital) = -2.39541478730592 (unseen ngrams)
+11: log P(maintain | capital to) = -inf (unknown word)
+12: log P(the | to maintain) = -2.09480746270392 (unseen ngrams)
+13: log P(bad | maintain the) = -4.80534791063722 (unseen ngrams)
+14: log P(assets | the bad) = -4.62925665158154 (unseen ngrams)
+15: log P(of | bad assets) = -0.76560670649126 (unseen ngrams)
+16: log P(thrifts | assets of) = -inf (unknown word)
+17: log P(that | of thrifts) = -2.81412183494472 (unseen ngrams)
+18: log P(are | thrifts that) = -1.79368578149242 (unseen ngrams)
+19: log P(sold | that are) = -4.15213539686188 (unseen ngrams)
+20: log P(, | are sold) = -1.18952932393775 (unseen ngrams)
+21: log P(until | sold ,) = -4.06498522114298 (unseen ngrams)
+22: log P(the | , until) = -2.09480746270392 (unseen ngrams)
+23: log P(assets | until the) = -4.62925665158154 (unseen ngrams)
+24: log P(can | the assets) = -3.82762430534837 (unseen ngrams)
+25: log P(be | assets can) = -1.27374463914154 (unseen ngrams)
+26: log P(sold | can be) = -2.18837783077696 (unseen ngrams)
+27: log P(separately | be sold) = -inf (unknown word)
+28: log P(. | sold separately) = -2.11250099135999 (unseen ngrams)
+29: log P(</s> | separately .) = -0.322502345739275 (unseen ngrams)
+1 sentence, 28 words, 4 OOVs
+logprob=-70.5958703707589 ppl=666.553195545872
+
+
+
+Sent #9: <s> That debt would be paid off as the assets are sold , leaving the total spending for the bailout at $ 50 billion , or $ 166 billion including interest over 10 years . </s>
+1: log P(That | <s>) = -2.38869076398238
+2: log P(debt | <s> That) = -4.02719666025358 (unseen ngrams)
+3: log P(would | That debt) = -3.53817618223421 (unseen ngrams)
+4: log P(be | debt would) = -0.963695942140739 (unseen ngrams)
+5: log P(paid | would be) = -2.18890269460218 (unseen ngrams)
+6: log P(off | be paid) = -4.02719666025358 (unseen ngrams)
+7: log P(as | paid off) = -3.14733651398011 (unseen ngrams)
+8: log P(the | off as) = -1.01795089198558 (unseen ngrams)
+9: log P(assets | as the) = -4.62925665158154 (unseen ngrams)
+10: log P(are | the assets) = -3.11074271170365 (unseen ngrams)
+11: log P(sold | assets are) = -4.15213539686188 (unseen ngrams)
+12: log P(, | are sold) = -1.18952932393775 (unseen ngrams)
+13: log P(leaving | sold ,) = -inf (unknown word)
+14: log P(the | , leaving) = -2.09480746270392 (unseen ngrams)
+15: log P(total | leaving the) = -2.98123412285378 (unseen ngrams)
+16: log P(spending | the total) = -3.93028664724552 (unseen ngrams)
+17: log P(for | total spending) = -2.74844305930075 (unseen ngrams)
+18: log P(the | spending for) = -1.06054967721649 (unseen ngrams)
+19: log P(bailout | for the) = -inf (unknown word)
+20: log P(at | the bailout) = -3.16189523415103 (unseen ngrams)
+21: log P($ | bailout at) = -1.39027729387367 (unseen ngrams)
+22: log P(50 | at $) = -2.37373289134718 (unseen ngrams)
+23: log P(billion | $ 50) = -3.53817618223421 (unseen ngrams)
+24: log P(, | 50 billion) = -1.04498147014221 (unseen ngrams)
+25: log P(or | billion ,) = -2.32702091768404 (unseen ngrams)
+26: log P($ | , or) = -1.21931507902345
+27: log P(166 | or $) = -inf (unknown word)
+28: log P(billion | $ 166) = -3.53817618223421 (unseen ngrams)
+29: log P(including | 166 billion) = -4.15213539686188 (unseen ngrams)
+30: log P(interest | billion including) = -3.93028664724552 (unseen ngrams)
+31: log P(over | including interest) = -3.99243455399436 (unseen ngrams)
+32: log P(10 | interest over) = -1.41435509156033 (unseen ngrams)
+33: log P(years | over 10) = -0.84412349716498 (unseen ngrams)
+34: log P(. | 10 years) = -1.03112612333072 (unseen ngrams)
+35: log P(</s> | years .) = -0.239667837636183
+1 sentence, 34 words, 3 OOVs
+logprob=-81.3938357613216 ppl=349.588684992592
+
+
+
+Sent #10: <s> `` It 's a problem that clearly has to be resolved , '' said David Cooke , executive director of the RTC . </s>
+1: log P(`` | <s>) = -1.35651893145566
+2: log P(It | <s> ``) = -1.55160264231125
+3: log P('s | `` It) = -0.570843281577015
+4: log P(a | It 's) = -1.55501400995708
+5: log P(problem | 's a) = -4.62925665158154 (unseen ngrams)
+6: log P(that | a problem) = -2.81412183494472 (unseen ngrams)
+7: log P(clearly | problem that) = -4.62925665158154 (unseen ngrams)
+8: log P(has | that clearly) = -3.1332500527015 (unseen ngrams)
+9: log P(to | clearly has) = -1.59688082390484 (unseen ngrams)
+10: log P(be | has to) = -1.14259921716313
+11: log P(resolved | to be) = -5.1063779063012 (unseen ngrams)
+12: log P(, | be resolved) = -2.04191991707428 (unseen ngrams)
+13: log P('' | resolved ,) = -1.49960147810997 (unseen ngrams)
+14: log P(said | , '') = -1.42096313092403
+15: log P(David | '' said) = -4.26127986628694 (unseen ngrams)
+16: log P(Cooke | said David) = -inf (unknown word)
+17: log P(, | David Cooke) = -2.04191991707428 (unseen ngrams)
+18: log P(executive | Cooke ,) = -3.99243455399436 (unseen ngrams)
+19: log P(director | , executive) = -3.99243455399436 (unseen ngrams)
+20: log P(of | executive director) = -0.454645627066925 (unseen ngrams)
+21: log P(the | director of) = -0.837021137706471
+22: log P(RTC | of the) = -inf (unknown word)
+23: log P(. | the RTC) = -2.11250099135999 (unseen ngrams)
+24: log P(</s> | RTC .) = -0.322502345739275 (unseen ngrams)
+1 sentence, 23 words, 2 OOVs
+logprob=-51.0629455228104 ppl=209.43197020182
+
+
+
+Sent #11: <s> The agency has already spent roughly $ 19 billion selling 34 insolvent S&Ls , and it is likely to sell or merge 600 by the time the bailout concludes . </s>
+1: log P(The | <s>) = -1.048238975517
+2: log P(agency | <s> The) = -4.62925665158154 (unseen ngrams)
+3: log P(has | The agency) = -3.1332500527015 (unseen ngrams)
+4: log P(already | agency has) = -2.27160897047677 (unseen ngrams)
+5: log P(spent | has already) = -4.62925665158154 (unseen ngrams)
+6: log P(roughly | already spent) = -5.1063779063012 (unseen ngrams)
+7: log P($ | spent roughly) = -3.02719666025358 (unseen ngrams)
+8: log P(19 | roughly $) = -2.37695998698542 (unseen ngrams)
+9: log P(billion | $ 19) = -3.53817618223421 (unseen ngrams)
+10: log P(selling | 19 billion) = -5.1063779063012 (unseen ngrams)
+11: log P(34 | billion selling) = -inf (unknown word)
+12: log P(insolvent | selling 34) = -inf (unknown word)
+13: log P(S&Ls | 34 insolvent) = -inf (unknown word)
+14: log P(, | insolvent S&Ls) = -2.04191991707428 (unseen ngrams)
+15: log P(and | S&Ls ,) = -1.68350269709506 (unseen ngrams)
+16: log P(it | , and) = -2.34641859865781
+17: log P(is | and it) = -1.21337668647019 (unseen ngrams)
+18: log P(likely | it is) = -4.80534791063722 (unseen ngrams)
+19: log P(to | is likely) = -0.297549364201232 (unseen ngrams)
+20: log P(sell | likely to) = -3.00851248319651 (unseen ngrams)
+21: log P(or | to sell) = -3.39880773020326 (unseen ngrams)
+22: log P(merge | sell or) = -5.1063779063012 (unseen ngrams)
+23: log P(600 | or merge) = -inf (unknown word)
+24: log P(by | merge 600) = -3.02359253598475 (unseen ngrams)
+25: log P(the | 600 by) = -0.953330803765224 (unseen ngrams)
+26: log P(time | by the) = -3.22443347926198 (unseen ngrams)
+27: log P(the | the time) = -2.09480746270392 (unseen ngrams)
+28: log P(bailout | time the) = -inf (unknown word)
+29: log P(concludes | the bailout) = -inf (unknown word)
+30: log P(. | bailout concludes) = -2.11250099135999 (unseen ngrams)
+31: log P(</s> | concludes .) = -0.322502345739275 (unseen ngrams)
+1 sentence, 30 words, 6 OOVs
+logprob=-70.4996808565859 ppl=660.67402774116
+
+
+
+Sent #12: <s> Absent other working capital , he said , the RTC would be forced to delay other thrift resolutions until cash could be raised by selling the bad assets . </s>
+1: log P(Absent | <s>) = -inf (unknown word)
+2: log P(other | <s> Absent) = -3.55007540553391 (unseen ngrams)
+3: log P(working | Absent other) = -4.62925665158154 (unseen ngrams)
+4: log P(capital | other working) = -4.32822665591756 (unseen ngrams)
+5: log P(, | working capital) = -2.04191991707428 (unseen ngrams)
+6: log P(he | capital ,) = -2.21827227991762 (unseen ngrams)
+7: log P(said | , he) = -0.925633590603625
+8: log P(, | he said) = -1.44826842001503
+9: log P(the | said ,) = -1.03013024946686
+10: log P(RTC | , the) = -inf (unknown word)
+11: log P(would | the RTC) = -3.53817618223421 (unseen ngrams)
+12: log P(be | RTC would) = -0.963695942140739 (unseen ngrams)
+13: log P(forced | would be) = -inf (unknown word)
+14: log P(to | be forced) = -2.39541478730592 (unseen ngrams)
+15: log P(delay | forced to) = -inf (unknown word)
+16: log P(other | to delay) = -3.55007540553391 (unseen ngrams)
+17: log P(thrift | delay other) = -4.62925665158154 (unseen ngrams)
+18: log P(resolutions | other thrift) = -inf (unknown word)
+19: log P(until | thrift resolutions) = -4.06498522114298 (unseen ngrams)
+20: log P(cash | resolutions until) = -4.50431791497324 (unseen ngrams)
+21: log P(could | until cash) = -3.69140455833038 (unseen ngrams)
+22: log P(be | cash could) = -1.23431020547542 (unseen ngrams)
+23: log P(raised | could be) = -2.19153657091466 (unseen ngrams)
+24: log P(by | be raised) = -0.57249150807358
+25: log P(selling | raised by) = -5.1063779063012 (unseen ngrams)
+26: log P(the | by selling) = -2.09480746270392 (unseen ngrams)
+27: log P(bad | selling the) = -4.80534791063722 (unseen ngrams)
+28: log P(assets | the bad) = -4.62925665158154 (unseen ngrams)
+29: log P(. | bad assets) = -0.758491959640308 (unseen ngrams)
+30: log P(</s> | assets .) = -0.239667837636183
+1 sentence, 29 words, 5 OOVs
+logprob=-69.1413978463174 ppl=582.983031004447
+
+
+
+Sent #13: <s> `` We would have to wait until we have collected on those assets before we can move forward , '' he said . </s>
+1: log P(`` | <s>) = -1.35651893145566
+2: log P(We | <s> ``) = -1.85433082649488
+3: log P(would | `` We) = -3.53817618223421 (unseen ngrams)
+4: log P(have | We would) = -1.02133961214663 (unseen ngrams)
+5: log P(to | would have) = -1.29791149969014
+6: log P(wait | have to) = -5.1063779063012 (unseen ngrams)
+7: log P(until | to wait) = -0.30095521459057 (unseen ngrams)
+8: log P(we | wait until) = -4.32822665591756 (unseen ngrams)
+9: log P(have | until we) = -3.21428330361072 (unseen ngrams)
+10: log P(collected | we have) = -5.1063779063012 (unseen ngrams)
+11: log P(on | have collected) = -3.00257418534524 (unseen ngrams)
+12: log P(those | collected on) = -3.90225792364528 (unseen ngrams)
+13: log P(assets | on those) = -4.62925665158154 (unseen ngrams)
+14: log P(before | those assets) = -3.87592898492293 (unseen ngrams)
+15: log P(we | assets before) = -4.32822665591756 (unseen ngrams)
+16: log P(can | before we) = -3.82762430534837 (unseen ngrams)
+17: log P(move | we can) = -4.80534791063722 (unseen ngrams)
+18: log P(forward | can move) = -4.80534791063722 (unseen ngrams)
+19: log P(, | move forward) = -2.04191991707428 (unseen ngrams)
+20: log P('' | forward ,) = -1.49960147810997 (unseen ngrams)
+21: log P(he | , '') = -1.56009735564229
+22: log P(said | '' he) = -0.862145163335436
+23: log P(. | he said) = -0.74936469002789
+24: log P(</s> | said .) = -0.239667837636183
+1 sentence, 23 words, 0 OOVs
+logprob=-67.2538590086042 ppl=634.226121889155
+
+
+
+Sent #14: <s> The complicated language in the huge new law has muddied the fight . </s>
+1: log P(The | <s>) = -1.048238975517
+2: log P(complicated | <s> The) = -4.80534791063722 (unseen ngrams)
+3: log P(language | The complicated) = -4.80534791063722 (unseen ngrams)
+4: log P(in | complicated language) = -0.596386169584315 (unseen ngrams)
+5: log P(the | language in) = -0.689375934496678
+6: log P(huge | in the) = -5.1063779063012 (unseen ngrams)
+7: log P(new | the huge) = -3.45316539252586 (unseen ngrams)
+8: log P(law | huge new) = -1.94907227597323 (unseen ngrams)
+9: log P(has | new law) = -3.1332500527015 (unseen ngrams)
+10: log P(muddied | law has) = -inf (unknown word)
+11: log P(the | has muddied) = -2.09480746270392 (unseen ngrams)
+12: log P(fight | muddied the) = -3.30567354127349 (unseen ngrams)
+13: log P(. | the fight) = -2.11250099135999 (unseen ngrams)
+14: log P(</s> | fight .) = -0.322502345739275 (unseen ngrams)
+1 sentence, 13 words, 1 OOVs
+logprob=-33.4220468694509 ppl=372.328844272918
+
+
+
+Sent #15: <s> The law does allow the RTC to borrow from the Treasury up to $ 5 billion at any time . </s>
+1: log P(The | <s>) = -1.048238975517
+2: log P(law | <s> The) = -3.87592898492293 (unseen ngrams)
+3: log P(does | The law) = -3.99243455399436 (unseen ngrams)
+4: log P(allow | law does) = -4.80534791063722 (unseen ngrams)
+5: log P(the | does allow) = -2.09480746270392 (unseen ngrams)
+6: log P(RTC | allow the) = -inf (unknown word)
+7: log P(to | the RTC) = -2.39541478730592 (unseen ngrams)
+8: log P(borrow | RTC to) = -inf (unknown word)
+9: log P(from | to borrow) = -3.25511955758213 (unseen ngrams)
+10: log P(the | borrow from) = -0.918239190665512 (unseen ngrams)
+11: log P(Treasury | from the) = -3.27902058975028 (unseen ngrams)
+12: log P(up | the Treasury) = -3.56230986195093 (unseen ngrams)
+13: log P(to | Treasury up) = -1.21348861998203 (unseen ngrams)
+14: log P($ | up to) = -1.83689903321402 (unseen ngrams)
+15: log P(5 | to $) = -4.80534791063722 (unseen ngrams)
+16: log P(billion | $ 5) = -3.53817618223421 (unseen ngrams)
+17: log P(at | 5 billion) = -1.84764034068272 (unseen ngrams)
+18: log P(any | billion at) = -3.76395522547899 (unseen ngrams)
+19: log P(time | at any) = -3.96024987062296 (unseen ngrams)
+20: log P(. | any time) = -1.36218833893849 (unseen ngrams)
+21: log P(</s> | time .) = -0.239667837636183
+1 sentence, 20 words, 2 OOVs
+logprob=-51.794475234457 ppl=532.138905882021
+
+
+
+Sent #16: <s> Moreover , it says the RTC 's total obligations may not exceed $ 50 billion , but that figure is derived after including notes and other debt , and subtracting from it the market value of the assets the RTC holds . </s>
+1: log P(Moreover | <s>) = -2.99325380428497
+2: log P(, | <s> Moreover) = -0.215325746887063
+3: log P(it | Moreover ,) = -2.33142227432804 (unseen ngrams)
+4: log P(says | , it) = -3.28030310360037 (unseen ngrams)
+5: log P(the | it says) = -1.21984382960801 (unseen ngrams)
+6: log P(RTC | says the) = -inf (unknown word)
+7: log P('s | the RTC) = -2.70670418482016 (unseen ngrams)
+8: log P(total | RTC 's) = -4.15213539686188 (unseen ngrams)
+9: log P(obligations | 's total) = -5.1063779063012 (unseen ngrams)
+10: log P(may | total obligations) = -3.93028664724552 (unseen ngrams)
+11: log P(not | obligations may) = -1.17431021410048 (unseen ngrams)
+12: log P(exceed | may not) = -5.1063779063012 (unseen ngrams)
+13: log P($ | not exceed) = -3.02719666025358 (unseen ngrams)
+14: log P(50 | exceed $) = -2.37373289134718 (unseen ngrams)
+15: log P(billion | $ 50) = -3.53817618223421 (unseen ngrams)
+16: log P(, | 50 billion) = -1.04498147014221 (unseen ngrams)
+17: log P(but | billion ,) = -1.939433850278 (unseen ngrams)
+18: log P(that | , but) = -1.7236794474869
+19: log P(figure | but that) = -4.80534791063722 (unseen ngrams)
+20: log P(is | that figure) = -2.92740095900803 (unseen ngrams)
+21: log P(derived | figure is) = -inf (unknown word)
+22: log P(after | is derived) = -3.78415861156728 (unseen ngrams)
+23: log P(including | derived after) = -4.15213539686188 (unseen ngrams)
+24: log P(notes | after including) = -4.40740790196518 (unseen ngrams)
+25: log P(and | including notes) = -2.5153132992747 (unseen ngrams)
+26: log P(other | notes and) = -1.92737330486546 (unseen ngrams)
+27: log P(debt | and other) = -4.02719666025358 (unseen ngrams)
+28: log P(, | other debt) = -0.872636389161904 (unseen ngrams)
+29: log P(and | debt ,) = -1.68350269709506 (unseen ngrams)
+30: log P(subtracting | , and) = -inf (unknown word)
+31: log P(from | and subtracting) = -3.25511955758213 (unseen ngrams)
+32: log P(it | subtracting from) = -3.1063779063012 (unseen ngrams)
+33: log P(the | from it) = -2.09480746270392 (unseen ngrams)
+34: log P(market | it the) = -2.8084107992591 (unseen ngrams)
+35: log P(value | the market) = -4.32822665591756 (unseen ngrams)
+36: log P(of | market value) = -0.59365683135576 (unseen ngrams)
+37: log P(the | value of) = -0.949985889573139 (unseen ngrams)
+38: log P(assets | of the) = -4.62925665158154 (unseen ngrams)
+39: log P(the | the assets) = -2.09480746270392 (unseen ngrams)
+40: log P(RTC | assets the) = -inf (unknown word)
+41: log P(holds | the RTC) = -4.80534791063722 (unseen ngrams)
+42: log P(. | RTC holds) = -2.11250099135999 (unseen ngrams)
+43: log P(</s> | holds .) = -0.322502345739275 (unseen ngrams)
+1 sentence, 42 words, 4 OOVs
+logprob=-108.067015111486 ppl=590.131919093954
+
+
+
+Sent #17: <s> But Congress did n't anticipate or intend more public debt , say opponents of the RTC 's working-capital plan , and Rep. Charles Schumer -LRB- D. , N.Y . -RRB- said the RTC Oversight Board has been remiss in not keeping Congress informed . </s>
+1: log P(But | <s>) = -1.69205648912366
+2: log P(Congress | <s> But) = -4.32822665591756 (unseen ngrams)
+3: log P(did | But Congress) = -3.70843789762916 (unseen ngrams)
+4: log P(n't | Congress did) = -0.697697084490733 (unseen ngrams)
+5: log P(anticipate | did n't) = -inf (unknown word)
+6: log P(or | n't anticipate) = -3.39880773020326 (unseen ngrams)
+7: log P(intend | anticipate or) = -inf (unknown word)
+8: log P(more | or intend) = -3.46292522981501 (unseen ngrams)
+9: log P(public | intend more) = -4.50431791497324 (unseen ngrams)
+10: log P(debt | more public) = -4.02719666025358 (unseen ngrams)
+11: log P(, | public debt) = -0.872636389161904 (unseen ngrams)
+12: log P(say | debt ,) = -3.19753482070088 (unseen ngrams)
+13: log P(opponents | , say) = -inf (unknown word)
+14: log P(of | say opponents) = -2.31119331661878 (unseen ngrams)
+15: log P(the | opponents of) = -0.949985889573139 (unseen ngrams)
+16: log P(RTC | of the) = -inf (unknown word)
+17: log P('s | the RTC) = -2.70670418482016 (unseen ngrams)
+18: log P(working-capital | RTC 's) = -inf (unknown word)
+19: log P(plan | 's working-capital) = -4.02719666025358 (unseen ngrams)
+20: log P(, | working-capital plan) = -2.04191991707428 (unseen ngrams)
+21: log P(and | plan ,) = -1.68350269709506 (unseen ngrams)
+22: log P(Rep. | , and) = -4.80534791063722 (unseen ngrams)
+23: log P(Charles | and Rep.) = -4.62925665158154 (unseen ngrams)
+24: log P(Schumer | Rep. Charles) = -inf (unknown word)
+25: log P(-LRB- | Charles Schumer) = -4.02719666025358 (unseen ngrams)
+26: log P(D. | Schumer -LRB-) = -4.80534791063722 (unseen ngrams)
+27: log P(, | -LRB- D.) = -2.04191991707428 (unseen ngrams)
+28: log P(N.Y | D. ,) = -inf (unknown word)
+29: log P(. | , N.Y) = -2.11250099135999 (unseen ngrams)
+30: log P(-RRB- | N.Y .) = -2.95540984773435 (unseen ngrams)
+31: log P(said | . -RRB-) = -2.89686289175857 (unseen ngrams)
+32: log P(the | -RRB- said) = -1.06956388093184 (unseen ngrams)
+33: log P(RTC | said the) = -inf (unknown word)
+34: log P(Oversight | the RTC) = -inf (unknown word)
+35: log P(Board | RTC Oversight) = -4.40740790196518 (unseen ngrams)
+36: log P(has | Oversight Board) = -0.996816232082063 (unseen ngrams)
+37: log P(been | Board has) = -1.23090995182223 (unseen ngrams)
+38: log P(remiss | has been) = -inf (unknown word)
+39: log P(in | been remiss) = -2.4831286159033 (unseen ngrams)
+40: log P(not | remiss in) = -3.56230986195093 (unseen ngrams)
+41: log P(keeping | in not) = -5.1063779063012 (unseen ngrams)
+42: log P(Congress | not keeping) = -4.32822665591756 (unseen ngrams)
+43: log P(informed | keeping Congress) = -inf (unknown word)
+44: log P(. | Congress informed) = -2.11250099135999 (unseen ngrams)
+45: log P(</s> | informed .) = -0.322502345739275 (unseen ngrams)
+1 sentence, 44 words, 11 OOVs
+logprob=-97.5039266627143 ppl=737.500890264453
+
+
+
+Sent #18: <s> `` That secrecy leads to a proposal like the one from Ways and Means , which seems to me sort of draconian , '' he said . </s>
+1: log P(`` | <s>) = -1.35651893145566
+2: log P(That | <s> ``) = -1.98921074191508
+3: log P(secrecy | `` That) = -inf (unknown word)
+4: log P(leads | That secrecy) = -inf (unknown word)
+5: log P(to | secrecy leads) = -2.39541478730592 (unseen ngrams)
+6: log P(a | leads to) = -1.78652704218682 (unseen ngrams)
+7: log P(proposal | to a) = -2.96634914403996 (unseen ngrams)
+8: log P(like | a proposal) = -3.99243455399436 (unseen ngrams)
+9: log P(the | proposal like) = -1.33254365893798 (unseen ngrams)
+10: log P(one | like the) = -3.12774939776696 (unseen ngrams)
+11: log P(from | the one) = -3.25511955758213 (unseen ngrams)
+12: log P(Ways | one from) = -inf (unknown word)
+13: log P(and | from Ways) = -2.5153132992747 (unseen ngrams)
+14: log P(Means | Ways and) = -inf (unknown word)
+15: log P(, | and Means) = -2.04191991707428 (unseen ngrams)
+16: log P(which | Means ,) = -1.89208058025835 (unseen ngrams)
+17: log P(seems | , which) = -4.80534791063722 (unseen ngrams)
+18: log P(to | which seems) = -0.595126402107132 (unseen ngrams)
+19: log P(me | seems to) = -4.62925665158154 (unseen ngrams)
+20: log P(sort | to me) = -inf (unknown word)
+21: log P(of | me sort) = -2.31119331661878 (unseen ngrams)
+22: log P(draconian | sort of) = -inf (unknown word)
+23: log P(, | of draconian) = -2.04191991707428 (unseen ngrams)
+24: log P('' | draconian ,) = -1.49960147810997 (unseen ngrams)
+25: log P(he | , '') = -1.56009735564229
+26: log P(said | '' he) = -0.862145163335436
+27: log P(. | he said) = -0.74936469002789
+28: log P(</s> | said .) = -0.239667837636183
+1 sentence, 27 words, 6 OOVs
+logprob=-47.9449023345629 ppl=151.11714585352
+
+
+
+Sent #19: <s> `` The RTC is going to have to pay a price of prior consultation on the Hill if they want that kind of flexibility . '' </s>
+1: log P(`` | <s>) = -1.35651893145566
+2: log P(The | <s> ``) = -1.39017846974166
+3: log P(RTC | `` The) = -inf (unknown word)
+4: log P(is | The RTC) = -2.92740095900803 (unseen ngrams)
+5: log P(going | RTC is) = -4.40740790196518 (unseen ngrams)
+6: log P(to | is going) = -0.393593560592333 (unseen ngrams)
+7: log P(have | going to) = -1.53015451505383
+8: log P(to | to have) = -1.21413931217845
+9: log P(pay | have to) = -2.30540221179334 (unseen ngrams)
+10: log P(a | to pay) = -2.43151676556339 (unseen ngrams)
+11: log P(price | pay a) = -2.95394410157355 (unseen ngrams)
+12: log P(of | a price) = -2.31119331661878 (unseen ngrams)
+13: log P(prior | price of) = -5.1063779063012 (unseen ngrams)
+14: log P(consultation | of prior) = -inf (unknown word)
+15: log P(on | prior consultation) = -3.00257418534524 (unseen ngrams)
+16: log P(the | consultation on) = -0.760968051008378 (unseen ngrams)
+17: log P(Hill | on the) = -5.1063779063012 (unseen ngrams)
+18: log P(if | the Hill) = -3.87592898492293 (unseen ngrams)
+19: log P(they | Hill if) = -1.05232052189028 (unseen ngrams)
+20: log P(want | if they) = -4.40740790196518 (unseen ngrams)
+21: log P(that | they want) = -2.81412183494472 (unseen ngrams)
+22: log P(kind | want that) = -4.40740790196518 (unseen ngrams)
+23: log P(of | that kind) = -0.515864869302959 (unseen ngrams)
+24: log P(flexibility | kind of) = -inf (unknown word)
+25: log P(. | of flexibility) = -2.11250099135999 (unseen ngrams)
+26: log P('' | flexibility .) = -1.51735420261091 (unseen ngrams)
+27: log P(</s> | . '') = -0.574208863671873
+1 sentence, 26 words, 3 OOVs
+logprob=-58.4748641671342 ppl=273.182373264986
+
+
+
+Sent #20: <s> The Ways and Means Committee will hold a hearing on the bill next Tuesday . </s>
+1: log P(The | <s>) = -1.048238975517
+2: log P(Ways | <s> The) = -inf (unknown word)
+3: log P(and | The Ways) = -2.5153132992747 (unseen ngrams)
+4: log P(Means | Ways and) = -inf (unknown word)
+5: log P(Committee | and Means) = -4.80534791063722 (unseen ngrams)
+6: log P(will | Means Committee) = -3.26127986628694 (unseen ngrams)
+7: log P(hold | Committee will) = -4.80534791063722 (unseen ngrams)
+8: log P(a | will hold) = -0.595675425876047 (unseen ngrams)
+9: log P(hearing | hold a) = -4.50431791497324 (unseen ngrams)
+10: log P(on | a hearing) = -3.00257418534524 (unseen ngrams)
+11: log P(the | hearing on) = -0.760968051008378 (unseen ngrams)
+12: log P(bill | on the) = -4.50431791497324 (unseen ngrams)
+13: log P(next | the bill) = -3.85110540119789 (unseen ngrams)
+14: log P(Tuesday | bill next) = -4.32822665591756 (unseen ngrams)
+15: log P(. | next Tuesday) = -0.758491959640308 (unseen ngrams)
+16: log P(</s> | Tuesday .) = -0.239667837636183
+1 sentence, 15 words, 2 OOVs
+logprob=-38.9808733089212 ppl=608.622625931148
+
+
+
+Sent #21: <s> We 're about to see if advertising works . </s>
+1: log P(We | <s>) = -3.26830053086241
+2: log P('re | <s> We) = -0.698885026841098
+3: log P(about | We 're) = -3.30703735684762 (unseen ngrams)
+4: log P(to | 're about) = -1.92227485426016 (unseen ngrams)
+5: log P(see | about to) = -2.70402952977444 (unseen ngrams)
+6: log P(if | to see) = -3.87592898492293 (unseen ngrams)
+7: log P(advertising | see if) = -4.50431791497324 (unseen ngrams)
+8: log P(works | if advertising) = -5.1063779063012 (unseen ngrams)
+9: log P(. | advertising works) = -2.11250099135999 (unseen ngrams)
+10: log P(</s> | works .) = -0.322502345739275 (unseen ngrams)
+1 sentence, 9 words, 0 OOVs
+logprob=-27.8221554418824 ppl=605.641385344929
+
+
+
+Sent #22: <s> Hard on the heels of Friday 's 190-point stock-market plunge and the uncertainty that 's followed , a few big brokerage firms are rolling out new ads trumpeting a familiar message : Keep on investing , the market 's just fine . </s>
+1: log P(Hard | <s>) = -inf (unknown word)
+2: log P(on | <s> Hard) = -3.00257418534524 (unseen ngrams)
+3: log P(the | Hard on) = -0.760968051008378 (unseen ngrams)
+4: log P(heels | on the) = -inf (unknown word)
+5: log P(of | the heels) = -2.31119331661878 (unseen ngrams)
+6: log P(Friday | heels of) = -5.1063779063012 (unseen ngrams)
+7: log P('s | of Friday) = -2.70670418482016 (unseen ngrams)
+8: log P(190-point | Friday 's) = -inf (unknown word)
+9: log P(stock-market | 's 190-point) = -inf (unknown word)
+10: log P(plunge | 190-point stock-market) = -inf (unknown word)
+11: log P(and | stock-market plunge) = -2.5153132992747 (unseen ngrams)
+12: log P(the | plunge and) = -1.39696279151713 (unseen ngrams)
+13: log P(uncertainty | and the) = -5.1063779063012 (unseen ngrams)
+14: log P(that | the uncertainty) = -2.81412183494472 (unseen ngrams)
+15: log P('s | uncertainty that) = -2.15078095635662 (unseen ngrams)
+16: log P(followed | that 's) = -4.80534791063722 (unseen ngrams)
+17: log P(, | 's followed) = -2.04191991707428 (unseen ngrams)
+18: log P(a | followed ,) = -1.54208180074079 (unseen ngrams)
+19: log P(few | , a) = -2.27244210036221 (unseen ngrams)
+20: log P(big | a few) = -4.50431791497324 (unseen ngrams)
+21: log P(brokerage | few big) = -inf (unknown word)
+22: log P(firms | big brokerage) = -4.50431791497324 (unseen ngrams)
+23: log P(are | brokerage firms) = -0.900405947659646 (unseen ngrams)
+24: log P(rolling | firms are) = -inf (unknown word)
+25: log P(out | are rolling) = -3.78415861156728 (unseen ngrams)
+26: log P(new | rolling out) = -3.45316539252586 (unseen ngrams)
+27: log P(ads | out new) = -1.95210613030811 (unseen ngrams)
+28: log P(trumpeting | new ads) = -inf (unknown word)
+29: log P(a | ads trumpeting) = -2.43151676556339 (unseen ngrams)
+30: log P(familiar | trumpeting a) = -4.62925665158154 (unseen ngrams)
+31: log P(message | a familiar) = -4.62925665158154 (unseen ngrams)
+32: log P(: | familiar message) = -3.72616666458959 (unseen ngrams)
+33: log P(Keep | message :) = -inf (unknown word)
+34: log P(on | : Keep) = -3.00257418534524 (unseen ngrams)
+35: log P(investing | Keep on) = -5.1063779063012 (unseen ngrams)
+36: log P(, | on investing) = -2.04191991707428 (unseen ngrams)
+37: log P(the | investing ,) = -1.27329360988917 (unseen ngrams)
+38: log P(market | , the) = -2.8084107992591 (unseen ngrams)
+39: log P('s | the market) = -2.70670418482016 (unseen ngrams)
+40: log P(just | market 's) = -4.15213539686188 (unseen ngrams)
+41: log P(fine | 's just) = -4.62925665158154 (unseen ngrams)
+42: log P(. | just fine) = -0.467180378738683 (unseen ngrams)
+43: log P(</s> | fine .) = -0.239667837636183
+1 sentence, 42 words, 9 OOVs
+logprob=-99.4753556741336 ppl=842.841196820956
+
+
+
+Sent #23: <s> Their mission is to keep clients from fleeing the market , as individual investors did in droves after the crash in October </s>
+1: log P(Their | <s>) = -3.29428379994896
+2: log P(mission | <s> Their) = -inf (unknown word)
+3: log P(is | Their mission) = -2.92740095900803 (unseen ngrams)
+4: log P(to | mission is) = -1.97281996518512 (unseen ngrams)
+5: log P(keep | is to) = -2.53139122847685 (unseen ngrams)
+6: log P(clients | to keep) = -4.26127986628694 (unseen ngrams)
+7: log P(from | keep clients) = -3.25511955758213 (unseen ngrams)
+8: log P(fleeing | clients from) = -inf (unknown word)
+9: log P(the | from fleeing) = -2.09480746270392 (unseen ngrams)
+10: log P(market | fleeing the) = -2.8084107992591 (unseen ngrams)
+11: log P(, | the market) = -1.29459351106157 (unseen ngrams)
+12: log P(as | market ,) = -2.33803489029718 (unseen ngrams)
+13: log P(individual | , as) = -4.50431791497324 (unseen ngrams)
+14: log P(investors | as individual) = -0.9026007444062 (unseen ngrams)
+15: log P(did | individual investors) = -3.70843789762916 (unseen ngrams)
+16: log P(in | investors did) = -2.4831286159033 (unseen ngrams)
+17: log P(droves | did in) = -inf (unknown word)
+18: log P(after | in droves) = -3.78415861156728 (unseen ngrams)
+19: log P(the | droves after) = -0.895900774292973 (unseen ngrams)
+20: log P(crash | after the) = -4.80534791063722 (unseen ngrams)
+21: log P(in | the crash) = -2.4831286159033 (unseen ngrams)
+22: log P(October | crash in) = -1.84107143981443 (unseen ngrams)
+23: log P(</s> | in October) = -2.1063779063012 (unseen ngrams)
+1 sentence, 22 words, 3 OOVs
+logprob=-54.2926124712381 ppl=518.358976360042
+
+
+
+Sent #24: <s> Just days after the 1987 crash , major brokerage firms rushed out ads to calm investors . </s>
+1: log P(Just | <s>) = -inf (unknown word)
+2: log P(days | <s> Just) = -4.06498522114298 (unseen ngrams)
+3: log P(after | Just days) = -3.78415861156728 (unseen ngrams)
+4: log P(the | days after) = -0.895900774292973 (unseen ngrams)
+5: log P(1987 | after the) = -1.68686854629348
+6: log P(crash | the 1987) = -0.82386341754452
+7: log P(, | 1987 crash) = -2.04191991707428 (unseen ngrams)
+8: log P(major | crash ,) = -4.26127986628694 (unseen ngrams)
+9: log P(brokerage | , major) = -inf (unknown word)
+10: log P(firms | major brokerage) = -4.50431791497324 (unseen ngrams)
+11: log P(rushed | brokerage firms) = -inf (unknown word)
+12: log P(out | firms rushed) = -3.78415861156728 (unseen ngrams)
+13: log P(ads | rushed out) = -4.26127986628694 (unseen ngrams)
+14: log P(to | out ads) = -2.39541478730592 (unseen ngrams)
+15: log P(calm | ads to) = -inf (unknown word)
+16: log P(investors | to calm) = -3.85110540119789 (unseen ngrams)
+17: log P(. | calm investors) = -0.925077526034381 (unseen ngrams)
+18: log P(</s> | investors .) = -0.239667837636183
+1 sentence, 17 words, 4 OOVs
+logprob=-37.5199982992043 ppl=478.629958435228
+
+
+
+Sent #25: <s> This time around , they 're moving even faster . </s>
+1: log P(This | <s>) = -2.51169260973445
+2: log P(time | <s> This) = -1.17537796434505
+3: log P(around | This time) = -4.26127986628694 (unseen ngrams)
+4: log P(, | time around) = -1.09415852981551 (unseen ngrams)
+5: log P(they | around ,) = -2.59006198029131 (unseen ngrams)
+6: log P('re | , they) = -1.31568415241012
+7: log P(moving | they 're) = -inf (unknown word)
+8: log P(even | 're moving) = -3.85110540119789 (unseen ngrams)
+9: log P(faster | moving even) = -5.1063779063012 (unseen ngrams)
+10: log P(. | even faster) = -2.11250099135999 (unseen ngrams)
+11: log P(</s> | faster .) = -0.322502345739275 (unseen ngrams)
+1 sentence, 10 words, 1 OOVs
+logprob=-24.3407417474817 ppl=271.690325909174
+
+
+
+Sent #26: <s> PaineWebber Inc. filmed a new television commercial at 4 p.m. EDT yesterday and had it on the air by last night . </s>
+1: log P(PaineWebber | <s>) = -inf (unknown word)
+2: log P(Inc. | <s> PaineWebber) = -3.82762430534837 (unseen ngrams)
+3: log P(filmed | PaineWebber Inc.) = -inf (unknown word)
+4: log P(a | Inc. filmed) = -2.43151676556339 (unseen ngrams)
+5: log P(new | filmed a) = -1.9616556319751 (unseen ngrams)
+6: log P(television | a new) = -4.32822665591756 (unseen ngrams)
+7: log P(commercial | new television) = -1.0788957875643 (unseen ngrams)
+8: log P(at | television commercial) = -3.16189523415103 (unseen ngrams)
+9: log P(4 | commercial at) = -4.62925665158154 (unseen ngrams)
+10: log P(p.m. | at 4) = -inf (unknown word)
+11: log P(EDT | 4 p.m.) = -inf (unknown word)
+12: log P(yesterday | p.m. EDT) = -4.15213539686188 (unseen ngrams)
+13: log P(and | EDT yesterday) = -2.5153132992747 (unseen ngrams)
+14: log P(had | yesterday and) = -3.47290945072161 (unseen ngrams)
+15: log P(it | and had) = -1.61909151232952 (unseen ngrams)
+16: log P(on | had it) = -3.00257418534524 (unseen ngrams)
+17: log P(the | it on) = -0.760968051008378 (unseen ngrams)
+18: log P(air | on the) = -inf (unknown word)
+19: log P(by | the air) = -3.02359253598475 (unseen ngrams)
+20: log P(last | air by) = -3.56230986195093 (unseen ngrams)
+21: log P(night | by last) = -4.62925665158154 (unseen ngrams)
+22: log P(. | last night) = -0.758491959640308 (unseen ngrams)
+23: log P(</s> | night .) = -0.239667837636183
+1 sentence, 22 words, 5 OOVs
+logprob=-49.1553817744363 ppl=538.089531585502
+
+
+
+Sent #27: <s> Fidelity Investments placed new ads in newspapers yesterday , and wrote another new ad appearing today . </s>
+1: log P(Fidelity | <s>) = -inf (unknown word)
+2: log P(Investments | <s> Fidelity) = -inf (unknown word)
+3: log P(placed | Fidelity Investments) = -4.62925665158154 (unseen ngrams)
+4: log P(new | Investments placed) = -3.45316539252586 (unseen ngrams)
+5: log P(ads | placed new) = -1.95210613030811 (unseen ngrams)
+6: log P(in | new ads) = -2.4831286159033 (unseen ngrams)
+7: log P(newspapers | ads in) = -5.1063779063012 (unseen ngrams)
+8: log P(yesterday | in newspapers) = -4.15213539686188 (unseen ngrams)
+9: log P(, | newspapers yesterday) = -0.755113201239978 (unseen ngrams)
+10: log P(and | yesterday ,) = -1.68350269709506 (unseen ngrams)
+11: log P(wrote | , and) = -inf (unknown word)
+12: log P(another | and wrote) = -3.87592898492293 (unseen ngrams)
+13: log P(new | wrote another) = -3.45316539252586 (unseen ngrams)
+14: log P(ad | another new) = -1.94786464368477 (unseen ngrams)
+15: log P(appearing | new ad) = -inf (unknown word)
+16: log P(today | ad appearing) = -4.50431791497324 (unseen ngrams)
+17: log P(. | appearing today) = -0.877070506841786 (unseen ngrams)
+18: log P(</s> | today .) = -0.239667837636183
+1 sentence, 17 words, 4 OOVs
+logprob=-39.1128012724017 ppl=621.972981649767
+
+
+
+Sent #28: <s> Shearson Lehman Hutton Inc. by yesterday afternoon had already written new TV ads . </s>
+1: log P(Shearson | <s>) = -4.80534791063722 (unseen ngrams)
+2: log P(Lehman | <s> Shearson) = -0.301016398147385 (unseen ngrams)
+3: log P(Hutton | Shearson Lehman) = -0.221837418322962
+4: log P(Inc. | Lehman Hutton) = -3.82762430534837 (unseen ngrams)
+5: log P(by | Hutton Inc.) = -3.02359253598475 (unseen ngrams)
+6: log P(yesterday | Inc. by) = -4.15213539686188 (unseen ngrams)
+7: log P(afternoon | by yesterday) = -inf (unknown word)
+8: log P(had | yesterday afternoon) = -3.47290945072161 (unseen ngrams)
+9: log P(already | afternoon had) = -4.50431791497324 (unseen ngrams)
+10: log P(written | had already) = -4.62925665158154 (unseen ngrams)
+11: log P(new | already written) = -3.45316539252586 (unseen ngrams)
+12: log P(TV | written new) = -4.40740790196518 (unseen ngrams)
+13: log P(ads | new TV) = -0.999762104902626 (unseen ngrams)
+14: log P(. | TV ads) = -2.11250099135999 (unseen ngrams)
+15: log P(</s> | ads .) = -0.322502345739275 (unseen ngrams)
+1 sentence, 14 words, 1 OOVs
+logprob=-40.2333767190719 ppl=747.846770933505
+
+
+
+Sent #29: <s> It considered running them during tomorrow night 's World Series broadcast but decided not to when the market recovered yesterday . </s>
+1: log P(It | <s>) = -2.08682961426791
+2: log P(considered | <s> It) = -4.32822665591756 (unseen ngrams)
+3: log P(running | It considered) = -5.1063779063012 (unseen ngrams)
+4: log P(them | considered running) = -3.87592898492293 (unseen ngrams)
+5: log P(during | running them) = -4.26127986628694 (unseen ngrams)
+6: log P(tomorrow | them during) = -inf (unknown word)
+7: log P(night | during tomorrow) = -4.62925665158154 (unseen ngrams)
+8: log P('s | tomorrow night) = -2.70670418482016 (unseen ngrams)
+9: log P(World | night 's) = -4.20328791930926 (unseen ngrams)
+10: log P(Series | 's World) = -inf (unknown word)
+11: log P(broadcast | World Series) = -inf (unknown word)
+12: log P(but | Series broadcast) = -3.53817618223421 (unseen ngrams)
+13: log P(decided | broadcast but) = -4.32822665591756 (unseen ngrams)
+14: log P(not | but decided) = -1.07775582623639 (unseen ngrams)
+15: log P(to | decided not) = -0.833035950133093
+16: log P(when | not to) = -3.80534791063722 (unseen ngrams)
+17: log P(the | to when) = -0.966420150489025 (unseen ngrams)
+18: log P(market | when the) = -2.8084107992591 (unseen ngrams)
+19: log P(recovered | the market) = -inf (unknown word)
+20: log P(yesterday | market recovered) = -4.15213539686188 (unseen ngrams)
+21: log P(. | recovered yesterday) = -1.19877846364949 (unseen ngrams)
+22: log P(</s> | yesterday .) = -0.239667837636183
+1 sentence, 21 words, 4 OOVs
+logprob=-54.1458469564616 ppl=1018.83207423008
+
+
+
+Sent #30: <s> Other brokerage firms , including Merrill Lynch & Co. , were plotting out potential new ad strategies . </s>
+1: log P(Other | <s>) = -inf (unknown word)
+2: log P(brokerage | <s> Other) = -inf (unknown word)
+3: log P(firms | Other brokerage) = -4.50431791497324 (unseen ngrams)
+4: log P(, | brokerage firms) = -2.04191991707428 (unseen ngrams)
+5: log P(including | firms ,) = -2.57566496522196 (unseen ngrams)
+6: log P(Merrill | , including) = -inf (unknown word)
+7: log P(Lynch | including Merrill) = -inf (unknown word)
+8: log P(& | Merrill Lynch) = -3.87592898492293 (unseen ngrams)
+9: log P(Co. | Lynch &) = -0.832139211866669 (unseen ngrams)
+10: log P(, | & Co.) = -0.511689227735865
+11: log P(were | Co. ,) = -2.77963164456949 (unseen ngrams)
+12: log P(plotting | , were) = -inf (unknown word)
+13: log P(out | were plotting) = -3.78415861156728 (unseen ngrams)
+14: log P(potential | plotting out) = -4.50431791497324 (unseen ngrams)
+15: log P(new | out potential) = -3.45316539252586 (unseen ngrams)
+16: log P(ad | potential new) = -1.94786464368477 (unseen ngrams)
+17: log P(strategies | new ad) = -inf (unknown word)
+18: log P(. | ad strategies) = -2.11250099135999 (unseen ngrams)
+19: log P(</s> | strategies .) = -0.322502345739275 (unseen ngrams)
+1 sentence, 18 words, 6 OOVs
+logprob=-33.2458017662148 ppl=360.885444921332
+
+
+
+Sent #31: <s> The brokerage firms learned a lesson the last time around , when frightened investors flooded the phone lines and fled the market in a panic . </s>
+1: log P(The | <s>) = -1.048238975517
+2: log P(brokerage | <s> The) = -inf (unknown word)
+3: log P(firms | The brokerage) = -4.50431791497324 (unseen ngrams)
+4: log P(learned | brokerage firms) = -4.80534791063722 (unseen ngrams)
+5: log P(a | firms learned) = -2.43151676556339 (unseen ngrams)
+6: log P(lesson | learned a) = -2.97268712134022 (unseen ngrams)
+7: log P(the | a lesson) = -2.09480746270392 (unseen ngrams)
+8: log P(last | lesson the) = -2.49551671596809 (unseen ngrams)
+9: log P(time | the last) = -3.96024987062296 (unseen ngrams)
+10: log P(around | last time) = -4.26127986628694 (unseen ngrams)
+11: log P(, | time around) = -1.09415852981551 (unseen ngrams)
+12: log P(when | around ,) = -2.63606438272484 (unseen ngrams)
+13: log P(frightened | , when) = -inf (unknown word)
+14: log P(investors | when frightened) = -3.85110540119789 (unseen ngrams)
+15: log P(flooded | frightened investors) = -inf (unknown word)
+16: log P(the | investors flooded) = -2.09480746270392 (unseen ngrams)
+17: log P(phone | flooded the) = -5.1063779063012 (unseen ngrams)
+18: log P(lines | the phone) = -inf (unknown word)
+19: log P(and | phone lines) = -2.5153132992747 (unseen ngrams)
+20: log P(fled | lines and) = -inf (unknown word)
+21: log P(the | and fled) = -2.09480746270392 (unseen ngrams)
+22: log P(market | fled the) = -2.8084107992591 (unseen ngrams)
+23: log P(in | the market) = -1.10630733918131
+24: log P(a | market in) = -1.46023685290437 (unseen ngrams)
+25: log P(panic | in a) = -inf (unknown word)
+26: log P(. | a panic) = -2.11250099135999 (unseen ngrams)
+27: log P(</s> | panic .) = -0.322502345739275 (unseen ngrams)
+1 sentence, 26 words, 6 OOVs
+logprob=-55.776555376779 ppl=452.925160098763
+
+
+
+Sent #32: <s> This time , the firms were ready . </s>
+1: log P(This | <s>) = -2.51169260973445
+2: log P(time | <s> This) = -1.17537796434505
+3: log P(, | This time) = -0.541133646779666
+4: log P(the | time ,) = -1.03013024946686
+5: log P(firms | , the) = -3.28553205397876 (unseen ngrams)
+6: log P(were | the firms) = -3.43428004836548 (unseen ngrams)
+7: log P(ready | firms were) = -5.1063779063012 (unseen ngrams)
+8: log P(. | were ready) = -2.11250099135999 (unseen ngrams)
+9: log P(</s> | ready .) = -0.322502345739275 (unseen ngrams)
+1 sentence, 8 words, 0 OOVs
+logprob=-19.5195278160707 ppl=147.515081655248
+
+
+
+Sent #33: <s> Fidelity , for example , prepared ads several months ago in case of a market plunge . </s>
+1: log P(Fidelity | <s>) = -inf (unknown word)
+2: log P(, | <s> Fidelity) = -2.04191991707428 (unseen ngrams)
+3: log P(for | Fidelity ,) = -2.13146639794031 (unseen ngrams)
+4: log P(example | , for) = -1.1594706221754
+5: log P(, | for example) = -0.368426876661884
+6: log P(prepared | example ,) = -4.80534791063722 (unseen ngrams)
+7: log P(ads | , prepared) = -4.26127986628694 (unseen ngrams)
+8: log P(several | prepared ads) = -4.15213539686188 (unseen ngrams)
+9: log P(months | ads several) = -1.25478326251756 (unseen ngrams)
+10: log P(ago | several months) = -4.26127986628694 (unseen ngrams)
+11: log P(in | months ago) = -2.4831286159033 (unseen ngrams)
+12: log P(case | ago in) = -4.1063779063012 (unseen ngrams)
+13: log P(of | in case) = -1.26055148312873 (unseen ngrams)
+14: log P(a | case of) = -1.74171057832336 (unseen ngrams)
+15: log P(market | of a) = -4.02719666025358 (unseen ngrams)
+16: log P(plunge | a market) = -inf (unknown word)
+17: log P(. | market plunge) = -2.11250099135999 (unseen ngrams)
+18: log P(</s> | plunge .) = -0.322502345739275 (unseen ngrams)
+1 sentence, 17 words, 2 OOVs
+logprob=-40.4900786974518 ppl=339.335986248112
+
+
+
+Sent #34: <s> When the market went into its free fall Friday afternoon , the investment firm ordered full pages in the Monday editions of half a dozen newspapers . </s>
+1: log P(When | <s>) = -2.44727736781254
+2: log P(the | <s> When) = -1.10857353210976
+3: log P(market | When the) = -2.8084107992591 (unseen ngrams)
+4: log P(went | the market) = -4.50431791497324 (unseen ngrams)
+5: log P(into | market went) = -3.67501414214221 (unseen ngrams)
+6: log P(its | went into) = -3.17695898058691 (unseen ngrams)
+7: log P(free | into its) = -4.50431791497324 (unseen ngrams)
+8: log P(fall | its free) = -4.80534791063722 (unseen ngrams)
+9: log P(Friday | free fall) = -5.1063779063012 (unseen ngrams)
+10: log P(afternoon | fall Friday) = -inf (unknown word)
+11: log P(, | Friday afternoon) = -2.04191991707428 (unseen ngrams)
+12: log P(the | afternoon ,) = -1.27329360988917 (unseen ngrams)
+13: log P(investment | , the) = -2.69296458910285
+14: log P(firm | the investment) = -4.40740790196518 (unseen ngrams)
+15: log P(ordered | investment firm) = -4.40740790196518 (unseen ngrams)
+16: log P(full | firm ordered) = -4.40740790196518 (unseen ngrams)
+17: log P(pages | ordered full) = -4.32822665591756 (unseen ngrams)
+18: log P(in | full pages) = -1.06237742907352 (unseen ngrams)
+19: log P(the | pages in) = -0.689375934496678
+20: log P(Monday | in the) = -4.62925665158154 (unseen ngrams)
+21: log P(editions | the Monday) = -5.1063779063012 (unseen ngrams)
+22: log P(of | Monday editions) = -0.2968080919117 (unseen ngrams)
+23: log P(half | editions of) = -4.40740790196518 (unseen ngrams)
+24: log P(a | of half) = -2.43151676556339 (unseen ngrams)
+25: log P(dozen | half a) = -2.67165712567624 (unseen ngrams)
+26: log P(newspapers | a dozen) = -5.1063779063012 (unseen ngrams)
+27: log P(. | dozen newspapers) = -0.294377527032457 (unseen ngrams)
+28: log P(</s> | newspapers .) = -0.239667837636183
+1 sentence, 27 words, 1 OOVs
+logprob=-82.6304260242141 ppl=1149.17494597926
+
+
+
+Sent #35: <s> The ads touted Fidelity 's automated 800-number beneath the huge headline , `` Fidelity Is Ready For Your Call . '' </s>
+1: log P(The | <s>) = -1.048238975517
+2: log P(ads | <s> The) = -4.26127986628694 (unseen ngrams)
+3: log P(touted | The ads) = -inf (unknown word)
+4: log P(Fidelity | ads touted) = -inf (unknown word)
+5: log P('s | touted Fidelity) = -2.70670418482016 (unseen ngrams)
+6: log P(automated | Fidelity 's) = -inf (unknown word)
+7: log P(800-number | 's automated) = -inf (unknown word)
+8: log P(beneath | automated 800-number) = -inf (unknown word)
+9: log P(the | 800-number beneath) = -2.09480746270392 (unseen ngrams)
+10: log P(huge | beneath the) = -5.1063779063012 (unseen ngrams)
+11: log P(headline | the huge) = -inf (unknown word)
+12: log P(, | huge headline) = -2.04191991707428 (unseen ngrams)
+13: log P(`` | headline ,) = -2.09862920887168 (unseen ngrams)
+14: log P(Fidelity | , ``) = -inf (unknown word)
+15: log P(Is | `` Fidelity) = -inf (unknown word)
+16: log P(Ready | Fidelity Is) = -inf (unknown word)
+17: log P(For | Is Ready) = -4.15213539686188 (unseen ngrams)
+18: log P(Your | Ready For) = -inf (unknown word)
+19: log P(Call | For Your) = -inf (unknown word)
+20: log P(. | Your Call) = -2.11250099135999 (unseen ngrams)
+21: log P('' | Call .) = -1.51735420261091 (unseen ngrams)
+22: log P(</s> | . '') = -0.574208863671873
+1 sentence, 21 words, 11 OOVs
+logprob=-27.7141569760798 ppl=330.726363798025
+
+
+
+Sent #36: <s> A Fidelity spokesman says the 800-line , which already was operating but which many clients did n't know about , received about double the usual volume of calls over the weekend . </s>
+1: log P(A | <s>) = -1.92994441330845
+2: log P(Fidelity | <s> A) = -inf (unknown word)
+3: log P(spokesman | A Fidelity) = -4.32822665591756 (unseen ngrams)
+4: log P(says | Fidelity spokesman) = -3.28030310360037 (unseen ngrams)
+5: log P(the | spokesman says) = -1.21984382960801 (unseen ngrams)
+6: log P(800-line | says the) = -inf (unknown word)
+7: log P(, | the 800-line) = -2.04191991707428 (unseen ngrams)
+8: log P(which | 800-line ,) = -1.89208058025835 (unseen ngrams)
+9: log P(already | , which) = -1.80480054791509
+10: log P(was | which already) = -3.00257418534524 (unseen ngrams)
+11: log P(operating | already was) = -4.40740790196518 (unseen ngrams)
+12: log P(but | was operating) = -3.53817618223421 (unseen ngrams)
+13: log P(which | operating but) = -3.49359404958147 (unseen ngrams)
+14: log P(many | but which) = -3.74465007028361 (unseen ngrams)
+15: log P(clients | which many) = -4.26127986628694 (unseen ngrams)
+16: log P(did | many clients) = -3.70843789762916 (unseen ngrams)
+17: log P(n't | clients did) = -0.697697084490733 (unseen ngrams)
+18: log P(know | did n't) = -1.77713261620749
+19: log P(about | n't know) = -3.30703735684762 (unseen ngrams)
+20: log P(, | know about) = -2.04191991707428 (unseen ngrams)
+21: log P(received | about ,) = -4.50431791497324 (unseen ngrams)
+22: log P(about | , received) = -3.30703735684762 (unseen ngrams)
+23: log P(double | received about) = -5.1063779063012 (unseen ngrams)
+24: log P(the | about double) = -2.09480746270392 (unseen ngrams)
+25: log P(usual | double the) = -5.1063779063012 (unseen ngrams)
+26: log P(volume | the usual) = -4.40740790196518 (unseen ngrams)
+27: log P(of | usual volume) = -0.688491215950321 (unseen ngrams)
+28: log P(calls | volume of) = -4.62925665158154 (unseen ngrams)
+29: log P(over | of calls) = -3.99243455399436 (unseen ngrams)
+30: log P(the | calls over) = -0.698218204146818 (unseen ngrams)
+31: log P(weekend | over the) = -inf (unknown word)
+32: log P(. | the weekend) = -2.11250099135999 (unseen ngrams)
+33: log P(</s> | weekend .) = -0.322502345739275 (unseen ngrams)
+1 sentence, 32 words, 3 OOVs
+logprob=-87.4467565874927 ppl=822.037985425149
+
+
+
+Sent #37: <s> `` A lot of investor confidence comes from the fact that they can speak to us , '' he says . </s>
+1: log P(`` | <s>) = -1.35651893145566
+2: log P(A | <s> ``) = -1.58855379197115
+3: log P(lot | `` A) = -1.55054501405297
+4: log P(of | A lot) = -0.358310102442177
+5: log P(investor | lot of) = -4.80534791063722 (unseen ngrams)
+6: log P(confidence | of investor) = -inf (unknown word)
+7: log P(comes | investor confidence) = -5.1063779063012 (unseen ngrams)
+8: log P(from | confidence comes) = -3.25511955758213 (unseen ngrams)
+9: log P(the | comes from) = -0.918239190665512 (unseen ngrams)
+10: log P(fact | from the) = -3.28553205397876 (unseen ngrams)
+11: log P(that | the fact) = -0.454032433662929
+12: log P(they | fact that) = -2.52784686832909 (unseen ngrams)
+13: log P(can | that they) = -0.960258064935775
+14: log P(speak | they can) = -inf (unknown word)
+15: log P(to | can speak) = -2.39541478730592 (unseen ngrams)
+16: log P(us | speak to) = -4.26127986628694 (unseen ngrams)
+17: log P(, | to us) = -1.09415852981551 (unseen ngrams)
+18: log P('' | us ,) = -0.880573172444212
+19: log P(he | , '') = -1.56009735564229
+20: log P(says | '' he) = -2.03168654631631 (unseen ngrams)
+21: log P(. | he says) = -1.42517448228036 (unseen ngrams)
+22: log P(</s> | says .) = -0.239667837636183
+1 sentence, 21 words, 2 OOVs
+logprob=-40.0547344037423 ppl=100.632142752437
+
+
+
+Sent #38: <s> `` To maintain that dialogue is absolutely crucial . </s>
+1: log P(`` | <s>) = -1.35651893145566
+2: log P(To | <s> ``) = -2.41885312530255
+3: log P(maintain | `` To) = -inf (unknown word)
+4: log P(that | To maintain) = -2.81412183494472 (unseen ngrams)
+5: log P(dialogue | maintain that) = -4.80534791063722 (unseen ngrams)
+6: log P(is | that dialogue) = -2.92740095900803 (unseen ngrams)
+7: log P(absolutely | dialogue is) = -inf (unknown word)
+8: log P(crucial | is absolutely) = -5.1063779063012 (unseen ngrams)
+9: log P(. | absolutely crucial) = -2.11250099135999 (unseen ngrams)
+10: log P(</s> | crucial .) = -0.322502345739275 (unseen ngrams)
+1 sentence, 9 words, 2 OOVs
+logprob=-21.8636240047486 ppl=540.695805607481
+
+
+
+Sent #39: <s> It would have been too late to think about on Friday . </s>
+1: log P(It | <s>) = -2.08682961426791
+2: log P(would | <s> It) = -3.53817618223421 (unseen ngrams)
+3: log P(have | It would) = -1.02133961214663 (unseen ngrams)
+4: log P(been | would have) = -1.10436335524076
+5: log P(too | have been) = -4.20328791930926 (unseen ngrams)
+6: log P(late | been too) = -4.62925665158154 (unseen ngrams)
+7: log P(to | too late) = -2.39541478730592 (unseen ngrams)
+8: log P(think | late to) = -5.1063779063012 (unseen ngrams)
+9: log P(about | to think) = -3.30703735684762 (unseen ngrams)
+10: log P(on | think about) = -3.00257418534524 (unseen ngrams)
+11: log P(Friday | about on) = -5.1063779063012 (unseen ngrams)
+12: log P(. | on Friday) = -0.294377527032457 (unseen ngrams)
+13: log P(</s> | Friday .) = -0.239667837636183
+1 sentence, 12 words, 0 OOVs
+logprob=-36.0350808415501 ppl=591.465333935654
+
+
+
+Sent #40: <s> We had to think about it ahead of time . '' </s>
+1: log P(We | <s>) = -3.26830053086241
+2: log P(had | <s> We) = -3.47290945072161 (unseen ngrams)
+3: log P(to | We had) = -1.40997173232175 (unseen ngrams)
+4: log P(think | had to) = -5.1063779063012 (unseen ngrams)
+5: log P(about | to think) = -3.30703735684762 (unseen ngrams)
+6: log P(it | think about) = -3.1063779063012 (unseen ngrams)
+7: log P(ahead | about it) = -4.80534791063722 (unseen ngrams)
+8: log P(of | it ahead) = -0.59365683135576 (unseen ngrams)
+9: log P(time | ahead of) = -0.996062063311045
+10: log P(. | of time) = -1.36218833893849 (unseen ngrams)
+11: log P('' | time .) = -1.51735420261091 (unseen ngrams)
+12: log P(</s> | . '') = -0.574208863671873
+1 sentence, 11 words, 0 OOVs
+logprob=-29.5197930938811 ppl=288.391700479565
+
+
+
+Sent #41: <s> Today 's Fidelity ad goes a step further , encouraging investors to stay in the market or even to plunge in with Fidelity . </s>
+1: log P(Today | <s>) = -3.29428379994896
+2: log P('s | <s> Today) = -2.70670418482016 (unseen ngrams)
+3: log P(Fidelity | Today 's) = -inf (unknown word)
+4: log P(ad | 's Fidelity) = -3.78415861156728 (unseen ngrams)
+5: log P(goes | Fidelity ad) = -4.50431791497324 (unseen ngrams)
+6: log P(a | ad goes) = -2.43151676556339 (unseen ngrams)
+7: log P(step | goes a) = -4.62925665158154 (unseen ngrams)
+8: log P(further | a step) = -4.40740790196518 (unseen ngrams)
+9: log P(, | step further) = -2.04191991707428 (unseen ngrams)
+10: log P(encouraging | further ,) = -inf (unknown word)
+11: log P(investors | , encouraging) = -3.85110540119789 (unseen ngrams)
+12: log P(to | encouraging investors) = -1.22490765458598 (unseen ngrams)
+13: log P(stay | investors to) = -inf (unknown word)
+14: log P(in | to stay) = -2.4831286159033 (unseen ngrams)
+15: log P(the | stay in) = -0.981019231651497 (unseen ngrams)
+16: log P(market | in the) = -2.8084107992591 (unseen ngrams)
+17: log P(or | the market) = -3.39880773020326 (unseen ngrams)
+18: log P(even | market or) = -1.70446065578363 (unseen ngrams)
+19: log P(to | or even) = -1.4975578073223 (unseen ngrams)
+20: log P(plunge | even to) = -inf (unknown word)
+21: log P(in | to plunge) = -2.4831286159033 (unseen ngrams)
+22: log P(with | plunge in) = -3.08518860723126 (unseen ngrams)
+23: log P(Fidelity | in with) = -inf (unknown word)
+24: log P(. | with Fidelity) = -2.11250099135999 (unseen ngrams)
+25: log P(</s> | Fidelity .) = -0.322502345739275 (unseen ngrams)
+1 sentence, 24 words, 5 OOVs
+logprob=-53.7522842036348 ppl=487.095604074313
+
+
+
+Sent #42: <s> Underneath the headline `` Diversification , '' it counsels , `` Based on the events of the past week , all investors need to know their portfolios are balanced to help protect them against the market 's volatility . '' </s>
+1: log P(Underneath | <s>) = -inf (unknown word)
+2: log P(the | <s> Underneath) = -2.09480746270392 (unseen ngrams)
+3: log P(headline | Underneath the) = -inf (unknown word)
+4: log P(`` | the headline) = -2.82307667759765 (unseen ngrams)
+5: log P(Diversification | headline ``) = -inf (unknown word)
+6: log P(, | `` Diversification) = -2.04191991707428 (unseen ngrams)
+7: log P('' | Diversification ,) = -1.49960147810997 (unseen ngrams)
+8: log P(it | , '') = -3.1063779063012 (unseen ngrams)
+9: log P(counsels | '' it) = -inf (unknown word)
+10: log P(, | it counsels) = -2.04191991707428 (unseen ngrams)
+11: log P(`` | counsels ,) = -2.09862920887168 (unseen ngrams)
+12: log P(Based | , ``) = -inf (unknown word)
+13: log P(on | `` Based) = -3.00257418534524 (unseen ngrams)
+14: log P(the | Based on) = -0.760968051008378 (unseen ngrams)
+15: log P(events | on the) = -4.80534791063722 (unseen ngrams)
+16: log P(of | the events) = -0.59365683135576 (unseen ngrams)
+17: log P(the | events of) = -0.673243382588536
+18: log P(past | of the) = -2.34615523407789
+19: log P(week | the past) = -3.93028664724552 (unseen ngrams)
+20: log P(, | past week) = -0.615443712536078 (unseen ngrams)
+21: log P(all | week ,) = -2.97884025857689 (unseen ngrams)
+22: log P(investors | , all) = -3.85110540119789 (unseen ngrams)
+23: log P(need | all investors) = -4.80534791063722 (unseen ngrams)
+24: log P(to | investors need) = -2.39541478730592 (unseen ngrams)
+25: log P(know | need to) = -2.70231329169742 (unseen ngrams)
+26: log P(their | to know) = -3.46292522981501 (unseen ngrams)
+27: log P(portfolios | know their) = -4.50431791497324 (unseen ngrams)
+28: log P(are | their portfolios) = -0.900405947659646 (unseen ngrams)
+29: log P(balanced | portfolios are) = -inf (unknown word)
+30: log P(to | are balanced) = -2.39541478730592 (unseen ngrams)
+31: log P(help | balanced to) = -2.22633544178715 (unseen ngrams)
+32: log P(protect | to help) = -4.62925665158154 (unseen ngrams)
+33: log P(them | help protect) = -3.87592898492293 (unseen ngrams)
+34: log P(against | protect them) = -4.06498522114298 (unseen ngrams)
+35: log P(the | them against) = -0.840425406151318 (unseen ngrams)
+36: log P(market | against the) = -2.8084107992591 (unseen ngrams)
+37: log P('s | the market) = -2.70670418482016 (unseen ngrams)
+38: log P(volatility | market 's) = -inf (unknown word)
+39: log P(. | 's volatility) = -2.11250099135999 (unseen ngrams)
+40: log P('' | volatility .) = -1.51735420261091 (unseen ngrams)
+41: log P(</s> | . '') = -0.574208863671873
+1 sentence, 40 words, 7 OOVs
+logprob=-85.7862047990047 ppl=333.52137345051
+
+
+
+Sent #43: <s> It goes on to plug a few diversified Fidelity funds by name . </s>
+1: log P(It | <s>) = -2.08682961426791
+2: log P(goes | <s> It) = -4.50431791497324 (unseen ngrams)
+3: log P(on | It goes) = -0.899649824974721 (unseen ngrams)
+4: log P(to | goes on) = -2.39541478730592 (unseen ngrams)
+5: log P(plug | on to) = -inf (unknown word)
+6: log P(a | to plug) = -2.43151676556339 (unseen ngrams)
+7: log P(few | plug a) = -2.27244210036221 (unseen ngrams)
+8: log P(diversified | a few) = -inf (unknown word)
+9: log P(Fidelity | few diversified) = -inf (unknown word)
+10: log P(funds | diversified Fidelity) = -3.47290945072161 (unseen ngrams)
+11: log P(by | Fidelity funds) = -3.02359253598475 (unseen ngrams)
+12: log P(name | funds by) = -4.50431791497324 (unseen ngrams)
+13: log P(. | by name) = -2.11250099135999 (unseen ngrams)
+14: log P(</s> | name .) = -0.322502345739275 (unseen ngrams)
+1 sentence, 13 words, 3 OOVs
+logprob=-28.0259942462263 ppl=353.034914756138
+
+
+
+Sent #44: <s> PaineWebber also was able to gear up quickly thanks to the 1987 crash . </s>
+1: log P(PaineWebber | <s>) = -inf (unknown word)
+2: log P(also | <s> PaineWebber) = -3.49359404958147 (unseen ngrams)
+3: log P(was | PaineWebber also) = -1.87978114429464 (unseen ngrams)
+4: log P(able | also was) = -4.62925665158154 (unseen ngrams)
+5: log P(to | was able) = -0.297549364201232 (unseen ngrams)
+6: log P(gear | able to) = -inf (unknown word)
+7: log P(up | to gear) = -3.56230986195093 (unseen ngrams)
+8: log P(quickly | gear up) = -4.62925665158154 (unseen ngrams)
+9: log P(thanks | up quickly) = -inf (unknown word)
+10: log P(to | quickly thanks) = -2.39541478730592 (unseen ngrams)
+11: log P(the | thanks to) = -1.31073683354123 (unseen ngrams)
+12: log P(1987 | to the) = -3.24785183721119 (unseen ngrams)
+13: log P(crash | the 1987) = -0.82386341754452
+14: log P(. | 1987 crash) = -0.216297973315926
+15: log P(</s> | crash .) = -0.239667837636183
+1 sentence, 14 words, 3 OOVs
+logprob=-26.7255804097463 ppl=168.706455407532
+
+
+
+Sent #45: <s> In the aftermath of the 1987 debacle , the brokerage firm began taping commercials in-house , ultimately getting its timing down fast enough to tape a commercial after the market closed and rush it on the air that night . </s>
+1: log P(In | <s>) = -1.60395112774338
+2: log P(the | <s> In) = -1.03468285410642
+3: log P(aftermath | In the) = -inf (unknown word)
+4: log P(of | the aftermath) = -2.31119331661878 (unseen ngrams)
+5: log P(the | aftermath of) = -0.949985889573139 (unseen ngrams)
+6: log P(1987 | of the) = -3.24785183721119 (unseen ngrams)
+7: log P(debacle | the 1987) = -inf (unknown word)
+8: log P(, | 1987 debacle) = -2.04191991707428 (unseen ngrams)
+9: log P(the | debacle ,) = -1.27329360988917 (unseen ngrams)
+10: log P(brokerage | , the) = -inf (unknown word)
+11: log P(firm | the brokerage) = -4.40740790196518 (unseen ngrams)
+12: log P(began | brokerage firm) = -4.20328791930926 (unseen ngrams)
+13: log P(taping | firm began) = -inf (unknown word)
+14: log P(commercials | began taping) = -5.1063779063012 (unseen ngrams)
+15: log P(in-house | taping commercials) = -inf (unknown word)
+16: log P(, | commercials in-house) = -2.04191991707428 (unseen ngrams)
+17: log P(ultimately | in-house ,) = -4.80534791063722 (unseen ngrams)
+18: log P(getting | , ultimately) = -4.62925665158154 (unseen ngrams)
+19: log P(its | ultimately getting) = -3.17695898058691 (unseen ngrams)
+20: log P(timing | getting its) = -inf (unknown word)
+21: log P(down | its timing) = -3.90225792364528 (unseen ngrams)
+22: log P(fast | timing down) = -5.1063779063012 (unseen ngrams)
+23: log P(enough | down fast) = -5.1063779063012 (unseen ngrams)
+24: log P(to | fast enough) = -0.297549364201232 (unseen ngrams)
+25: log P(tape | enough to) = -inf (unknown word)
+26: log P(a | to tape) = -2.43151676556339 (unseen ngrams)
+27: log P(commercial | tape a) = -4.26127986628694 (unseen ngrams)
+28: log P(after | a commercial) = -3.78415861156728 (unseen ngrams)
+29: log P(the | commercial after) = -0.895900774292973 (unseen ngrams)
+30: log P(market | after the) = -2.8084107992591 (unseen ngrams)
+31: log P(closed | the market) = -4.50431791497324 (unseen ngrams)
+32: log P(and | market closed) = -2.5153132992747 (unseen ngrams)
+33: log P(rush | closed and) = -inf (unknown word)
+34: log P(it | and rush) = -3.1063779063012 (unseen ngrams)
+35: log P(on | rush it) = -3.00257418534524 (unseen ngrams)
+36: log P(the | it on) = -0.760968051008378 (unseen ngrams)
+37: log P(air | on the) = -inf (unknown word)
+38: log P(that | the air) = -2.81412183494472 (unseen ngrams)
+39: log P(night | air that) = -4.62925665158154 (unseen ngrams)
+40: log P(. | that night) = -0.758491959640308 (unseen ngrams)
+41: log P(</s> | night .) = -0.239667837636183
+1 sentence, 40 words, 9 OOVs
+logprob=-91.7583552977961 ppl=736.967953087747
+
+
+
+Sent #46: <s> It also negotiated an arrangement with Cable News Network under which CNN would agree to air its last-minute creations . </s>
+1: log P(It | <s>) = -2.08682961426791
+2: log P(also | <s> It) = -1.56218191903174
+3: log P(negotiated | It also) = -inf (unknown word)
+4: log P(an | also negotiated) = -3.11515183060871 (unseen ngrams)
+5: log P(arrangement | negotiated an) = -5.1063779063012 (unseen ngrams)
+6: log P(with | an arrangement) = -3.08518860723126 (unseen ngrams)
+7: log P(Cable | arrangement with) = -inf (unknown word)
+8: log P(News | with Cable) = -4.50431791497324 (unseen ngrams)
+9: log P(Network | Cable News) = -inf (unknown word)
+10: log P(under | News Network) = -3.76395522547899 (unseen ngrams)
+11: log P(which | Network under) = -1.03986224095747 (unseen ngrams)
+12: log P(CNN | under which) = -inf (unknown word)
+13: log P(would | which CNN) = -3.53817618223421 (unseen ngrams)
+14: log P(agree | CNN would) = -5.1063779063012 (unseen ngrams)
+15: log P(to | would agree) = -2.39541478730592 (unseen ngrams)
+16: log P(air | agree to) = -inf (unknown word)
+17: log P(its | to air) = -3.17695898058691 (unseen ngrams)
+18: log P(last-minute | air its) = -inf (unknown word)
+19: log P(creations | its last-minute) = -inf (unknown word)
+20: log P(. | last-minute creations) = -2.11250099135999 (unseen ngrams)
+21: log P(</s> | creations .) = -0.322502345739275 (unseen ngrams)
+1 sentence, 20 words, 7 OOVs
+logprob=-40.915796452378 ppl=836.675187013592
+
+
+
+Sent #47: <s> The new PaineWebber commercial , created with ad agency Saatchi & Saatchi Co. , features Mary Farrell , one of the firm 's most visible investment strategists , sounding particularly bullish . </s>
+1: log P(The | <s>) = -1.048238975517
+2: log P(new | <s> The) = -1.88103198345183
+3: log P(PaineWebber | The new) = -inf (unknown word)
+4: log P(commercial | new PaineWebber) = -4.26127986628694 (unseen ngrams)
+5: log P(, | PaineWebber commercial) = -0.5304811166715 (unseen ngrams)
+6: log P(created | commercial ,) = -5.1063779063012 (unseen ngrams)
+7: log P(with | , created) = -3.08518860723126 (unseen ngrams)
+8: log P(ad | created with) = -3.78415861156728 (unseen ngrams)
+9: log P(agency | with ad) = -1.62282117300324 (unseen ngrams)
+10: log P(Saatchi | ad agency) = -inf (unknown word)
+11: log P(& | agency Saatchi) = -3.87592898492293 (unseen ngrams)
+12: log P(Saatchi | Saatchi &) = -inf (unknown word)
+13: log P(Co. | & Saatchi) = -3.90225792364528 (unseen ngrams)
+14: log P(, | Saatchi Co.) = -0.642389319623728 (unseen ngrams)
+15: log P(features | Co. ,) = -5.1063779063012 (unseen ngrams)
+16: log P(Mary | , features) = -4.32822665591756 (unseen ngrams)
+17: log P(Farrell | features Mary) = -inf (unknown word)
+18: log P(, | Mary Farrell) = -2.04191991707428 (unseen ngrams)
+19: log P(one | Farrell ,) = -3.58786396642331 (unseen ngrams)
+20: log P(of | , one) = -0.694962541261721 (unseen ngrams)
+21: log P(the | one of) = -0.760090302905209
+22: log P(firm | of the) = -4.40740790196518 (unseen ngrams)
+23: log P('s | the firm) = -2.70670418482016 (unseen ngrams)
+24: log P(most | firm 's) = -3.87592898492293 (unseen ngrams)
+25: log P(visible | 's most) = -5.1063779063012 (unseen ngrams)
+26: log P(investment | most visible) = -3.99243455399436 (unseen ngrams)
+27: log P(strategists | visible investment) = -inf (unknown word)
+28: log P(, | investment strategists) = -2.04191991707428 (unseen ngrams)
+29: log P(sounding | strategists ,) = -inf (unknown word)
+30: log P(particularly | , sounding) = -4.80534791063722 (unseen ngrams)
+31: log P(bullish | sounding particularly) = -inf (unknown word)
+32: log P(. | particularly bullish) = -2.11250099135999 (unseen ngrams)
+33: log P(</s> | bullish .) = -0.322502345739275 (unseen ngrams)
+1 sentence, 32 words, 7 OOVs
+logprob=-75.6307204549201 ppl=810.725556786882
+
+
+
+Sent #48: <s> Taped just as the market closed yesterday , it offers Ms. Farrell advising , `` We view the market here as going through a relatively normal cycle ... . </s>
+1: log P(Taped | <s>) = -inf (unknown word)
+2: log P(just | <s> Taped) = -4.15213539686188 (unseen ngrams)
+3: log P(as | Taped just) = -0.951467260512678 (unseen ngrams)
+4: log P(the | just as) = -0.835793186234589
+5: log P(market | as the) = -2.8084107992591 (unseen ngrams)
+6: log P(closed | the market) = -4.50431791497324 (unseen ngrams)
+7: log P(yesterday | market closed) = -0.902845296806217 (unseen ngrams)
+8: log P(, | closed yesterday) = -0.755113201239978 (unseen ngrams)
+9: log P(it | yesterday ,) = -2.33142227432804 (unseen ngrams)
+10: log P(offers | , it) = -5.1063779063012 (unseen ngrams)
+11: log P(Ms. | it offers) = -5.1063779063012 (unseen ngrams)
+12: log P(Farrell | offers Ms.) = -inf (unknown word)
+13: log P(advising | Ms. Farrell) = -inf (unknown word)
+14: log P(, | Farrell advising) = -2.04191991707428 (unseen ngrams)
+15: log P(`` | advising ,) = -2.09862920887168 (unseen ngrams)
+16: log P(We | , ``) = -1.76643356714693
+17: log P(view | `` We) = -5.1063779063012 (unseen ngrams)
+18: log P(the | We view) = -2.09480746270392 (unseen ngrams)
+19: log P(market | view the) = -2.8084107992591 (unseen ngrams)
+20: log P(here | the market) = -4.62925665158154 (unseen ngrams)
+21: log P(as | market here) = -3.14733651398011 (unseen ngrams)
+22: log P(going | here as) = -4.40740790196518 (unseen ngrams)
+23: log P(through | as going) = -4.26127986628694 (unseen ngrams)
+24: log P(a | going through) = -1.12418100084999 (unseen ngrams)
+25: log P(relatively | through a) = -2.96634914403996 (unseen ngrams)
+26: log P(normal | a relatively) = -inf (unknown word)
+27: log P(cycle | relatively normal) = -inf (unknown word)
+28: log P(... | normal cycle) = -4.26127986628694 (unseen ngrams)
+29: log P(. | cycle ...) = -0.822247011647358 (unseen ngrams)
+30: log P(</s> | ... .) = -0.239667837636183
+1 sentence, 29 words, 5 OOVs
+logprob=-69.2298457984494 ppl=587.751616086244
+
+
+
+Sent #49: <s> We continue to feel that the stock market is still the place to be for long-term appreciation . '' </s>
+1: log P(We | <s>) = -3.26830053086241
+2: log P(continue | <s> We) = -4.40740790196518 (unseen ngrams)
+3: log P(to | We continue) = -0.690320177038163 (unseen ngrams)
+4: log P(feel | continue to) = -5.1063779063012 (unseen ngrams)
+5: log P(that | to feel) = -2.81412183494472 (unseen ngrams)
+6: log P(the | feel that) = -1.08608862159373 (unseen ngrams)
+7: log P(stock | that the) = -2.80622944565906 (unseen ngrams)
+8: log P(market | the stock) = -0.842592577481706
+9: log P(is | stock market) = -2.92740095900803 (unseen ngrams)
+10: log P(still | market is) = -2.46885835626693 (unseen ngrams)
+11: log P(the | is still) = -2.09480746270392 (unseen ngrams)
+12: log P(place | still the) = -4.50431791497324 (unseen ngrams)
+13: log P(to | the place) = -2.39541478730592 (unseen ngrams)
+14: log P(be | place to) = -1.65735387631535 (unseen ngrams)
+15: log P(for | to be) = -2.74844305930075 (unseen ngrams)
+16: log P(long-term | be for) = -5.1063779063012 (unseen ngrams)
+17: log P(appreciation | for long-term) = -inf (unknown word)
+18: log P(. | long-term appreciation) = -2.11250099135999 (unseen ngrams)
+19: log P('' | appreciation .) = -1.51735420261091 (unseen ngrams)
+20: log P(</s> | . '') = -0.574208863671873
+1 sentence, 19 words, 1 OOVs
+logprob=-49.1284773756643 ppl=385.220451178734
+
+
+
+Sent #50: <s> The spot was scheduled to appear three times on CNN last night . </s>
+1: log P(The | <s>) = -1.048238975517
+2: log P(spot | <s> The) = -5.1063779063012 (unseen ngrams)
+3: log P(was | The spot) = -3.00257418534524 (unseen ngrams)
+4: log P(scheduled | spot was) = -4.62925665158154 (unseen ngrams)
+5: log P(to | was scheduled) = -0.471910712695462 (unseen ngrams)
+6: log P(appear | scheduled to) = -5.1063779063012 (unseen ngrams)
+7: log P(three | to appear) = -3.90225792364528 (unseen ngrams)
+8: log P(times | appear three) = -1.50449777727184 (unseen ngrams)
+9: log P(on | three times) = -3.00257418534524 (unseen ngrams)
+10: log P(CNN | times on) = -inf (unknown word)
+11: log P(last | on CNN) = -3.56230986195093 (unseen ngrams)
+12: log P(night | CNN last) = -4.62925665158154 (unseen ngrams)
+13: log P(. | last night) = -0.758491959640308 (unseen ngrams)
+14: log P(</s> | night .) = -0.239667837636183
+1 sentence, 13 words, 1 OOVs
+logprob=-36.963792534813 ppl=697.218105649662
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+sent_num=50 word_num=1175 oov_num=190
+logprob=-2854.78157013778 ave_logprob=-2.75824306293506 ppl=573.116699237283

@@ -1,0 +1,7 @@
+
+Global symbol "%s" requires explicit package name
+
+(F) You've said "use strict" or "use strict vars", which indicates that all variables must either be lexically scoped (using "my" or "state"), declared beforehand using "our", or explicitly qualified to say which package the global variable is in (using "::").
+
+
+I think the problem is that the '/corpora/LDC/LDC99T42/RAW/parsed/prd/wsj/15' is just the directory, and within it there are 100 .prd files.  You could make a loop to iterate through these .prd files, operating on them one at a time. 

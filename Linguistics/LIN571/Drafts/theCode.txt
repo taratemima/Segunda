@@ -1,0 +1,29 @@
+#Tara Edwards
+
+"""
+I am doing the code rather slowly. I figure what I need to do is load the sentences, then load the grammar. The split the sentences line-by-line and read them into the parser. Get the best possible tree for each line. Print the parses for each line and add them to a larger number. Get number of lines and divide the total parses by the lines. It may involve numberofparses = len(trees.parses(grammar.start()))
+"""
+
+def hw1
+    import nltk, re, pprint 
+    from nltk import Nonterminal, nonterminals, Production, parse_cfg, ContextFreeGrammar
+    from nltk.parse import EarleyChartParser 
+    from __future__ import division
+    f = open('sentences.txt')
+    g = open('grammar.cfg')
+    
+    sentences = f.read()
+    #split the lines in the file
+    #split the words in the line
+    grammar = parse_cfg(g)
+    #eparser = nltk.parse.EarleyChartParser(grammar)
+    #trees = eparser.nbest_parse(sentences)
+
+   #for j in sentences.splitlines()
+   #for k in j.split()
+   #trees = eparser.nbest_parse(k)
+   #for tree in trees:
+    #print tree
+
+
+

@@ -1,0 +1,17 @@
+(S
+(NP (I PRP))
+(VP (VP (VP (VP (have VBN))
+(not RB))
+(VP (programmed VBD)))
+(PP (PP (in IN))
+(NP (NP (ten CD)
+(NP (years NN)))))))
+
+(S
+(NP ([You] PRP))
+(VP (VP (torture VBP))
+(NP (NP (the DT)
+(NP (data NN)))
+(PP (until IN)
+(S' (NP (it PRP))
+(VP (confesses VBZ)))))))

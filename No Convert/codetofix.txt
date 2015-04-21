@@ -1,0 +1,57 @@
+Code to fix
+
+
+#Have two versions of training data
+#One with new lines and markings
+#One without newlines
+
+sub ActualNGrams{
+
+open (TEXT, "<", "fortypes.txt") || die "No text has been added";
+
+while (<TEXT>){
+my $text = $_;
+
+my $clear = "[\.,!\?\(\)'-]";
+$text =~ s/$clear/ $clear /g;
+#Thank pseudonymously named Tigress for reminding me of a simple implementation
+
+
+}
+
+
+
+
+
+#&ActualNGrams(1);
+#&ActualNGrams(2);
+#&ActualNGrams(3);
+
+
+sub DistinguishSentences{
+open (TEXT, "<", "morenickyfun.txt") || die "No text has been added";
+while (<TEXT>){
+my $text = $_;
+#Do I use chomp $text;
+#or s/^\s+|\s+$//g;
+#to get rid of the blank space between sentences
+#What about    1. $string =~ s/^[\t\f ]+|[\t\f ]+$//mg;
+
+#Or maybe add the markers, remove the trailing space, and add newline for output
+#Use the new output as input for sentences
+#Use the output without newline to make dictionary
+my $clear = "[\.,!\?\(\)'-]";
+$text =~ s/$clear/ $clear /g;
+$text = "<s> " . $text . " </s>"; 
+return $text;
+	}
+}
+
+#sub SentenceNgrams{
+#Per sentence, give number of unigrams, number of bigrams, and number of trigrams
+
+#}
+
+
+#sub WordProbability{}
+#

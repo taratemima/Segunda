@@ -1,0 +1,33 @@
+sub Test{
+open("/home2/tarae76/homework4/lexicon_ex") || die "Lexicon not found";
+close("/home2/tarae76/homework4/lexicon_ex");
+open("/home2/tarae76/homework4/wordlist_ex") || die "Word list not found";
+close("/home2/tarae76/homework4/wordlist_ex");
+}
+
+&Test;
+
+Use of uninitialized value in open at hw4.pl line 10 (#1)
+    (W uninitialized) An undefined value was used as if it were already
+    defined.  It was interpreted as a "" or a 0, but maybe it was a mistake.
+    To suppress this warning assign a defined value to your variables.
+
+    To help you figure out what was undefined, perl will try to tell you the
+    name of the variable (if any) that was undefined. In some cases it cannot
+    do this, so it also tells you what operation you used the undefined value
+    in.  Note, however, that perl optimizes your program and the operation
+    displayed in the warning may not necessarily appear literally in your
+    program.  For example, "that $foo" is usually optimized into "that "
+    . $foo, and the warning will refer to the concatenation (.) operator,
+    even though there is no . in your program.
+
+Uncaught exception from user code:
+        Lexicon not found at hw4.pl line 10.
+ at hw4.pl line 10
+        main::Test called at hw4.pl line 16
+
+tarae76@patas:~/homework4$ ls
+hw4.pl      q1  q3  q5         testsubfunctions.txt
+lexicon_ex  q2  q4  reference  wordlist_ex
+
+Permissions are set to readable by all for wordlist_ex and lexicon_ex

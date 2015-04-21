@@ -1,0 +1,14 @@
+50orsoboos.txt
+
+Word	Occurrences	Frequency	Rank
+books	8	1.5%	1
+pages	7	1.3%	2
+philip	7	1.3%	2
+read	6	1.1%	3
+novel	5	0.9%	4
+dick	4	0.7%	5
+commission	4	0.7%	5
+mark	4	0.7%	5
+dick 	3	0.6%	6
+classics	3	0.6%	6
+

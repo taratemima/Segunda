@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "C:\Documents and Settings\Steve\My Documents\Tara\Ongoing\LIN571\571hw5\hw5.py", line 6, in <module>
+    grammar = nltk.data.load('file:./grammar.fcfg',format='fcfg')
+  File "C:\Python26\lib\site-packages\nltk\data.py", line 604, in load
+    fstruct_parser=fstruct_parser)
+  File "C:\Python26\lib\site-packages\nltk\grammar.py", line 1137, in parse_fcfg
+    start, productions = parse_grammar(input, fstruct_parser.partial_parse)
+  File "C:\Python26\lib\site-packages\nltk\grammar.py", line 1248, in parse_grammar
+    (linenum+1, line, e))
+ValueError: Unable to parse line 1: S[SEM = <?vp(?subj)>?punc] -> NP[NUM=?n,SEM=?subj] VP[NUM=?n,SEM=?vp] PUNC[sem=?punc]
+Error parsing feature structure
+    S[SEM = <?vp(?subj)>?punc] -> NP[NUM=?n,SEM=?subj] VP[NUM=?n,SEM=?vp] PUNC[sem=?punc]
+
+I have no idea what I am doing wrong in typing this. 

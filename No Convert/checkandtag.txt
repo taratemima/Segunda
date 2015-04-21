@@ -1,0 +1,82 @@
+#!/usr/bin/perl
+
+#This is to ask for a sentence, divide it by word, check if it is there, and give the POS associated # w/ it if it is there, and to ask for the POS and add it to the file if it is not
+
+&init_test;
+
+
+while (($word, $pos) = each(%test)){
+	
+print "Type a sentence and press return: "; 
+$sent = <STDIN>;
+chomp($sent);
+@sentence = split(/\s+/,$sent);
+
+while (! &pos_in_file($word, $pos))){
+&tagger;
+
+}
+#end of unadded word loop
+
+#subroutines go here
+
+sub pos_in_file{
+	local($someword, $somepos) = @_;
+	$someword =~ s/\W.*//;
+	$someword =~ tr/A-Z/a-z/;
+
+		if(($test{$someword}) eq $somepos{
+			1; #return true
+				} else {
+					0; #return false
+				}
+
+			}
+
+sub init_test{ 
+
+	open(WORDLIST, $filename);
+	while ($word = <WORDLIST>){
+		chop($word);
+		$pos = <WORDLIST>;
+		chop($pos);
+		$test{$word} = $pos;
+				}
+
+	close(WORDLIST);
+			}
+
+sub tagger{
+
+print "Type a sentence and press return: "; 
+$sent = <STDIN>;
+chomp($sent);
+@sentence = split(/\s+/,$sent);
+
+foreach $word (@sentence) {
+    $place++;
+    print "\n$word\n";
+    print "Enter part of speech:\n";
+    print "n(noun) v(verb) a(adjective) d(determiner) p(preposition)
+o(other)\n";
+    $cat{$place} = <STDIN>;
+    chomp($cat{$place});
+
+#something to add it to wordlist goes here
+#plain array or associative array?
+    }
+
+print "====\n";
+
+foreach $word (@sentence) {
+    $num++;
+    print "$word\n";
+    print "     $cat{$num}\n";
+    }
+
+}
+
+}
+#This closes the while loop
+#make that more intregrated with wordlist
+

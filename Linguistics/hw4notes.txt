@@ -1,0 +1,98 @@
+I had trouble with having the files not being read by the program, so I decided at first to explicitly declare the lexicon and word list examples, and focus on how to store the morphotactical information and word parts for the subfunction based on question 3. 
+
+Out of frustration, I explicitly declared a word list and lexicon. Now it is not in the current code, but this was what I wrote. I did it so I could write the states function without worrying that errors were from the subfunction or from the uninitialized file.
+
+#my @wordList = ('cut', 'cuts', 'cuted', 'cuting', 'cutting', 'speaks', 'speaking', 'spoke', 'speak', 'speaked');
+
+#my %lexicon = (
+#'impeach', 'reg_verb_stem',
+#'walk',  'reg_verb_stem',
+#'talk', 'reg_verb_stem',
+#'cut', 'irreg_verb_stem',
+#'speak', 'irreg_verb_stem',
+#'sing', 'irreg_verb_stem',
+#'caught', 'irreg_past_verb_form',
+#'ate', 'irreg_past_verb_form',
+#'sang', 'irreg_past_verb_form',
+#'spoke', 'irreg_past_verb_form',
+#'eaten', 'irreg_past_verb_form',
+#'sung', 'irreg_past_verb_form',
+#'spoken', 'irreg_past_verb_form',
+#'ed', 'past',
+#'ed', 'past_participle',
+#'ing', 'pres_part',
+#'s', '3sg',
+#);
+
+
+I did get some answers:
+
+I usually use open in Perl with a FILEHANDLE and MODE.
+
+Something like this:
+
+open(FH ">" "/home2/tarae76/homework4/lexicon_ex");
+
+I'm a Perl noob, but I'd try this with some explicit arguments for filehandle and mode.  And from the perldoc for open, it seems like there might be an issue with using "use strict;" and leaving the filehandle anonymous.   
+
+http://perldoc.perl.org/functions/open.html
+
+you can use
+
+open($fp, "filename_here");
+
+close($fp);
+
+open FILEHANDLE,MODE,EXPR
+
+I made changes based on them. I also retrofitted the code so that an expander function was there that did not interfere with the acceptor function.
+
+After I decided on an array of hashes and implemented loops that filled the values, I wanted to make it possible for other files to be filled in. 
+
+Then  I had to do two new changes: Have input be letter-by-letter rather than all at once, and enable the lexicon and wordlist to be other documents.
+
+I am kinda bummed that I have to do it letter-by-letter in my code because I hate letter-by-letter. That was why I decided to code my own rather than use Carmel.
+
+I made changes to the code to account for reading it in character-by-character. I am not sure if I will be able to add all the inflections possible from the lexicon. For now, I have a counter that will reset the state if the answers are less than the possible iterations of the lexicon. I made it variable to what is the input or output.
+
+Writing "q1" and "q2" states were interesting. I had it on strict, so I had to make sure that a declared variable stays declared.I did divide common tasks into subfunctions, which may speed things up. 
+
+I encoded the morphotactical rules too rather than using anything like a morph_rules_ex file. ExpanderTest and ExpandFile are the closest I can get to answering Q2. If I was not so distracted, I would add in a function to use ExpandFile to set switch cases.
+
+The format of the shell files are the following
+
+expand_fsm1.sh
+#/bin/sh
+perl hw4.pl expand $0 $1 basic > $2
+
+expand_fsm1.sh <lexicon> <morph_rules> q1/output_q1
+
+morph_acceptor1.sh
+
+#/bin/sh
+perl hw4.pl accept $0 $1 basic > $2
+
+morph_acceptor1.sh <lexicon> <wordlist> q2/output_q2
+
+expand_fsm2.sh
+perl hw4.pl expand $0 $1 detailed > $2
+
+expand_fsm2.sh <lexicon> <morph_rules> q3/output_q3
+
+morph_acceptor2.sh
+perl hw4.pl $0 $1 l detailed > $2
+
+morph_acceptor2.sh <lexicon> <wordlist> q4/output_q4
+
+q5.sh
+expand_fsm1.sh lexicon_ex morph_rules_ex hw4_dir/q4/q4_expand_fsm
+morph_acceptor1.sh lexicon_ex wordlist_ex hw4_dir/q4/q4_result
+expand_fsm2.sh lexicon_ex morph_rules_ex hw4_dir/q5/q5_expand_fsm
+morph_acceptor2.sh lexicon_ex wordlist_ex hw4_dir/q5/q5_result
+
+
+
+
+
+
+

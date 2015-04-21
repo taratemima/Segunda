@@ -1,0 +1,46 @@
+ngram 1: type: token:
+ngram 2: type: token:
+ngram 3: type: token:
+
+1-grams
+word, one number, one other number
+
+Modified ARPA format
+\data\
+ngram 1: type=xxtoken=yy
+ngram 2: type=xx token=yy
+ngram 3: type=xx token=yy
+
+Types: the number of distinct words in a corpus
+Tokens: the total number of words in a corpus
+
+\1-grams:
+cnt prob logprob w
+count probability logprob w
+...
+\2-grams:
+cnt prob logprobw1 w2...
+\3-grams:
+cnt prob logprobw1w2 w3
+...
+\end\
+# cnt is Cnt(w1,w2), prob is P(w2| w1)
+# prob is P(w3| w1, w2)
+
+
+Probability from beginning of sentence to end of sentence
+
+probability for each word appearance/total tokens or types/tokens
+I could try both
+
+take the current list 
+keep it to unigrams 
+take one word as a key
+find other examples of that word in list
+add it all together
+
+After I figure out a way to sort types for the dictionaries without dragging out memory
+
+
+
+

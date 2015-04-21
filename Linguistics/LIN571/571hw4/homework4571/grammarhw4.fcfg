@@ -1,0 +1,87 @@
+ADJP[NUM=?n] -> JJ ADJP | JJ 
+Adv[NUM=?n] -> RB | RP
+AdvP[NUM=?n] -> Adv | Adv AdvP
+AT[NUM=?n] ->  'the' |  'The'
+AT[NUM=sg] -> 'a' | 'A' 
+AUX[NUM=?n] -> MD | BE
+BE[NUM=sg, PER=3] -> 'is' | 'was'
+CC[NUM=?n] -> 'and'
+CD[NUM=pl] -> 'five'
+COM[NUM=?n] -> ','
+Det[NUM=?n] -> PDT | DT | PRPS | AT | WDT
+FRAG[NUM=?n] -> NP PUNC
+IN[NUM=?n] -> 'in' | 'by' | 'of' | 'with' | 'that' | 'on' | 'for' | 'into'
+JJ[NUM=?n] -> 'dendritic' | 'immune' | 'infected' | 'new' | 'Systemic' | 'weak' | 'whole' | 'live' | 'interesting' | 'compromised' 
+MD[NUM=?n, PER=?p, TENSE=?t] -> 'will'  | 'Will'
+MD[NUM=?n, PER=?p, TENSE=past] -> 'did' 
+MD[NUM=?n, PER=1, TENSE=pres] -> 'have'
+MD[NUM=pl, PER=3, TENSE=pres] -> 'have'
+MD[NUM=sg, PER=3, TENSE=pres] -> 'does'
+N[NUM=sg] -> NN | NNP 
+N[NUM=?n] -> PRP 
+N[NUM=pl] -> NNS 
+NN[NUM=sg, PER=3] -> 'system' | 'research' | 'response' | 'pathogen' | 'researcher' | 'vaccine' | 'immunity' | 'case' | 'type' | 'body' | 'mouse' | 'Tuesday' | 'summit' | 'cart' | 'shelf' | 'book' | 'sand' | 'farmer' | 'dog' 
+NNP[NUM=sg, PER=3, GND=?g] -> 'Dr' |  'Villadangos' | 'sepsis' | 'malaria' 
+NNP[NUM=sg, PER=3, GND=mas] -> 'John' | 'Jose'
+NNP[NUM=sg, PER=3, GND=fem] -> 'Mary'
+NNS[NUM=pl, PER=3] -> 'cells' | 'fragments' | 'humans' | 'infections' | 'mice' | 'Scientists'| 'minutes' | 'cats' | 'dogs'
+Nom[NUM=?n] -> ADJP Nom | Nom PP | Nom Nom | N
+NP[NUM=?n] -> Det Nom | Nom | PRP Nom | PRP 
+P[NUM=?n] -> IN | CC
+PDT[NUM=?n] -> 'whole' | 'mouse'
+PP[NUM=?n] -> P | PP NP | P PP | PP Sbar
+PPL[NUM=sg, PER=3, GND=fem, AGR=subj] -> 'herself' 
+PPL[NUM=sg, PER=3, GND=mas, AGR=subj] ->'himself' 
+PRP[NUM=sg] -> 'this' 
+PRP[NUM=pl, PER=3] -> 'them' | 'They' | 'they'
+PRPS[NUM=pl, PER=3] -> 'their' | 'Their'
+PUNC[NUM=?n] -> '?' | '.'
+RB[NUM=?n] -> 'online' | 'today'| 'Tuesday'
+RP[NUM=?n] -> 'down'
+S[NUM=?n] -> NP VP | S PUNC |  X1 S 
+SBAR[NUM=?n] -> 'that' S 
+SQ[NUM=?n] -> X2 '?'
+TOP[NUM=?n] -> S | SQ | FRAG
+WDT[NUM=sg] -> 'that' | 'this'
+WP[NUM=?n] -> 'what'
+X1[NUM=?n] -> PP COM
+X2[NUM=?n] -> AUX S
+X3[NUM=?n] -> P VP
+X4[NUM=?n] -> NP PP
+V[NUM=?n, TENSE=?t, PER=?p]->VBZ | VBD | VBN | VBP | VB
+VB[NUM=?n, TENSE=pres, PER=1, AGR=subj]->'work'
+VB[NUM=pl, TENSE=pres, PER=3,  AGR=subj]->'work'
+VBD[NUM=?n, TENSE=past, PER=?p, subcat=?s,  AGR=subj]-> 'walked' | 'published' | 'did' 
+VBD[NUM=?n, TENSE=past, PER=?p, subcat=TV,  AGR=subj]->'alerted' | 'injected' | 'rescued'  | 'restored' | 'loaded' | 'thought' 
+VBD[NUM=?n, TENSE=past, PER=?p, subcat=DatV,  AGR=subj]->'alerted' | 'injected' | 'rescued'  | 'restored' | 'loaded' 
+VBD[NUM=?n, TENSE=past, PER=?p, subcat=SV,  AGR=subj]->'loaded' 
+VBN[NUM=?n, TENSE=past, PER=?p, subcat=?s,  AGR=subj]->'published' |  'injected' | 'saw' 
+VBN[NUM=?n, TENSE=past, PER=?p, subcat=IV],  AGR=subj->'compromised' | 'reached'
+VBN[NUM=?n, TENSE=past, PER=?p, subcat=TV,  AGR=subj]->'alerted' | 'discovered' |  'made' | 'infected' | 'restored' |  'filled' | 'reached'
+VBN[NUM=?n, TENSE=past, PER=?p, subcat=DatV,  AGR=subj]->'alerted' | 'compromised' | 'discovered' |  'made' | 'infected' | 'restored' |  'filled' 
+VBN[NUM=?n, TENSE=past, PER=?p, subcat=SV,  AGR=subj]->'compromised' | 'discovered' 
+VBP[NUM=?n, TENSE=pres, PER=1, subcat=?s,  AGR=subj]->'have' |  'know' 
+VBP[NUM=pl, TENSE=pres, PER=3, subcat=?s,  AGR=subj]->'have' |  'know' 
+VBP[NUM=?n, TENSE=pres, PER=1, subcat=IV,  AGR=subj]->'bark' | 'think'
+VBP[NUM=pl, TENSE=pres, PER=3, subcat=IV,  AGR=subj]->'bark' | 'think'
+VBP[NUM=?n, TENSE=pres, PER=1, subcat=TV,  AGR=subj]->'alert' | 'capture' | 'display' | 'overstimulate' 
+VBP[NUM=pl, TENSE=pres, PER=3, subcat=TV,  AGR=subj]->'alert' | 'capture' | 'display' | 'overstimulate' 
+VBP[NUM=?n, TENSE=pres, PER=1, subcat=DatV,  AGR=subj]->'alert' | 'capture' | 'display' | 'overstimulate' | 'put' | 'think'
+VBP[NUM=pl, TENSE=pres, PER=3, subcat=DatV,  AGR=subj]->'alert' | 'capture' | 'display' | 'overstimulate' | 'put' | 'think'
+VBP[NUM=?n, TENSE=pres, PER=1, subcat=SV,  AGR=subj]->'bark' | 'think'
+VBP[NUM=pl, TENSE=pres, PER=3, subcat=SV,  AGR=subj]->'bark' | 'think'
+VBZ[NUM=sg, TENSE=pres, PER=3, subcat=?s,  AGR=subj]->'does' |  'knows' | 'shuts' 
+VBZ[NUM=sg, TENSE=pres, PER=3, subcat=IV,  AGR=subj]->'barks' 
+VBZ[NUM=sg, TENSE=pres, PER=3, subcat=TV,  AGR=subj]->'invades'
+VBZ[NUM=sg, TENSE=pres, PER=3, subcat=DatV,  AGR=subj]->'invades'
+VBZ[NUM=sg, TENSE=pres, PER=3, subcat=SV,  AGR=subj]->'barks' |
+VP[NUM=?n, TENSE=?t, PER=?p, subcat=?s,  AGR=subj]->AUX VP | VP AdvP | VP X3 | BE ADJP
+VP[NUM=?n, TENSE=?t, PER=?p, subcat=IV,  AGR=subj]->V 
+VP[NUM=?n, TENSE=pres, PER=1, subcat=TV,  AGR=subj]->VBP NP 
+VP[NUM=pl, TENSE=pres, PER=3, subcat=TV,  AGR=subj]->VBP NP 
+VP[NUM=sg, TENSE=pres, PER=3, subcat=TV,  AGR=subj]->VBZ NP | VBZ RP 
+VP[NUM=?n, TENSE=past, PER=?p, subcat=TV,  AGR=subj]->VBD NP 
+VP[num=?n, TENSE=past, PER=?p, subcat=SV,  AGR=subj]->VBN SBAR
+VP[NUM=?n, TENSE=past, PER=?p, subcat=DatV,  AGR=subj]->VBD X4 | VP PP 
+
+

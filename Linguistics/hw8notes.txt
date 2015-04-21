@@ -1,0 +1,186 @@
+﻿Goal
+
+I have no idea other than finish the Mallet part of the assignment and figure how to design a Perl program that handles vectors.
+
+
+Mallet
+Set up Mallet for my home directory
+Test the environment
+Read the Mallet command-line totorial
+Run commands on patas for first part
+
+Set up Mallet for my home directory
+Open ~/.bash_profile in vi
+Type in these commands: 
+
+PATH=$PATH:$HOME/dropbox/07-08/572/fei_mallet/bin
+export PATH
+CLASSPATH=$CLASSPATH:$HOME/dropbox/07-08/572/fei_mallet/class:/NLP_TOOLS/tool_sets/mallet/latest/lib/mallet.jar:/NLP_TOOLS/tool_sets/mallet/latest/lib/mallet-deps.jar
+export CLASSPATH
+
+Save .bash_profile--done (is it supposed to be .bashrc?)
+Exit
+Log back in
+
+Test the environment
+
+Type “which classify”:
+/opt/dropbox/07-08/572/fei_mallet/bin/classify--done
+•Type “which vectors2info”
+/NLP_TOOLS/tool_sets/mallet/latest/bin/vectors2info--done
+•If they did not work,
+echo $PATH
+/opt/dropbox/07-08/572/fei_mallet/bin should be there.
+echo $CLASSPATH
+/opt/dropbox/07-08/572/fei_mallet/class,
+/NLP_TOOLS/tool_sets/mallet/latest/lib/mallet.jar,
+/NLP_TOOLS/tool_sets/mallet/latest/lib/mallet-deps.jar should be there
+
+Read the Mallet command-line totorial
+Test if I can use lynx on my terminal--we have lynx, done
+Got an error message that there was no such file. I found the line was broken up, so I fixed it.
+Resize terminal for easier reading--Cannot do that
+Open /NLP_TOOLS/tool_sets/mallet/latest/doc/command-line-classification.html--I keep on getting sent to some spam/no site page when I do that. Should try again, since I realized I forgot the underscores.
+
+Read the page, and copy what notes are important.
+
+Run commands on patas for the first part
+Let $dataDir be ~/dropbox/10-11/570/hw8/20_newsgroups, and $exDir be ~/dropbox/10-11/570hw8/examples/.
+Type text2vectors --input $dataDir/talk.politics.* --skip-header --output news3.vectors -done
+
+Run these commands after that
+
+vectors2info --input news3.vectors --print-matrix siw > news3.vectors.txt -done
+
+OK, vectors2info seems like a word count with lines read in rather than paragraphs
+
+info2vectors --input news3.vectors.txt --output news3.vectors.new -done
+
+info2vectors seems to be different words with t after them
+
+vectors2vectors --input news3.vectors --training-portion 0.9 --training-file train1.vectors --testing-
+file test1.vectors -done
+
+Training portion = 0.9
+Validation portion = 0.0
+Testing portion = 0.09999999999999998
+
+Run these commands
+
+vectors2classify --training-file ~/dropbox/10-11/570/hw8/examples/train.vectors --testing-file ~/dropbox/10-11/570/hw8/examples/test.vectors --trainer NaiveBayes > NaiveBayes.stdout 2>NaiveBayes.stderr
+
+Naive Bayes Training accuracy 0.9440740740740741
+Test accuracy 0.8833333333333333
+
+vectors2classify --training-file ~/dropbox/10-11/570/hw8/examples/train.vectors --testing-file ~/dropbox/10-11/570/hw8/examples/test.vectors --trainer MaxEnt > MaxEnt.stdout 2>MaxEnt.stderr
+
+MaxEnt Training accuracy 0.9714814814814815
+Test accuracy 0.87
+
+vectors2classify --training-file ~/dropbox/10-11/570/hw8/examples/train.vectors --testing-file ~/dropbox/10-11/570/hw8/examples/test.vectors --trainer DecisionTree > DecisionTree.stdout 2>DecisionTree.stderr
+
+Decision Tree Training accuracy 0.5981481481481481
+Test accuracy 0.6 
+
+vectors2classify --training-file ~/dropbox/10-11/570/hw8/examples/train.vectors --testing-file ~/dropbox/10-11/570/hw8/examples/test.vectors --trainer Winnow > Winnow.stdout 2>Winnow.stderr
+
+Winnow Training accuracy 0.727037037037037
+Test accuracy 0.6833333333333333
+
+vectors2classify --training-file ~/dropbox/10-11/570/hw8/examples/train.vectors --testing-file ~/dropbox/10-11/570/hw8/examples/test.vectors --trainer BalancedWinnow > BalancedWinnow.stdout 2>BalancedWinnow.stderr
+
+BalancedWinnow Training accuracy 0.9714814814814815
+Test accuracy 0.8633333333333333
+
+If we were going for these factors, these would be the classifiers I would choose.
+
+Closest match to testing and training scores: DecisionTree
+Improvement upon testing material: DecisionTree
+Highest training accuracy: Tie between MaxEnt and BalancedWinnow
+Highest testing accuracy Naive Bayes
+
+vectors2train --trainer MaxEnt --output-classifier MaxEnt.train --training-file ~/dropbox/10-11/570/hw8/examples/train.vectors
+
+This is what I got when I ran vectors2train
+
+Trial 0 Training MaxEntTrainer,numIterations=10,gaussianPriorVariance=1.0 with 2700 instances
+Value (loglikelihood) = -222.8303488330551
+Exiting L-BFGS on termination #1:
+value difference below tolerance (oldValue: -222.84524659853656 newValue: -222.8
+303488330551
+MaxEnt ngetValueCalls:230
+MaxEnt ngetValueGradientCalls:219
+
+Trial 0 Training MaxEntTrainer,numIterations=10,gaussianPriorVariance=1.0 finish
+ed
+Trial 0 Trainer MaxEntTrainer,numIterations=10,gaussianPriorVariance=1.0 trainin
+g data accuracy= 0.9714814814814815
+
+MaxEntTrainer,numIterations=10,gaussianPriorVariance=1.0
+Summary. train accuracy mean = 0.9714814814814815 stddev = 0.0 stderr = 0.0
+
+For the output-classifer, I got a long list of words with t's in them.
+
+classify --testing-file ~/dropbox/10-11/570/hw8/examples/test.vectors --classifier MaxEnt.train --report test:accuracy test:confusion test:raw>test_res.stdout 2>test_res.stderr
+
+Test Data Confusion Matrix
+Confusion Matrix, row=true, column=predicted  accuracy=0.87
+      label   0   1   2  |total
+  0    guns 100   1   8  |109
+  1 mideast   1  76  10  |87
+  2    misc  13   6  85  |104
+
+Test data accuracy= 0.87
+
+I saved a lot more information when I ran all the tests
+
+Program
+Create a function that converts text into data vectors
+Have a function to specify which file is input, which file is output, and a command to tell it to find and skip headers
+Define these states: text, info, vectors
+
+
+#create_vectors.sh train_vector_file test_vector_file ratio dir1 dir2 ...
+
+Using arguments from create_vectors, convert text files in listed directories into two vectors: training and testing
+
+Make an array from instances (files) from each directory in the input (DirectoryList)
+Get the total bit length of all the files in each directory
+
+Multiple the total length by the ratio and round it to the closest integer. This is the training length.(AssignRatio)
+Subtract the training length from the total length. That is the testing length 
+
+Open the first directory in the array
+Open the first file in the directory
+Read the file paragraph by paragraph
+Run the tokenization and editing scripts on that file (FileIntoArraysMallet, TokenizationMallet)
+Compare the array size to the training length
+If the array size is less or equal to the training length, join the directory and file name into a string. 
+Return the name string and the text array.
+If it is greater than the training length, array is split into two arrays: one that is the same length as the training length, and another that is the rest of the array.
+After the first file is finished, the array length is subtracted from the training length, and file name and the array(s) and the array length are returned
+The process continues for each file in the directory
+
+An array of anonymous hashes are build, with the keys classLabel, Word, and Count.
+The word array is made into an associative array, with values incremented as keys are found.
+While associative array keys and values are available, while the index of the array of hashes is less than word array length, classLabel equals name string, Word equals associative array key, and Count equals associative array value
+
+One anonymous hash stores training data, and another anonymous hash stores testing data after the training length is reached. 
+
+Going through the anonymous hash, collect the classLabel values into one array. Filter them through an associative array, and save the keys in another array (MakeClassRow).
+
+Do the same for the words. Save the function that filters out stopwords (ExtractWordsFromContainer) as an array within the classLabel array.
+
+Fill $scoreboard[$n][0]  with the file names
+$scoreboard[0][$m] with the filtered array of words
+Looping through the index of these arrays, put the Count value in corresponding word and file array locations (Scoreboard)
+
+Print out the array to a file
+
+Make one such file for train_vector_file and another for test_vector_file
+
+train vector file and test vector file are the output files and they are the training and test
+vectors in the text format (the same format as the output file in Q2(a)).
+
+OK, whoops, I got a few more steps to go.
+

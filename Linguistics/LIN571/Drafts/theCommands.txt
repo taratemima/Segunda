@@ -1,0 +1,136 @@
+import nltk
+nltk.parse.EarleyChartParser
+
+>>> from nltk import Nonterminal, nonterminals, Production, parse_cfg, ContextFreeGrammar
+
+  	
+
+>>> nt1 = Nonterminal('NP')
+>>> nt2 = Nonterminal('VP')
+
+  	
+
+>>> nt1.symbol()
+'NP'
+
+  	
+
+>>> nt1 == Nonterminal('NP')
+True
+
+  	
+
+>>> nt1 == nt2
+False
+
+  	
+
+>>> S, NP, VP, PP = nonterminals('S, NP, VP, PP')
+>>> N, V, P, DT = nonterminals('N, V, P, DT')
+
+  	
+
+>>> prod1 = Production(S, [NP, VP])
+>>> prod2 = Production(NP, [DT, NP])
+
+  	
+
+>>> prod1.lhs()
+S
+
+  	
+
+>>> prod1.rhs()
+(NP, VP)
+
+  	
+
+>>> prod1 == Production(S, [NP, VP])
+True
+
+  	
+
+>>> prod1 == prod2
+False
+
+  	
+
+>>> grammar = parse_cfg("""
+... S -> NP VP
+... PP -> P NP
+... NP -> 'the' N | N PP | 'the' N PP
+... VP -> V NP | V PP | V NP PP
+... N -> 'cat'
+... N -> 'dog'
+... N -> 'rug'
+... V -> 'chased'
+... V -> 'sat'
+... P -> 'in'
+... P -> 'on'
+... """)
+
+>>> sentences = nltk.data.load('grammars/large_grammars/atis_sentences.txt', format='raw')
+>>> sentences = nltk.parse.util.extract_test_sentences(sentences)
+>>> len(sentences)
+98
+>>> testsentence = sentences[22]
+>>> testsentence[0]
+['show', 'me', 'northwest', 'flights', 'to', 'detroit', '.']
+>>> testsentence[1]
+17
+>>> sentence = testsentence[0]
+
+>>> parser = nltk.parse.EarleyChartParser(grammar)
+>>> chart = parser.chart_parse(sentence)
+>>> print chart.num_edges()
+28352
+>>> print len(chart.parses(grammar.start()))
+17
+
+numberofparses = len(trees.parses(grammar.start()))
+
+>>> f = open('document.txt')
+>>> raw = f.read()
+s.splitlines() 	split s into a list of strings, one per line
+s.strip() 	a copy of s without leading or trailing whitespace
+
+output_file.write(word + "\n")
+
+>>> for line in f:
+        print line,
+
+len(parser.nbest_parse(tokenList))
+
+
+'parser' is the parser you created.
+'tokenList' is the sentence. 
+
+if __name__ == "__main__":
+    thisisafunction()
+
+
+f = open('example.txt', 'r')
+for line in f.readlines():
+    line = line.rstrip()
+    print line
+f.close()
+
+Note that this doesn't have an import statement; in this case it's not necessary because the string functions being used here are part of the base functionality. rstrip() removes the newline character from the line. 'example.txt' here has to be in the same directory as where the script is running from.
+If you're doing this for a lot of files you might do:
+
+def printfile(filename):
+    f = open(filename, 'r')
+    for line in f.readlines():
+        line = line.rstrip()
+        print line
+    f.close()
+
+if __name__=="__main__":
+    printfile('example1.txt')
+    printfile('example2.txt')
+    printfile('example3.txt')
+
+
+"print chart.parses(grammar.start())[0]"
+tokens = nltk.word_tokenize(sentence)
+

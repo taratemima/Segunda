@@ -1,0 +1,104 @@
+CheckingAccountAmount
+OverdraftAmount
+
+Mar31
+Apr15
+Apr30
+May15
+
+DaysPerPeriod
+HoursPTO
+HoursFMLA
+
+HoursPerDay = 8
+PayPerHour = 14.58
+
+HealthCare
+FedTax
+StateTax
+
+401K = 4
+
+401KLoan = 26.07
+BusPass = 59.00
+
+ThisPeriod.GrossHours =  (((ThisPeriod.DaysPerPeriod *HoursPerDay) + LastPeriod.HoursPTO) - ( ThisPeriod.HoursPTO + ThisPeriod.HoursFMLA))
+
+ThisPeriod.GrossPay = ThisPeriod.GrossHours * PayPerHour
+
+//For rates, I will take the average amount deducted from January 1st to February 26th
+
+TotalPastPeriods = 4
+
+//total amounts deducted divided by total gross pay times one hundred
+//Do for HealthCare, FedTax, and StateTax
+//Need Boolean to determine if the bus pass is to be taken out
+
+ThisPeriod.PayAfterDeduct = (ThisPeriod.GrossPay * (100 - (HealthCare + 401K))) - 401KLoan
+
+//Need Boolean to determine if the bus pass is to be taken out
+//If TRUE
+
+ThisPeriod.PayAfterBus = ThisPeriod.PayAfterDeduct - 59
+
+//If FALSE
+
+ThisPeriod.PayAfterBus = ThisPeriod.PayAfterDeduct
+
+//Need to figure out order that deductions are taken out
+
+//Test subtractions against amounts listed on the original
+//Continue until finding the right answers
+//Then return order of subtractions
+//Then figure out amount after tax
+
+//Then add amount to CheckingAccountAmount
+
+//OK, recurring bills, all under Bill
+
+Rent = 420
+StudentLoan = 430
+Phone = 130
+Coach = 60
+MomLoan = 91.30
+
+
+//One times
+
+Copay = 28.80
+LJ = 19.99
+Norton = 74.98
+AANE = 35
+
+//(If CheckingAccountAmount - Bill < 0), add OverdraftAmount. If (CheckingAccountAmount + //OverdraftAmount) < Bill, return CheckingAccountAmount - Bill
+
+//What do I do if it comes out negative?
+//Food - Eat at Mom's, drink tea, go to places with free food.
+
+
+
+
+//Changing
+
+OverdraftPay
+CreditCard
+Food
+Entertainment
+
+//If CheckingAccountAmount is positive
+QCUDeduct = 80.40
+
+CheckingAccountAmount = CheckingAccountAmount - QCUDeduct
+
+//If CheckingAccountAmount is positive
+
+INGDeduct = 50
+
+CheckingAccountAmount = CheckingAccountAmount - INGDeduct
+
+//If still positive
+
+Food = ThisPeriod. DaysPerPeriod * 15
+
+CheckingAccountAmount - Food
+

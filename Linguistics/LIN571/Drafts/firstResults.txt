@@ -1,0 +1,565 @@
+Python 2.6.5 (r265:79096, Mar 19 2010, 21:48:26) [MSC v.1500 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+
+    ****************************************************************
+    Personal firewall software may warn about the connection IDLE
+    makes to its subprocess using this computer's internal loopback
+    interface.  This connection is not visible on any external
+    interface and no data is sent to or received from the Internet.
+    ****************************************************************
+    
+IDLE 2.6.5      
+>>> 1 + 1
+2
+>>> 1.0/3.0
+0.33333333333333331
+>>> 1 +
+SyntaxError: invalid syntax
+>>> import nltk
+>>> nltk.download()
+
+Warning (from warnings module):
+  File "C:\Python26\lib\site-packages\nltk\__init__.py", line 588
+DeprecationWarning: object.__new__() takes no parameters
+showing info http://nltk.googlecode.com/svn/trunk/nltk_data/index.xml
+True
+>>> from nltk.book import *
+*** Introductory Examples for the NLTK Book ***
+Loading text1, ..., text9 and sent1, ..., sent9
+Type the name of the text or sentence to view it.
+Type: 'texts()' or 'sents()' to list the materials.
+text1: Moby Dick by Herman Melville 1851
+text2: Sense and Sensibility by Jane Austen 1811
+text3: The Book of Genesis
+text4: Inaugural Address Corpus
+text5: Chat Corpus
+text6: Monty Python and the Holy Grail
+text7: Wall Street Journal
+text8: Personals Corpus
+text9: The Man Who Was Thursday by G . K . Chesterton 1908
+>>> text6
+<Text: Monty Python and the Holy Grail>
+>>> text6.concordance("good enough")
+Building index...
+No matches
+>>> text1.concordance("good enough")
+Building index...
+No matches
+>>> text2.concordance("good enough")
+Building index...
+No matches
+>>> text4.concordance("good enough")
+Building index...
+No matches
+>>> text6.concordance("good")
+Displaying 16 of 16 matches:
+ ' you do ? ARTHUR : How do you do , good lady . I am Arthur , King of the Bri
+ hear of -- ARTHUR : Please , please good people . I am in haste . Who lives i
+RTHUR : I have no quarrel with you , good Sir Knight , but I must cross this b
+y ' re made of ... wood ? BEDEVERE : good ! Heh heh . CROWD : Oh yeah . Oh . B
+ons . BEDEVERE : My liege ! ARTHUR : good Sir Knight , will you come with me t
+ample in these dark times . ARTHUR : good idea , O Lord ! GOD : ' Course it ' 
+a , O Lord ! GOD : ' Course it ' s a good idea ! Behold ! [ angels sing ] Arth
+person . ARTHUR : Now look here , my good man -- FRENCH GUARD : I don ' t wann
+ to um , just to p -- pass through , good Sir Knight . ALL HEADS : I ' m afrai
+ ZOOT : Yes . Oh , it ' s not a very good name is it ? Oh , but we are nice an
+: Yes , yes , you must give us all a good spanking ! GIRLS : A spanking ! A sp
+LAUNCELOT : And again ! Over we go ! good . Steady ! And now , the big one ! U
+ry nice castle , Camelot . Uh , very good pig country ... LAUNCELOT : Is it ? 
+ay we go now ? HEAD KNIGHT : It is a good shrubbery . I like the laurels parti
+ir Robin ! ROBIN : My liege ! It ' s good to see you . HEAD KNIGHT : Now he ' 
+: I understand , my liege . ARTHUR : good luck , brave Sir Launcelot . God be 
+>>> text6.concordance("fair cop")
+No matches
+>>> text6.concordance("fair")
+Displaying 3 of 3 matches:
+A witch ! A witch ! WITCH : It ' s a fair cop . VILLAGER # 3 : Burn her ! CROW
+: O Knights of Ni , you are just and fair , and we will return with a shrubber
+er the room -- aaugh ! LAUNCELOT : O fair one , behold your humble servant Sir
+>>> text9.concordance("fair")
+Building index...
+Displaying 3 of 3 matches:
+ very mild - looking mortal , with a fair , pointed beard and faint , yellow h
+ the steel weapons . With his long , fair hair and rather foppish frock - coat
+answered the Pole . " I see it ' s a fair cop . All I say is , I don ' t belie
+>>> text6.similiar("fair")
+
+Traceback (most recent call last):
+  File "<pyshell#15>", line 1, in <module>
+    text6.similiar("fair")
+AttributeError: 'Text' object has no attribute 'similiar'
+>>> text6.similar("fair")
+Building word-context index...
+anchovies bedevere carp galahad go jam nineteen orangutans sloths soft
+>>> text9.similar("fair")
+Building word-context index...
+auburn
+>>> text6.common_contexts("fair")
+('The following word(s) were not found:', 'f a i r')
+>>> text6.common_contexts(["fair"], ["cop"])
+
+Traceback (most recent call last):
+  File "<pyshell#19>", line 1, in <module>
+    text6.common_contexts(["fair"], ["cop"])
+  File "C:\Python26\lib\site-packages\nltk\text.py", line 436, in common_contexts
+    ranked_contexts = fd.keys()[:num]
+TypeError: slice indices must be integers or None or have an __index__ method
+>>> text6.common_contexts(["fair", "cop"])
+No common contexts were found
+>>> text6.common_contexts(["fair","go"])
+and_and
+>>> text4.dispersion_plot(["citizens", "democracy", "freedom", "duties", "America"])
+
+
+Traceback (most recent call last):
+  File "<pyshell#22>", line 1, in <module>
+    text4.dispersion_plot(["citizens", "democracy", "freedom", "duties", "America"])
+  File "C:\Python26\lib\site-packages\nltk\text.py", line 452, in dispersion_plot
+    dispersion_plot(self, words)
+  File "C:\Python26\lib\site-packages\nltk\draw\dispersion.py", line 25, in dispersion_plot
+    raise ValueError('The plot function requires the matplotlib package.'
+ValueError: The plot function requires the matplotlib package.See http://matplotlib.sourceforge.net/
+>>> text9.generate{}
+SyntaxError: invalid syntax
+>>> text9.generate()
+Building ngram index...
+[ The Man Who Was Thursday by G . K . C . CHAPTER I THE TWO POETS OF
+SAFFRON PARK THE suburb of Saffron Park ?" Gregory smiled . " My dear
+fellow ." said Syme , with great politeness , neither is it ?" asked
+Syme with perfect calm ; " if you strike at the beginning of the down
+behind the door , which stretched away to be moving in their
+allegiance under this oppression of a conspirator -- because my smile
+went crooked , and that shall be still a riddle ; you shall , of
+>>> text5.count("lol")
+704
+>>> 100 * text5.count("lol")/len(text5)
+1
+>>> len(text5)
+45010
+>>> 704/45010
+0
+>>> text9.collocations()
+Building collocations list
+said Syme; asked Syme; Saffron Park; Comrade Gregory; Leicester
+Square; Colonel Ducroix; red hair; old gentleman; could see; Inspector
+Ratcliffe; Anarchist Council; blue card; Scotland Yard; dark room;
+blue eyes; common sense; straw hat; hundred yards; said Gregory; run
+away
+>>> text6.collocations()
+Building collocations list
+BLACK KNIGHT; clop clop; HEAD KNIGHT; mumble mumble; Holy Grail;
+squeak squeak; FRENCH GUARD; saw saw; Sir Robin; Run away; CARTOON
+CHARACTER; King Arthur; Iesu domine; Pie Iesu; DEAD PERSON; Round
+Table; clap clap; OLD MAN; dramatic chord; dona eis
+>>> nltk.chat.chatbots()
+Which chatbot would you like to talk to?
+  1: Eliza (psycho-babble)
+  2: Iesha (teen anime junky)
+  3: Rude (abusive bot)
+  4: Suntsu (Chinese sayings)
+  5: Zen (gems of wisdom)
+
+Enter a number in the range 1-5: 2
+ Iesha the TeenBoT
+---------
+Talk to the program by typing in plain English, using normal upper-
+and lower-case letters and punctuation.  Enter "quit" when done.
+========================================================================
+hi!! i'm iesha! who r u??!
+>I am doing well.
+ur funny! kekeke
+>I guess I am.
+ur funny! kekeke
+>Tell me about yourself
+ur funny! kekeke
+>is everything I say funny?
+man u ask lots of questions!
+>Yes, well, you don't give me many answers
+i wish i was a kitty!! kekekeke ^_^
+>I like cats
+yay!  cats rocks!
+>I miss my cat Tabitah
+do u like anime?
+>Sometiems
+boooooring! talk about something else! tell me wat u like!
+>I like beer
+yay!  beer rocks!
+>I like natural language processing
+yay!  natural language processing is neat!
+>I like sleeping
+cool! do u like other stuff?? ^_^
+>I also like dolls
+i wish i was a kitty!! kekekeke ^_^
+>I used to have cats
+ur funny! kekeke
+>What kind of anime do you like?
+boooooring!! ur not very fun
+>That's rude.
+i wish i was a kitty!! kekekeke ^_^
+>I want to know what anime I could see
+ur funny! kekeke
+>quit
+mom says i have to go eat dinner now :,( bye!!
+>>> nltk.chat.rude
+<module 'nltk.chat.rude' from 'C:\Python26\lib\site-packages\nltk\chat\rude.pyc'>
+>>> nltk.chat.chatbots()
+Which chatbot would you like to talk to?
+  1: Eliza (psycho-babble)
+  2: Iesha (teen anime junky)
+  3: Rude (abusive bot)
+  4: Suntsu (Chinese sayings)
+  5: Zen (gems of wisdom)
+
+Enter a number in the range 1-5: 3
+ Talk to the program by typing in plain English, using normal upper-
+and lower-case letters and punctuation.  Enter "quit" when done.
+========================================================================
+I suppose I should say hello.
+>Hi there
+Either become more thrilling or get lost, buddy.
+>Nope, you are stuck with my boring ass
+Change the subject before I die of fatal boredom.
+>what do you like?
+Figure it out yourself.
+>No, I'm not psychic.
+Change the subject before I die of fatal boredom.
+>What if I don't want to?
+Do I look like an encylopedia?
+>Do I look like a punching bag?
+Change the subject before I die of fatal boredom.
+>Talk about yourself--you're good at that.
+I'm getting bored here. Become more interesting.
+>When you're bored, you're boring.
+Change the subject before I die of fatal boredom.
+>I'm drunk right now.
+Either become more thrilling or get lost, buddy.
+>You often insult people?
+Either become more thrilling or get lost, buddy.
+>Is this to compensate for something?
+Either become more thrilling or get lost, buddy.
+>Are you often lonely?
+I'm getting bored here. Become more interesting.
+>exit
+Either become more thrilling or get lost, buddy.
+>quit
+Change the subject before I die of fatal boredom.
+>>> nltk.parse.EarleyChartParser
+<class 'nltk.parse.earleychart.EarleyChartParser'>
+>>> from nltk import Nonterminal, nonterminals, Production, parse_cfg, ContextFreeGrammar
+>>> nt1 = Nonterminal('NP')
+>>> nt2 - Nonterminal('VP')
+
+Traceback (most recent call last):
+  File "<pyshell#37>", line 1, in <module>
+    nt2 - Nonterminal('VP')
+NameError: name 'nt2' is not defined
+>>> nt2 = Nonterminal('VP')
+>>> nt1.symbol()
+'NP'
+>>> nt1 == Nonterminal('NP')
+True
+>>> nt1 == nt2
+False
+>>> grammar = parse_cfg(""" ... S -> NP VP ... PP -> P NP ...""")
+
+Traceback (most recent call last):
+  File "<pyshell#42>", line 1, in <module>
+    grammar = parse_cfg(""" ... S -> NP VP ... PP -> P NP ...""")
+  File "C:\Python26\lib\site-packages\nltk\grammar.py", line 1085, in parse_cfg
+    start, productions = parse_grammar(input, standard_nonterm_parser)
+  File "C:\Python26\lib\site-packages\nltk\grammar.py", line 1248, in parse_grammar
+    (linenum+1, line, e))
+ValueError: Unable to parse line 1: ... S -> NP VP ... PP -> P NP ...
+Expected a nonterminal, found: ... S -> NP VP ... PP -> P NP ...
+>>> parse_cfg
+<function parse_cfg at 0x014D5170>
+>>> f = open('sentences.txt')
+
+Traceback (most recent call last):
+  File "<pyshell#44>", line 1, in <module>
+    f = open('sentences.txt')
+IOError: [Errno 2] No such file or directory: 'sentences.txt'
+>>> f = open('sentences.txt')
+>>> grammar = parse_cfg(file:'grammar.cfg')
+SyntaxError: invalid syntax
+>>> grammar = parse_cfg('grammar.cfg')
+
+Traceback (most recent call last):
+  File "<pyshell#47>", line 1, in <module>
+    grammar = parse_cfg('grammar.cfg')
+  File "C:\Python26\lib\site-packages\nltk\grammar.py", line 1085, in parse_cfg
+    start, productions = parse_grammar(input, standard_nonterm_parser)
+  File "C:\Python26\lib\site-packages\nltk\grammar.py", line 1248, in parse_grammar
+    (linenum+1, line, e))
+ValueError: Unable to parse line 1: grammar.cfg
+Expected an arrow
+>>> grammar = nltk.parse_cfg('grammar.cfg')
+
+Traceback (most recent call last):
+  File "<pyshell#48>", line 1, in <module>
+    grammar = nltk.parse_cfg('grammar.cfg')
+  File "C:\Python26\lib\site-packages\nltk\grammar.py", line 1085, in parse_cfg
+    start, productions = parse_grammar(input, standard_nonterm_parser)
+  File "C:\Python26\lib\site-packages\nltk\grammar.py", line 1248, in parse_grammar
+    (linenum+1, line, e))
+ValueError: Unable to parse line 1: grammar.cfg
+Expected an arrow
+>>> g = open('grammar.cfg')
+>>> grammar = nltk.parse_cfg(g)
+
+Traceback (most recent call last):
+  File "<pyshell#50>", line 1, in <module>
+    grammar = nltk.parse_cfg(g)
+  File "C:\Python26\lib\site-packages\nltk\grammar.py", line 1085, in parse_cfg
+    start, productions = parse_grammar(input, standard_nonterm_parser)
+  File "C:\Python26\lib\site-packages\nltk\grammar.py", line 1248, in parse_grammar
+    (linenum+1, line, e))
+ValueError: Unable to parse line 1: """
+Expected a nonterminal, found: """
+>>> grammar = nltk.parse_cfg(g)
+
+Traceback (most recent call last):
+  File "<pyshell#51>", line 1, in <module>
+    grammar = nltk.parse_cfg(g)
+  File "C:\Python26\lib\site-packages\nltk\grammar.py", line 1085, in parse_cfg
+    start, productions = parse_grammar(input, standard_nonterm_parser)
+  File "C:\Python26\lib\site-packages\nltk\grammar.py", line 1248, in parse_grammar
+    (linenum+1, line, e))
+ValueError: Unable to parse line 1: Quest -> Q Sbar ?
+Expected a nonterminal, found: ?
+>>> grammar = nltk.parse_cfg(g)
+
+Traceback (most recent call last):
+  File "<pyshell#52>", line 1, in <module>
+    grammar = nltk.parse_cfg(g)
+  File "C:\Python26\lib\site-packages\nltk\grammar.py", line 1085, in parse_cfg
+    start, productions = parse_grammar(input, standard_nonterm_parser)
+  File "C:\Python26\lib\site-packages\nltk\grammar.py", line 1248, in parse_grammar
+    (linenum+1, line, e))
+ValueError: Unable to parse line 1: Q -> MD | WP | WP$ | BE
+Expected a nonterminal, found: $ | BE
+>>> grammar = nltk.parse_cfg(g)
+
+Traceback (most recent call last):
+  File "<pyshell#53>", line 1, in <module>
+    grammar = nltk.parse_cfg(g)
+  File "C:\Python26\lib\site-packages\nltk\grammar.py", line 1085, in parse_cfg
+    start, productions = parse_grammar(input, standard_nonterm_parser)
+  File "C:\Python26\lib\site-packages\nltk\grammar.py", line 1248, in parse_grammar
+    (linenum+1, line, e))
+ValueError: Unable to parse line 2: S -> Sbar . | S Sbar .
+Expected a nonterminal, found: . | S Sbar .
+>>> grammar = nltk.parse_cfg(g)
+
+Traceback (most recent call last):
+  File "<pyshell#55>", line 1, in <module>
+    grammar = nltk.parse_cfg(g)
+  File "C:\Python26\lib\site-packages\nltk\grammar.py", line 1085, in parse_cfg
+    start, productions = parse_grammar(input, standard_nonterm_parser)
+  File "C:\Python26\lib\site-packages\nltk\grammar.py", line 1248, in parse_grammar
+    (linenum+1, line, e))
+ValueError: Unable to parse line 2: PartS -> PP , Sbar
+Expected a nonterminal, found: , Sbar
+>>> grammar = nltk.parse_cfg(g)
+
+Traceback (most recent call last):
+  File "<pyshell#57>", line 1, in <module>
+    grammar = nltk.parse_cfg(g)
+  File "C:\Python26\lib\site-packages\nltk\grammar.py", line 1085, in parse_cfg
+    start, productions = parse_grammar(input, standard_nonterm_parser)
+  File "C:\Python26\lib\site-packages\nltk\grammar.py", line 1248, in parse_grammar
+    (linenum+1, line, e))
+ValueError: Unable to parse line 3: Det -> PDT | DT | PRP$ | AT
+Expected a nonterminal, found: $ | AT
+>>> grammar = nltk.parse_cfg(g)
+
+Traceback (most recent call last):
+  File "<pyshell#58>", line 1, in <module>
+    grammar = nltk.parse_cfg(g)
+  File "C:\Python26\lib\site-packages\nltk\grammar.py", line 1085, in parse_cfg
+    start, productions = parse_grammar(input, standard_nonterm_parser)
+  File "C:\Python26\lib\site-packages\nltk\grammar.py", line 1248, in parse_grammar
+    (linenum+1, line, e))
+ValueError: Unable to parse line 19: PRP$ -> 'their'
+Expected an arrow
+>>> grammar = nlkt.parse_cfg(g)
+
+Traceback (most recent call last):
+  File "<pyshell#59>", line 1, in <module>
+    grammar = nlkt.parse_cfg(g)
+NameError: name 'nlkt' is not defined
+>>> grammar = nltk.parse_cfg(g)
+
+Traceback (most recent call last):
+  File "<pyshell#60>", line 1, in <module>
+    grammar = nltk.parse_cfg(g)
+  File "C:\Python26\lib\site-packages\nltk\grammar.py", line 1085, in parse_cfg
+    start, productions = parse_grammar(input, standard_nonterm_parser)
+  File "C:\Python26\lib\site-packages\nltk\grammar.py", line 1248, in parse_grammar
+    (linenum+1, line, e))
+ValueError: Unable to parse line 8: """
+Expected a nonterminal, found: """
+>>> grammar = nltk.parse_cfg(g)
+
+Traceback (most recent call last):
+  File "<pyshell#61>", line 1, in <module>
+    grammar = nltk.parse_cfg(g)
+  File "C:\Python26\lib\site-packages\nltk\grammar.py", line 1085, in parse_cfg
+    start, productions = parse_grammar(input, standard_nonterm_parser)
+  File "C:\Python26\lib\site-packages\nltk\grammar.py", line 1251, in parse_grammar
+    raise ValueError, 'No productions found!'
+ValueError: No productions found!
+>>> g = open('grammar.cfg')
+>>> grammar = nltk.parse_cfg(g)
+
+Traceback (most recent call last):
+  File "<pyshell#63>", line 1, in <module>
+    grammar = nltk.parse_cfg(g)
+  File "C:\Python26\lib\site-packages\nltk\grammar.py", line 1085, in parse_cfg
+    start, productions = parse_grammar(input, standard_nonterm_parser)
+  File "C:\Python26\lib\site-packages\nltk\grammar.py", line 1248, in parse_grammar
+    (linenum+1, line, e))
+ValueError: Unable to parse line 4: S -> Sbar . | S Sbar '.'
+Expected a nonterminal, found: . | S Sbar '.'
+>>> g = open('grammar.cfg')
+>>> grammar = nltk.parse_cfg(g)
+>>> f = open('sentences.txt')
+>>> sentences = nltk.data.load(f)
+
+Traceback (most recent call last):
+  File "<pyshell#67>", line 1, in <module>
+    sentences = nltk.data.load(f)
+  File "C:\Python26\lib\site-packages\nltk\data.py", line 581, in load
+    resource_url_parts = resource_url.split('.')
+AttributeError: 'file' object has no attribute 'split'
+>>> sentences = nltk.data.load(f.split)
+
+Traceback (most recent call last):
+  File "<pyshell#68>", line 1, in <module>
+    sentences = nltk.data.load(f.split)
+AttributeError: 'file' object has no attribute 'split'
+>>> sentences = nltk.data.load(f.splitlines())
+
+Traceback (most recent call last):
+  File "<pyshell#69>", line 1, in <module>
+    sentences = nltk.data.load(f.splitlines())
+AttributeError: 'file' object has no attribute 'splitlines'
+>>> sentences = f.splitlines()
+
+Traceback (most recent call last):
+  File "<pyshell#70>", line 1, in <module>
+    sentences = f.splitlines()
+AttributeError: 'file' object has no attribute 'splitlines'
+>>> f = open('sentences.txt')
+>>> sentences = f.splitlines()
+
+Traceback (most recent call last):
+  File "<pyshell#72>", line 1, in <module>
+    sentences = f.splitlines()
+AttributeError: 'file' object has no attribute 'splitlines'
+>>> sentences = f.read()
+>>> sent = sentences.splitlines()
+>>> nltk.data.load(sent)
+
+Traceback (most recent call last):
+  File "<pyshell#75>", line 1, in <module>
+    nltk.data.load(sent)
+  File "C:\Python26\lib\site-packages\nltk\data.py", line 569, in load
+    resource_val = _resource_cache.get(resource_url)
+TypeError: unhashable type: 'list'
+>>> nltk.data.load(sentences)
+
+Traceback (most recent call last):
+  File "<pyshell#76>", line 1, in <module>
+    nltk.data.load(sentences)
+  File "C:\Python26\lib\site-packages\nltk\data.py", line 590, in load
+    % resource_url)
+ValueError: Could not determine format for """"
+    Scientists rescued a mouse immune system  .
+    Will this work in humans ?
+    They published their research today online . .
+    The mmune response is alerted by dendritic cells . 
+    They capture infected cells and display fragments of the pathogen . 
+    Dr Jose Villadangos is a researcher of the immune system  .
+    Systemic infections overstimulate dendritic cells  .
+    a new type of vaccine ?
+    They injected them with a live vaccine  .
+    The vaccine was made of dendritic cells  .
+    They restored immunity in mice with a weakimmune system  .
+    Their immune system was compromised by sepsis  .
+    In the case of infections , cells alert the immune system  .
+    the immune system shuts down  .
+    Scientists have discovered that malaria invades the whole body  .
+"""
+
+ based on its file
+extension; use the "format" argument to specify the format explicitly.
+>>> nltk.data.load(sentences, format='raw')
+
+Traceback (most recent call last):
+  File "<pyshell#77>", line 1, in <module>
+    nltk.data.load(sentences, format='raw')
+  File "C:\Python26\lib\site-packages\nltk\data.py", line 614, in load
+    resource_val = _open(resource_url).read()
+  File "C:\Python26\lib\site-packages\nltk\data.py", line 673, in _open
+    return find(path).open()
+  File "C:\Python26\lib\site-packages\nltk\data.py", line 455, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource '""""' not found.  Please use the NLTK Downloader to
+  obtain the resource: >>> nltk.download().
+  Searched in:
+    - 'C:\\Documents and Settings\\Steve/nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'C:\\Python26\\nltk_data'
+    - 'C:\\Python26\\lib\\nltk_data'
+    - 'C:\\Documents and Settings\\Steve\\Application Data\\nltk_data'
+**********************************************************************
+>>> nltk.data.load('sentences.txt',format='raw')
+
+Traceback (most recent call last):
+  File "<pyshell#78>", line 1, in <module>
+    nltk.data.load('sentences.txt',format='raw')
+  File "C:\Python26\lib\site-packages\nltk\data.py", line 614, in load
+    resource_val = _open(resource_url).read()
+  File "C:\Python26\lib\site-packages\nltk\data.py", line 673, in _open
+    return find(path).open()
+  File "C:\Python26\lib\site-packages\nltk\data.py", line 455, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource 'sentences.txt' not found.  Please use the NLTK
+  Downloader to obtain the resource: >>> nltk.download().
+  Searched in:
+    - 'C:\\Documents and Settings\\Steve/nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+    - 'C:\\Python26\\nltk_data'
+    - 'C:\\Python26\\lib\\nltk_data'
+    - 'C:\\Documents and Settings\\Steve\\Application Data\\nltk_data'
+**********************************************************************
+>>> nltk.data.load(file:'sentences.txt',format='raw')
+SyntaxError: invalid syntax
+>>> grammar1 = nltk.data.load('file:grammar.cfg')
+>>> sentence = "Scientists rescued a mouse immune system .".split
+>>> parser = nltk.parse.EarleyChartParser(grammar1)
+>>> for tree in parser.nbest_parse(sentence)    print tree
+SyntaxError: invalid syntax
+>>> for tree in parser.nbest_parse(sentence):
+	print tree
+
+	
+
+Traceback (most recent call last):
+  File "<pyshell#87>", line 1, in <module>
+    for tree in parser.nbest_parse(sentence):
+  File "C:\Python26\lib\site-packages\nltk\parse\chart.py", line 1405, in nbest_parse
+    chart = self.chart_parse(tokens)
+  File "C:\Python26\lib\site-packages\nltk\parse\earleychart.py", line 300, in chart_parse
+    tokens = list(tokens)
+TypeError: 'builtin_function_or_method' object is not iterable
+>>> 

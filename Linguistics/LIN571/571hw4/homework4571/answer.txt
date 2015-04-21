@@ -1,0 +1,14 @@
+but the problem here is that you are calling the FeatStruct and unify methods on a token and grammar object respectively, instead of on features. see http://nltk.googlecode.com/svn/trunk/doc/book/ch09.html#ex-dag043
+
+So, I corrected that. Now I get this
+
+Traceback (most recent call last):
+  File "C:\Documents and Settings\Steve\My Documents\Tara\Ongoing\LIN571\571hw4\hw4.py", line 14, in <module>
+    gram = grammar.parse_fcfg(g)
+  File "C:\Python26\lib\site-packages\nltk\grammar.py", line 1137, in parse_fcfg
+    start, productions = parse_grammar(input, fstruct_parser.partial_parse)
+  File "C:\Python26\lib\site-packages\nltk\grammar.py", line 1227, in parse_grammar
+    for linenum, line in enumerate(lines):
+TypeError: 'FeatureGrammar' object is not iterable
+
+I have no clue what I am doing.

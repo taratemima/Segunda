@@ -1,0 +1,112 @@
+print "I confess that I have not programmed in 10 years."
+
+#I hope that period does not throw it off
+
+stringorder1 = "If I knew how to program, I could make more money."
+
+If I could talk to people, I would be in a better job.
+
+If I had more money, I could have gone back to school sooner.
+
+I was floundering with the assignment, and could not figure out how to solve the syntax errors or how slow the computer was.
+
+I passed computer science classes, but I had no idea why.
+
+I could not understand why I was making mistakes, and I could not understand what I was doing right.
+
+I found a stop-gap job.
+
+Seven years later, I could not leave for something 'better'.
+
+Despite offshoring trends, I felt that if I knew programming, I could get a better job, better pay, and a better life.
+
+First thing, I write documentation, fiction, and journals.
+
+I wrote many pieces for a technical writing portfolio.
+
+Some of it I still show off.
+
+Some of it, I look at and see that I could do better.
+
+"What are you doing here? You know nothing."
+
+I had a revelation--I could program for myself.
+
+I could program ways to sort through what I have written, to merge and compare documents, and to remind myself of appointments.
+
+I could get software for these tasks, but they may not work with each other or I could not afford it.
+
+I rather not buy 'warez', so perhaps, I could code it myself.
+
+Perhaps?
+
+In school, I was so busy trying to imitate other students and to do things as I was taught in class. 
+
+I forgot that I could use a programming language as a tool, not as a measuring stick of how 'ready' I was.
+
+I could code for my own purposes. 
+
+I could code to make my life easier.
+
+I had no idea where to start.
+
+Life got in the way of learning.
+
+I decided that I was not good enough at programming to get a coding job.
+
+When I did my manic search for a job after graduation, I did not send resumes for programmer positions.
+
+def function_name(parameter_1,parameter_2):
+    {this is the code in the function}
+    {more code}
+    {more code}
+    return {value to return to the main program}
+{this code isn't in the function}
+{because it isn't indented}
+#remember to put a colon ":" at the end
+#of the line that starts with 'def'
+
+openfile = open('pathtofile', 'r')
+openfile.read()
+
+
+#format is [variable].readlines()
+
+#reads a text fle and returns it as an index of strings
+
+#May store file contents as a list and then make changes, or use dictionary format.
+
+
+
+
+
+What I want the program to do:
+
+Read from an outside file.
+Have the sentences as separate strings.
+Compare the strings.
+Have them grouped by keywords.
+Have me rate the possible order that they could go.
+Have strings with the same order value compared.
+Continue until all are sorted.
+Print the strings in order.
+If not correct, figure out how to make it correct. 
+
+(Save original outside file to test any code changes)
+
+
+http://docs.python.org/tutorial/
+http://www.sthurlow.com/python/
+http://en.wikipedia.org/wiki/Sorting_algorithm
+
+
+Assign random keys to string entries
+
+Compare two keys and print the strings associated with them
+If out of order, swap
+Else, go to the next strings
+
+What if the dictionary entries are an odd number?
+
+
+ 

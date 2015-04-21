@@ -1,0 +1,18 @@
+
+
+
+#Print "May I have a number, please?\n";
+
+#Here would be the switch statement for numbers 0-9
+
+#sub NumberWords {
+#@numbers = (0, "one", "two","three", "four", "five", "six", "seven", "eight", "nine");
+#Code reuse from Learning Perl
+#local ($num) = @_;
+#if ($numbers[$num]) {
+#$numbers[num];
+#}
+# else {
+#$num;
+#}
+#}

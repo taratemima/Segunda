@@ -1,0 +1,275 @@
+#!/usr/bin/perl
+
+use warnings;
+use strict;
+use diagnostics;
+
+#maxent_tagger.sh train_file test_file rare_thres feat_thres output_dir
+
+#In output_dir: train_voc, init_feats, kept_feats
+
+
+#directory -> instance -> hash -> container -> vector
+
+sub FileIntoArraysMallet{
+#This assumes you are processing a file with paragraphs. Comma separated values and the like will be dealt with in ReviseWordLists
+#This also assumes that your text is in English. Not necessarily standard American English, but still English
+	$/ = "";
+	my $startingParagraphs = $_[0];
+	open(TRAIN, $startingParagraphs);
+	my @containerArray;
+	while (<TRAIN>){
+		chomp;
+		(my $header, my $text) = split(/\n+/, $_, 2);
+		@containerArray = split(/\s+/, $text);
+	}
+return @containerArray;
+}
+
+sub TokenizationMallet{
+	my $startingParagraphs = $_[0];
+	my @rawWords = &FileIntoArraysMallet($startingParagraphs);
+	my $lettersonly = " [A-Za-z] ";
+	my $notletters = " [^A-Za-z] ";
+	my $alwayssep = " [ \ \?!()\" ; /\ \| '] ";
+	my @newRaw;
+#Next, replace all the chars that are not [a-zA-Z] with whitespace
+#lowercase all the remaining chars.
+	foreach my $r (@rawWords){
+		if (defined($r)){
+			$r =~ s/$notletters/' '/gm;
+			$r =~ s/\.$/' '/gm;
+			$r =~ lc $r;
+				}
+			}
+	for (my $i = 0; $i < $#rawWords; $i++){
+		@newRaw = split(/\s+/, $rawWords[$i]);
+		if(!(defined($newRaw[$i]))){	
+			splice(@newRaw, $i, 1);
+		}
+	}
+
+return @newRaw;
+}
+#Alter this to allow slashes as separators and to change /,/ as comma
+
+sub Proc{
+#proc file.sh input_file targetLabel output_file
+(my $input, my $label, my $output) = @ARGV;
+my @order = &CreateAlphabeticalWordLists($input);
+my %list = &MakeWordList($input);
+open(PROC, $output);
+print(PROC "$label \n");
+
+foreach my $w (@order){
+	print(PROC "$w \t $list{$w} \n");
+	}
+}
+
+sub MakeWordList{
+	my $file = $_[0];
+	my @materials = &TokenizationMallet($file);
+	my %wordList;
+
+	foreach my $line (@materials){
+		while( $line =~ m/(\b[^\W_][\w'\/-]+\b)/gm ){
+			$wordList{$1}++;
+			}
+		}
+	return %wordList;
+}
+
+sub CreateAlphabeticalWordLists{
+my $file = $_[0];
+my %wordList = &MakeWordList($file);
+my @diction = sort(keys %wordList);
+
+return @diction;
+}
+
+sub MakeContainers{
+my @word_count =
+({Word => "Tara" , Count => "0", classLabel => "c1",},);
+
+}
+
+sub DirectoryConvert{
+$/ = "";
+(my $training_string, my $testing_string, my $ratio, my @directoryList) = @ARGV;
+my @instanceList;
+my $train_num, my $test_num = &AssignRatio(@instanceList, $ratio); 
+my $file_name;
+my @training_container = &MakeContainers;
+my @testing_container = &MakeContainers;
+my $ex_length;
+my $starter = 0;
+foreach my $d (@directoryList){
+	opendir(DIR, $d);
+	push (@instanceList, (readdir(DIR)));
+
+		foreach my $f (@instanceList){
+			open(EX, $f);
+			while(<EX>){
+				my @examples = &TokenizationMallet(&FileIntoArraysMallet($f));
+				$ex_length = @examples;
+				my %exList = &MakeWordList($f);
+				my @words = keys %exList;
+				$file_name = join("/", $d, $f);
+				if ($ex_length <= $train_num){
+					@training_container = &FillContainers($ex_length, %exList, @words, 								$file_name, $starter);
+					$starter = $ex_length;
+							}
+				elsif($ex_length > $train_num){
+				@training_container = &FillContainers($train_num, %exList, @words, $file_name, 0);
+				@testing_container = &FillContainers($ex_length, %exList, @words, $file_name, $train_num);
+				}
+			}
+		}
+	}
+return @training_container;
+return @testing_container;
+
+}
+
+
+sub FillContainers{
+	my $ex_len = $_[0];
+	my %words = $_[1];
+	my @list = $_[2];
+	my $file = $_[3];
+	my $starter = $_[4];
+	my @container;
+	for (my $y = $starter; $y < $ex_len; $y++){
+		foreach my $z (@list){
+			$container[$y]{classLabel} = $file;
+			$container[$y]{Word} = $z;
+			$container[$y]{Count} = $words{$z};
+		}
+	}
+
+return @container;
+}
+
+sub AssignRatio{
+	my @instances = $_[0];
+	my $ratio = $_[1];
+	my $sizes;
+	foreach my $f (@instances){
+		$sizes += length($f);
+	}
+	my $train = $sizes * $ratio;
+	my $rounded_train = int($train);
+	my $test = $sizes - $rounded_train;
+
+return $rounded_train;
+return $test;
+}
+
+sub ExtractWordsFromContainer{
+my @container = $_[0];
+my @stopList;
+open(STOP, "<common-english-words.txt");
+	while(<STOP>){
+	@stopList = split(/,/, $_);
+	}
+
+close STOP;
+
+my @gowords;
+
+for (my $k; $k < $#container; $k++){
+	for (my $m; $m < $#stopList; $m++){
+	if (($container[$k]{Word}) ne ($stopList[$m])){
+		push(@gowords, $container[$k]{Word});
+		}
+	}
+}
+
+my %goWords = map {$_, 1 } @gowords;
+my @wordList = (keys %goWords);
+
+return @wordList;
+}
+
+
+sub MakeClassRow{
+my @container = $_[0];
+my @list;
+
+for (my $i = 0; $i < $#container; $i++){
+	push(@list, ($container[$i]{classLabel}));
+}
+
+my %repeater = map { $_, 1 } @list;
+
+my @class_list = (keys %repeater);
+
+return @class_list;
+}
+
+
+
+sub Scoreboard{
+my @scoreboard;
+my @file_list = $_[0];
+my @container = $_[1];
+my @wordList = &ExtractWordsFromContainer(@container);
+
+	for (my $j = 0; $j < $#file_list; $j++){
+	$scoreboard[$j] = [ @wordList ];
+	}
+
+foreach my $d (@file_list){
+	for (my $n = 1; $n < $#file_list; $n++){
+	$scoreboard[$n][0] = $d;
+	}
+}
+
+foreach my $w (@wordList){
+	for (my $p = 1; $p < $#wordList; $p++){
+	$scoreboard[0][$p] = $w;
+
+		}
+
+}
+
+
+for (my $w = 0; $w < $#wordList; $w++){
+	for (my $f = 0; $f < $#file_list; $f++){
+		for (my $v = 0; $v < $#container; $v++){
+	if ((($scoreboard[$f][0]) eq ($container[$v]{classLabel}))&&(($scoreboard[0][$w]) eq ($container[$v]{Word}))){
+		$scoreboard[$f][$w] = ($container[$v]{Count});
+				}
+			}
+		}	
+
+	}
+
+return @scoreboard;
+}
+
+
+sub ScoreboardPrinting{
+	(my @train, my @test) = &DirectoryConvert;
+	my @file_array = &MakeClassRow(@train);
+	my @test_file = &MakeClassRow(@test);
+	my @train_vector = &Scoreboard(@file_array, @train);
+	my @test_vector = &Scoreboard(@test_file, @test);
+	my $test_file;
+	my $train_file;
+
+	open(TRAIN, $train_file);
+
+	for my $i (0 .. $#train_vector){
+		print(TRAIN "\t [ @{$train_vector[$i]} ], \n");
+		}
+
+	open (TEST, $test_file);
+
+	for my $j (0 .. $#test_vector){
+		print(TEST "\t [ @{$test_vector[$j]} ], \n");
+	}
+
+}
+
+&ScoreboardPrinting;

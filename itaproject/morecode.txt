@@ -1,0 +1,233 @@
+Goal: only one choice for each row and column
+
+Allowed entries [a-z]
+
+sub CreateBounds{
+my %length = &CreateWordList;
+
+my @exams = reverse(sort{$length{$a} <=> $length{$b}keys %length);
+
+my $row; #length of longest word
+my $column; #scalar value of @across
+
+my @across;
+my @down;
+
+my $test = pop(@exams);
+my $top = $length{$test};
+my @test;
+
+while(@exams){
+
+foreach my $w (@exams){
+        if(length($w) == $top){
+                push(@test, $w);
+                                                                }
+}
+
+if(!(defined(@test))){
+        $test = pop(@exams);
+$top = $length{$test};
+                                                }
+elsif(defined(@test)){
+        push(@test, $test);
+@across = @test;
+                                        }
+}
+
+foreach my $e (@exams){
+        if((length($e) < $top){
+                push(@down, $e);
+                        }
+        if(!defined(@down))){
+                @down = @exams;
+                }
+
+        }
+return @across;
+return @down;
+}
+
+
+sub CreateTable{
+        (my @across, my @down) =@_;
+        my @table;
+
+        for my $i (0 .. $#across){
+                $table[$i] = $across[$i];
+                $table[$i] = [$down[$i]];
+        }
+
+return @table;
+}
+
+@table = [(split(//,$word))];
+
+[0,0][0,1][0,2][0,3]
+[1,0][1,1][1,2][1,3]
+[2,0][2,1][2,2][2,3]
+[3,0][3,1][3,2][3,3]
+
+
+
+sub MainWork{
+my @table = &CreateTable;
+(my @across, my @down) = &CreateBounds;
+my @selections = &BagOfLetters(@across);
+(my %letters, my @order) = &CreateProbTable(@across);
+my @new_down = &ReduceDownWords(@order, @down);
+
+#@table = &FillTable(@selections);
+}
+
+sub GrabWordFromChoices{
+	(my $choice, my @words) = @_;
+	
+	for(my $i = 0; $i < $#words; $i++){
+		if($words[$i] eq $choice){
+		splice(@words, $i, 1);
+		}
+	}
+
+return @words;
+}
+
+sub PickWord{
+	(my @list, my @order) = @_;
+	my $word;
+	for(my $i = 0; $i < $#list; $i++){
+	$word = &DecideOnWord($list[$i], @list, @order), last if (defined($word));	
+	}
+
+return $word;
+}
+
+###This will need work####
+sub FillTableWithWord{
+        (my $wordChoice, my @bagOfWords, $across_length, $down_length) = @_
+        my @table = &CreateTable;
+
+my @wordLetters = split(//,$wordChoice)
+
+my %eliminate;
+
+grep($eliminate{$_}++, @wordLetters);
+
+my @rest = grep(!$eliminate{$_}, @bagOfWords);
+
+foreach my $t (@wordLetters){
+for(my $i = 0; $i < $#wordLetters; $i++){
+        for (my $j = 0; $j < $#wordLetters; $j++){
+	if(!(defined($table[$i][$j]))){
+                		&PlaceInTable($t, $i, $j, @table);
+						}
+	elsif((defined($table[$i][$j])) && ($table[$i][$j] eq $t)){
+		if((scalar(@wordLetters))  == $across_length){
+			$pivot = $i;
+			&PlaceInTable($t, $pivot, $j, @table);
+					}
+		elsif((scalar(@wordLetters)) == $down_length){
+			$pivot = $j;
+			&PlaceInTable($t, $i, $pivot, @table);
+				}
+			}
+	elsif(($defined($table[$i][$j])) && ($table[$i][$j] ne $t)){
+		next;
+		#Or have search for missing parts of words and filling them
+		}
+                        }
+                }
+        }
+
+return @table;
+return @rest;
+}
+###This will need work####
+
+sub DecideOnWord{
+	(my $letter, my @list, my @order) = @_;
+	
+	my @selection = grep(/$letter/, @across);
+	my $choice;
+	my $next;
+	
+while(@order){
+	$next = pop(@order);
+	if(!(defined(@selection))){	
+		my $string = join('', $letter, $next);
+		@selection = grep(/$string/, @list);	
+				}
+	elsif((defined(@selection)) && ((scalar(@selection)) > 1)){
+		my @new = grep(/$next/, @selection);
+		@selection = @new;	
+			}
+	elsif((defined(@selection)) && ((scalar(@selection)) == 1)){
+		$choice = $selection[0];
+		}
+	}
+return $choice;
+}
+
+sub ReduceDownWords{
+	(my @order, my @down) = @_;
+
+	my $range = $order[0];
+	for(my $r = 1; $r < $#order; $r++){
+		join('', $range, $order[$r]);
+#will I need a space? Let's assume I do not for now
+	}
+
+	return my @new_down = grep(/[$range]/, @down);
+}
+
+sub BagOfLetters{
+        my @across = $_[0];
+        my @bag;
+        foreach my $a (@across){
+                unshift(@bag, split(//, $a));
+        }
+return @bag;
+}
+
+sub CreateProbTable{
+        my %prob;
+        my @letters = &BagOfLetters($_[0]);
+
+        foreach my $p (@letters){
+                $prob{$p}++;
+        }
+
+        my @order = reverse(sort{$prob{$a} <=> $prob{$b}}keys %prob);
+
+return %prob;
+return @order;
+
+}
+
+#reduce words in @down by doing a range search with joined elements of @order
+
+#if you have not decided on letter in which place, have a reference to the order array;
+ 
+#Get where the most frequent letters are in the across words, and find their down matches
+#pick the highest ranking letter in prob table
+#Get the across words that match that letter
+#If there is one, get the down words that match the letter
+#If there is one down word, put the across word letter by letter on the first row, being sure
+#to 'pop' out any letters used in the hash
+#Repeat the same with the down word
+#If there is more than one across word, or more than one down word, find an undefined space, and link to a reference to the hash. 
+
+#If a cell refers to a hash, and the cells around it have letters, make a string with those letters
+#depending on direction of the words, do a search on the across and/or down words 
+
+sub PlaceInTable{
+(my $letter, my @row, my @column, my @tab) = @_;
+
+$tab[$row][$column] = $letter;
+
+return @tab;
+}
+
+
+
+

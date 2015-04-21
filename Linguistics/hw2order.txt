@@ -1,0 +1,52 @@
+Expected answers
+fsa1 (a*b*)
+"a" "a" "b" => yes
+"a" "a" => yes
+"b" => yes
+"a" "b" "a" => no
+"a" "c" => no
+
+D
+(A (A "a") (C "b") (B *e*))
+(B (D "a")(C "b"))
+(C (B "a")(C "b")(D *e*) (D "c"))
+
+fsa2 (a+b*)
+"a" "a" "b" => yes
+"a" "a" => yes
+"b" => no
+"a" "b" "a" => no
+"a" "c" => no
+
+D
+(A (B "a"))
+(B (C "a") (D *e*))
+(C (D "a")(D "b") (D *e*))
+
+fsa3 (a*b+)
+"a" "a" "b" => yes 
+"a" "a" => no
+"b" => yes
+"a" "b" "a" => no
+"a" "c" => no
+
+D
+(A (A "a")(D "b"))
+(B (D "b")(D *e*))
+(C (D "b")(D *e*))
+
+
+fsa4 (a+b+)
+"a" "a" "b" => yes
+"a" "a" => no
+"b" => no
+"a" "b" "a" => no
+"a" "c" => no
+
+E
+(A (B "a"))
+(B (C "a") (C "b"))
+(C (E "b"))
+(D (E "b")(E *e*))
+
+

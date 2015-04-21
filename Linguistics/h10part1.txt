@@ -1,0 +1,89 @@
+#/bin/usr/perl;
+
+use strict;
+use warnings;
+use diagnostics;
+
+sub CreateContainer{
+my @textFile = (
+{Language => {Word => ' ', Right => ' ', Left => ' ',},
+Count => {WordCount => 0, RightThenWord => 0, WordThenLeft => 0,},
+		}
+	);
+}
+#http://htmlfixit.com/cgi-tutes/tutorial_Perl_Primer_013_Advanced_data_constructs_An_array_of_hashes.php
+
+
+#Here would be the tokenization/normalization script
+
+#Here would be the FSA to refine words
+
+sub FillUp{
+my @container = $_[0];
+my $record = {};
+my $right = $_[3];
+my $word = $_[1];
+my $left = $_[2];
+$record->{Word} = $word;
+$record->{Left} = $left;
+$record->{Right} = $right;
+push(@container, $record);
+return @container;
+
+}
+
+sub CookbookFrequency{
+%seen = ();
+while (<>) {
+    while ( /(\w['\w-]*)/g ) {
+        $seen{lc $1}++;
+    			}
+		}
+ 
+# output hash in a descending numeric sort of its values
+foreach $word ( sort { $seen{$b} <=> $seen{$a} } keys %seen) {
+    printf "%5d %s\n", $seen{$word}, $word;
+	}
+}
+
+sub LeftWordRightWord{
+my @text = $_[0];
+my @container = &CreateContainer;
+my $length = @text;
+my $word;
+my $right;
+my $left;
+
+if(!(@text){
+	die "Text array is empty. \n";
+	}
+	elsif(@text){
+		if($word eq $text[0]){
+		$left = "BOT";
+		$right = $text[1];
+		&FillUp(@container, $word, $left, $right);
+			}
+		elsif($word eq $text[$length]){
+		$left = $text[$length - 1];
+		$right = "EOT";
+		&FillUp(@container, $word, $left, $right);
+		}
+		else{
+		for(my $i = 1; $i <= $length -1; $i++){
+			$word = $text[$i];
+			$left = $text[$i - 1];
+			$right = $text[$i + 1];
+			&FillUp(@container, $word, $left, $right);
+			}
+		}
+	}
+
+return @container;
+
+}
+
+sub GettingCount{
+my @container = LeftWordRightWord($_[0]);
+
+
+}

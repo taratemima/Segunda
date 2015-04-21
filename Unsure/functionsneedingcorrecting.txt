@@ -1,0 +1,196 @@
+
+sub CreateArrayFromMain{
+my $file = $_[0];
+my @samples = &CreateTrainingStructure($file);
+my $selection = $_[1];
+
+#It may be POS or Word,
+
+my @list;
+for (my $s = 0; $s < $#samples; $s++){
+	push (@list, $samples[$s]{$selection});
+			}
+return @list;
+}
+
+sub GetUniqueFromArray{
+my $file = $_[0];
+my $selection = $_[1];
+
+my @newList = &CreateArrayFromMain($file, $selection);
+
+my @unique = ();
+my %seen = ();
+   
+foreach my $elem ( @newList){
+	next if $seen{ $elem }++;
+	push @unique, $elem;
+		}
+my @sorted_unique = sort @unique;
+return @sorted_unique;
+}
+
+sub CountState{
+my $file = $_[0];
+my @pos = &GetUniqueFromArray($file, "POS");
+	
+my $counter = 0;
+
+for (my $p = 0; $p < $#pos; $p++){
+	$counter++;
+	}
+
+#print "Total number of tags are $counter \n";
+
+return $counter;
+
+}
+
+#&CountState('wsj_sec0.txt');
+#Results: Printed number and it matched with the Test 4 results.
+#trying again with new subroutines
+#Results: Printed number and it matched with the Test 4 results.
+
+sub CountSymbols{
+
+my $file = $_[0];
+my @words = &GetUniqueFromArray($file, "Word");
+my $counter = 0;
+	
+for (my $p = 0; $p < $#words; $p++){
+	$counter++;
+	}
+
+#print "Total number of unique words are $counter \n";
+
+return $counter;
+
+}
+
+#&CountSymbols('wsj_sec0.txt');
+#Results: Also got total unique words
+
+#trying again with new subroutines
+#Result: got the same output
+
+
+sub CalculatePossiblePaths{
+my $tag_count = &CountState($_[0]);
+my $word_count = &CountSymbols($_[0]);
+
+my $answer = 0;
+
+$answer = $tag_count * $word_count;
+
+#print "The estimated total paths available are ";
+#print "$answer . \n";
+
+return $answer;
+}
+
+sub TagTotal{
+
+#CreateUnknownWords
+
+	my $file = $_[0];
+	my $tag = $_[1];
+
+	my @samples = &CreateTrainingStructure($file);
+	my $select_total = 0;
+	
+	for (my $t = 0; $t < $#samples; $t++){
+		if (($samples[$t]{POS}) eq $tag){
+			$select_total += $samples[$t]{Number};
+			}
+	}
+	return $select_total;
+}
+
+#&TagTotal('wsj_sec0.txt', "DT");
+#It worked
+
+sub WordTotal{
+	my $file = $_[0];
+	my $word = $_[1];
+
+	my @samples = &CreateTrainingStructure($file);
+	my $select_total = 0;
+
+	for (my $t = 0; $t < $#samples; $t++){
+		if (($samples[$t]{Word}) eq $word){
+			$select_total += $samples[$t]{Number};
+			}	
+		}
+	return $select_total;
+
+
+}
+
+#print (&WordTotal('wsj_sec0.txt', "the"));
+
+#Wait, it was working, and now it is gone
+#I am not sure how, but I think I forgot to write print
+
+sub SpecificTagTotal{
+
+my %unknowns = &CreateUnknownWords;
+
+	my $file = $_[0];
+	my $word = $_[1];
+	my $tag = $_[2];
+	my @samples = &CreateTrainingStructure($file);
+	my $select_total = 0;
+
+	for (my $t = 0; $t < $#samples; $t++){
+		if ((($samples[$t]{POS}) eq $tag) && (($samples[$t]{Word}) eq $word)){
+			$select_total += $samples[$t]{Number};
+					}
+			else{
+			$select_total += ($samples[$t]{Number});
+			$select_total *= ($unknowns{$tag}); 
+				}
+	}
+	return $select_total;
+}
+
+sub GetProbability{
+	my $file = $_[0];
+	my $word = $_[1];
+	my $tag = $_[2];
+	my $word_total;
+	my $tag_total;
+
+	my $select_number = (&SpecificTagTotal($file, $word, $tag));
+
+#I think I did not predeclare it, that may have confused any instructions to die if the select_number is not defined.
+
+	if ($select_number > 0){
+		$word_total = &WordTotal($file, $word);
+				}
+		if ($word_total > 0){
+		$tag_total = &TagTotal($file, $tag);
+			}
+			if ($tag_total > 0){
+				my $word_prob = ($select_number/$word_total);
+				my $tag_prob = ($select_number/$tag_total);
+				my $total_prob = $word_prob * $tag_prob;
+				print "The word is $word. The tag is $tag. \n";
+				print "Number with both $tag and $word is $select_number. \n";
+				print "Total entries with $word are $word_total. \n";
+				print "Total entries with $tag are $tag_total. \n";
+				print "The ratio of specific word to word entries is $word_prob. \n";
+				print "The ratio of specific tag to tag entries is $tag_prob. \n";
+				print "The total probability of $word and tag is $total_prob. \n";
+				
+		}
+}
+
+
+
+
+#sub Viterbi{
+#(my $input_hmm, my $test_file, my $output_file) = @ARGV;
+#my @observation = $_[0];
+#}
+
+#Remember word - > POS
